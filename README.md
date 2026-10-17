@@ -15,7 +15,7 @@ It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build ste
 | Home | `index.html` | Hero, menu highlights, our story, rotating dish slideshow, visit summary |
 | Menu | `menu.html` | All 19 items with prices, a small photo beside every dish, search and category filters |
 | About | `about.html` | Our story, what we serve, a note on Ethiopian coffee, rating / hours / location facts |
-| Gallery | `gallery.html` | 15 photos with Food / Coffee / The cafe filters and a full-size photo viewer |
+| Gallery | `gallery.html` | 16 photos with Food / Coffee / The cafe filters and a full-size photo viewer |
 | Visit & Contact | `visit.html` | Address, phone, opening hours (today highlighted), Google map, directions, storefront |
 | Order Online | `order.html` | Call ahead for pickup, order online via the Google listing, dine in |
 
@@ -32,7 +32,7 @@ Every page shares the same header and footer:
 | `styles.css` | All styles, shared by every page |
 | `script.js` | Mobile menu, fade-ins, homepage slideshow, gallery viewer, today's hours |
 | `menu.js` | Menu search and filters |
-| `img/` | All images (WebP, with JPG fallbacks for the original placeholders) |
+| `img/` | Site images in WebP, plus JPG fallbacks for selected visuals and retained image drafts |
 | `sitemap.xml` | All 6 page URLs (domain placeholder) |
 | `robots.txt` | Currently **blocks** all crawlers (preview mode) |
 | `owner-review/menu-approval-checklist.html` | Checklist for the owner. **Do not upload.** |
@@ -47,11 +47,11 @@ Every page shares the same header and footer:
 - Refinements: faint gold leaf watermarks, gold lines beside section labels, generous spacing, gentle fade-ins and hover zooms.
 
 ### Homepage
-1. **Hero:** one H1, "Ethiopian Cafe on Danforth Avenue, Toronto", with "Big flavours. Warm welcomes." as a styled slogan.
+1. **Hero:** one H1, "Ethiopian Cafe on Danforth Avenue, Toronto", with "Big flavours. Warm welcomes." as a styled slogan and the supplied Ethiopian platter image.
    - Includes the View Menu and Get Directions buttons and the Google rating line.
    - On phones and tablets the photo moves below the text.
 2. **Ribbon:** Coffee • Breakfast • Ethiopian Favourites.
-3. **Menu preview:** Cappuccino, Tibs Firfir and Ful cards.
+3. **Menu preview:** Cappuccino, Tibs Firfir, Ful, Shiro and Kitfo cards.
 4. **Our Story:** a short story, linking to About.
 5. **Dish slideshow:** Tibs Firfir, Kitfo, Special Kitfo, Tibs, Ful and Firfir.
    - Rotates every 5 seconds, pauses on hover or focus, and stops while the browser tab is hidden.
@@ -89,7 +89,7 @@ Every page shares the same header and footer:
 - **`sitemap.xml`** lists all 6 pages.
 
 ### Accessibility and speed
-- **Contrast:** meets WCAG AA. The small gold text is `#85570c`, at least 5.3:1 on every cream.
+- **Contrast:** the small gold text is `#85570c`, at least 5.3:1 on every cream.
 - **Keyboard:**
   - skip link and visible focus outlines
   - keyboard-operable menu, filters, slideshow and gallery viewer (arrow keys browse, Escape closes)
@@ -97,11 +97,11 @@ Every page shares the same header and footer:
 - **`prefers-reduced-motion`:** turns off smooth scrolling, fade-ins, zooms and slideshow auto-rotation.
 - **Images:**
   - every image has descriptive alt text and a set width and height, so nothing jumps while loading
-  - responsive `srcset` sizes
+  - responsive `srcset` sizes for larger photos
   - lazy loading below the hero
-  - total `img/` size is about 2 MB
+  - responsive sizes for the added storefront, Ethiopian platter and Kitfo images
 - **Map:** the map on Visit & Contact loads lazily.
-- **Tested:** every page at 375px and 800px (no sideways scrolling) and at desktop width.
+- **Layout:** the five homepage preview cards use five columns on wide screens, two on tablets (with the fifth card centred), and one on phones.
 
 ---
 
@@ -131,18 +131,31 @@ Content changed on purpose until the owner confirms it:
 
 ## Images and licences
 
+### Recent image and layout changes
+
+| Asset | Where it appears | Files and treatment |
+|---|---|---|
+| User-provided Ethiopian platter | Homepage hero and Gallery | `ethiopian-platter-injera.jpg`, `ethiopian-platter-injera.webp` (1400×787) and `ethiopian-platter-injera-800.webp` (800×450); the hero preloads a responsive WebP, with JPG fallback. The gallery crop favours the food on the right. |
+| User-provided Rehoboth Cafe storefront | Home Visit Us, Visit & Contact, Gallery, and the Open Graph image on all six pages | `rehoboth-cafe-storefront.jpg`, `rehoboth-cafe-storefront.webp` (1600×684) and `rehoboth-cafe-storefront-800.webp` (800×342). The homepage business JSON-LD also points to the new JPG. |
+| Selected generated Shekla Shiro image (option 1, bright woven tray) | Fourth homepage menu-preview card | `shekla-shiro-bright-woven-tray.jpg` and `shekla-shiro-bright-woven-tray.webp` (800×480); the source PNG is retained in `img/`. This is an illustration, not a photograph of a Rehoboth Cafe dish. |
+| Kitfo photo by Vipon8 from Wikimedia Commons | Fifth homepage menu-preview card, homepage dish slideshow, Gallery, and Kitfo menu thumbnail | `kitfo-ayib-platter-1200.webp` (1200×675), `kitfo-ayib-platter-640.webp` (640×360) and `kitfo-ayib-platter-thumb.webp` (240×240). Cropped/resized from the [CC0 original](https://commons.wikimedia.org/wiki/File:Kitfo_(%E1%8A%AD%E1%89%B5%E1%8D%8E).jpg); credits and alt text were updated on the affected pages. |
+
+The five-card menu preview now shows Cappuccino, Tibs Firfir, Ful, Shiro and Kitfo. Its CSS grid uses five columns on wide screens, two on tablets with the last card centred, and one on phones. The Kitfo photo also replaces the older Kitfo image in the slideshow, Gallery and menu; the Special Kitfo and Bula Kitfo photos are separate assets.
+
+The `img/` folder also retains unused generated explorations (`ethiopian-coffee-and-platter-generated`, `shiro-preview`, `shekla-shiro-preview` and `shekla-shiro-generated`) and the older Kitfo, hero and storefront assets. These are not referenced by the current pages. Remove unused drafts when preparing a deployment package, after deciding which source files to keep.
+
+**Checks completed for these updates:** visually inspected the chosen Kitfo crop and menu thumbnail; verified the new image dimensions and that all new image references point to existing files; checked that the homepage preview contains five cards; ran `git diff --check`. No browser layout or deployment check was run for the latest five-card update.
+
 **Placeholders cut from the design mockup.** Replace these with the cafe's own photos:
-- Hero (`tibs-firfir-injera-cappuccino-hero`)
 - Cappuccino, Tibs Firfir and Ful cards
 - Coffee pour
 - `slide-tibs-firfir-*` and `tibs-firfir-injera-thumb`
-- **Storefront**, which is a low-resolution crop. It should be a real photo.
 
 **Openly licensed photos**, shown for illustration and credited on each page:
 
 | Used for | Title / author | Licence |
 |---|---|---|
-| Kitfo | "Kitfo, Ayib and Injera", Lelaw Wondimu | CC BY-SA 4.0 |
+| Kitfo | ["Kitfo (ክትፎ)"](https://commons.wikimedia.org/wiki/File:Kitfo_(%E1%8A%AD%E1%89%B5%E1%8D%8E).jpg), Vipon8; cropped and resized | CC0 1.0 |
 | Special Kitfo | "Kitfo, gomen and aybe", Arsupeee | CC BY-SA 4.0 |
 | Tibs | "Siga Tibs", Khajitdadddy | CC BY-SA 4.0 |
 | Chechebsa | "Chipchipsa Ethiopian dish 2014", Neftalem | CC BY-SA 4.0 |
@@ -151,7 +164,7 @@ Content changed on purpose until the owner confirms it:
 | Perrier | "PERRIER (10)", Dinkun Chen | CC BY-SA 4.0 |
 | Genfo | "Ga'at food", Stefan Alfons Tzeggai | CC BY-SA 3.0 |
 | Waffle | "Belgian waffle with fruitsalad and cream", Prashanthns | CC BY-SA 3.0 |
-| Shiro | "Taita and shiro", Temesgen Woldezion (ed. Merhawie W) | CC BY-SA 2.5 |
+| Shiro on Menu and Gallery | "Taita and shiro", Temesgen Woldezion (ed. Merhawie W) | CC BY-SA 2.5 |
 | Ginger Ale | "Ginger ale", Hisakazu Watanabe | CC BY-SA 2.0 |
 | Firfir | "Firfir", eekim (Flickr) | CC BY 2.0 |
 | Ful | "Ful Mudammas", Tarboosh | CC0 |
@@ -164,7 +177,6 @@ All are from Wikimedia Commons except Firfir, which is from Flickr. Each was cro
 **Deliberately not used:**
 - Customer photos from Google Maps and Restaurant Guru. The copyright belongs to the customers, and Restaurant Guru's copies are watermarked.
 - Photos from other projects on this computer.
-- AI-generated images.
 - Photos showing identifiable people.
 
 **Tried and removed:**
@@ -196,11 +208,10 @@ All are from Wikimedia Commons except Firfir, which is from Flickr. Each was cro
    - their story (optional)
    - email or social media accounts (optional)
 4. **Order link.** In `order.html`, replace the Google-listing button with the cafe's direct ordering link once it's known.
-5. **Real photos.** Get these from the owner, in landscape and daylight:
-   - the storefront
-   - the interior, which the Gallery says is "coming soon"
+5. **Real photos.** Confirm the supplied storefront and platter visuals represent the cafe; get current owner photos in landscape and daylight where needed:
+   - the storefront and interior (the Gallery says the interior is "coming soon")
    - the cappuccino and other coffee
-   - every dish, especially Tibs Firfir, Bula and Crush
+   - every dish, especially the generated Shiro preview, Kitfo, Tibs Firfir, Bula and Crush
 6. **Check and submit.**
    - Test the JSON-LD at <https://search.google.com/test/rich-results>.
    - Submit `sitemap.xml` in Google Search Console.
@@ -224,5 +235,6 @@ All are from Wikimedia Commons except Firfir, which is from Flickr. Each was cro
   - the About page facts
   - the JSON-LD in `index.html`
 - **Gallery:** each photo is an `<li class="g-item" data-cat="food|coffee|cafe">` in `gallery.html`. Credit any new photo that isn't the cafe's own.
-- **Slideshow:** each slide is an `<li class="slide">` in `index.html`, with `slide-<name>-1200.webp` and `-640.webp` images (16:9) and a matching dot button.
+- **Homepage menu preview:** each card is an `<li class="card">` inside `.cards` in `index.html`. Update the image, alt text, name and description together. The responsive grid is in `styles.css`.
+- **Slideshow:** each slide is an `<li class="slide">` in `index.html`, with 1200px and 640px WebP images (16:9) and a matching dot button.
 - **Colours:** the tokens at the top of `styles.css` (`--red`, `--gold`, `--cream`, …).

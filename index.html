@@ -17,9 +17,9 @@
 <meta property="og:title" content="Rehoboth Cafe | Ethiopian Food &amp; Coffee in Toronto">
 <meta property="og:description" content="Ethiopian favourites and freshly brewed coffee at 2737 Danforth Avenue, Toronto.">
 <meta property="og:url" content="https://YOUR-DOMAIN/">
-<meta property="og:image" content="https://YOUR-DOMAIN/img/rehoboth-cafe-storefront-danforth-ave.jpg">
-<meta property="og:image:width" content="1094">
-<meta property="og:image:height" content="476">
+<meta property="og:image" content="https://YOUR-DOMAIN/img/rehoboth-cafe-storefront.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="684">
 <meta property="og:image:alt" content="Rehoboth Cafe storefront on Danforth Avenue, Toronto">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Libre+Caslon+Text:wght@700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/tibs-firfir-injera-cappuccino-hero.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/ethiopian-platter-injera.webp" imagesrcset="img/ethiopian-platter-injera-800.webp 800w, img/ethiopian-platter-injera.webp 1400w" imagesizes="(max-width: 960px) 100vw, 58vw" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="styles.css">
 
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
   "@type": "CafeOrCoffeeShop",
   "name": "Rehoboth Cafe",
   "url": "https://YOUR-DOMAIN/",
-  "image": "https://YOUR-DOMAIN/img/rehoboth-cafe-storefront-danforth-ave.jpg",
+  "image": "https://YOUR-DOMAIN/img/rehoboth-cafe-storefront.jpg",
   "servesCuisine": ["Ethiopian", "Coffee"],
   "telephone": "+1-416-686-1104",
   "geo": { "@type": "GeoCoordinates", "latitude": 43.6889002, "longitude": -79.2974896 },
@@ -94,9 +94,9 @@
 <main id="main">
   <section class="hero" id="home" aria-labelledby="hero-title">
     <picture class="hero-photo">
-      <source srcset="img/tibs-firfir-injera-cappuccino-hero.webp" type="image/webp">
-      <img src="img/tibs-firfir-injera-cappuccino-hero.jpg" width="848" height="772"
-           alt="A pan of Tibs Firfir in front of injera and a cappuccino in a traditional Ethiopian cup"
+      <source srcset="img/ethiopian-platter-injera-800.webp 800w, img/ethiopian-platter-injera.webp 1400w" sizes="(max-width: 960px) 100vw, 58vw" type="image/webp">
+      <img src="img/ethiopian-platter-injera.jpg" width="1400" height="787"
+           alt="Ethiopian platter with injera, beef tibs, lentils, greens and vegetables"
            fetchpriority="high" decoding="async">
     </picture>
     <svg class="leaf leaf-hero" aria-hidden="true" focusable="false"><use href="#leaf-sprig"/></svg>
@@ -168,6 +168,30 @@
             <p>Seasoned fava beans, a favourite at our cafe.</p>
           </div>
         </li>
+        <li class="card">
+          <picture>
+            <source srcset="img/shekla-shiro-bright-woven-tray.webp" type="image/webp">
+            <img src="img/shekla-shiro-bright-woven-tray.jpg" width="800" height="480" loading="lazy" decoding="async"
+                 alt="Shiro chickpea stew in a black clay pot on a woven tray with injera">
+          </picture>
+          <div class="card-body">
+            <h3>Shiro</h3>
+            <span class="card-rule" aria-hidden="true"></span>
+            <p>Rich chickpea stew, served with injera.</p>
+          </div>
+        </li>
+        <li class="card">
+          <picture>
+            <source srcset="img/kitfo-ayib-platter-640.webp 640w, img/kitfo-ayib-platter-1200.webp 1200w" sizes="(max-width: 680px) 100vw, (max-width: 960px) 50vw, 20vw" type="image/webp">
+            <img src="img/kitfo-ayib-platter-1200.webp" width="1200" height="675" loading="lazy" decoding="async"
+                 alt="Kitfo served in clay bowls with ayib and injera">
+          </picture>
+          <div class="card-body">
+            <h3>Kitfo</h3>
+            <span class="card-rule" aria-hidden="true"></span>
+            <p>Finely minced beef with mitmita and niter kibbeh.</p>
+          </div>
+        </li>
       </ul>
       <p class="center menu-more reveal"><a href="menu.html" class="btn btn-outline btn-lg">See the Full Menu <span class="arrow" aria-hidden="true">&rarr;</span></a></p>
     </div>
@@ -206,8 +230,8 @@
           </div>
         </li>
         <li class="slide" role="group" aria-roledescription="slide" aria-label="2 of 6: Kitfo" aria-hidden="true">
-          <img src="img/slide-kitfo-1200.webp" srcset="img/slide-kitfo-640.webp 640w, img/slide-kitfo-1200.webp 1200w"
-               sizes="(max-width: 1180px) 100vw, 1180px" width="1200" height="675" loading="lazy" decoding="async" alt="Kitfo: finely minced seasoned beef in a pan, served with injera">
+          <img src="img/kitfo-ayib-platter-1200.webp" srcset="img/kitfo-ayib-platter-640.webp 640w, img/kitfo-ayib-platter-1200.webp 1200w"
+               sizes="(max-width: 1180px) 100vw, 1180px" width="1200" height="675" loading="lazy" decoding="async" alt="Kitfo and accompaniments in clay bowls with ayib and injera">
           <div class="slide-cap">
             <span class="slide-cat">Lunch &amp; Dinner</span>
             <h3>Kitfo</h3>
@@ -274,7 +298,7 @@
       <details class="photo-credits" id="photo-credits">
         <summary>Photo credits</summary>
         <ul>
-          <li>Kitfo: &ldquo;Kitfo, Ayib and Injera&rdquo; by Lelaw Wondimu, <a href="https://commons.wikimedia.org/wiki/File:Kitfo,_Ayib_and_Injera.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Cropped.</li>
+          <li>Kitfo: &ldquo;Kitfo (ክትፎ)&rdquo; by Vipon8, <a href="https://commons.wikimedia.org/wiki/File:Kitfo_(%E1%8A%AD%E1%89%B5%E1%8D%8E).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a>. Cropped and resized.</li>
           <li>Special Kitfo: &ldquo;Kitfo, gomen and aybe&rdquo; by Arsupeee, <a href="https://commons.wikimedia.org/wiki/File:Kitfo,_gomen_and_aybe.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Cropped.</li>
           <li>Tibs: &ldquo;Siga Tibs&rdquo; by Khajitdadddy, <a href="https://commons.wikimedia.org/wiki/File:Siga_Tibs.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Cropped.</li>
           <li>Firfir: &ldquo;Firfir&rdquo; by eekim, <a href="https://www.flickr.com/photos/63669472@N00/2321878522" target="_blank" rel="noopener">Flickr</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>. Cropped.</li>
@@ -317,8 +341,8 @@
         </div>
       </div>
       <picture class="storefront reveal">
-        <source srcset="img/rehoboth-cafe-storefront-danforth-ave.webp" type="image/webp">
-        <img src="img/rehoboth-cafe-storefront-danforth-ave.jpg" width="1094" height="476" loading="lazy" decoding="async"
+        <source srcset="img/rehoboth-cafe-storefront-800.webp 800w, img/rehoboth-cafe-storefront.webp 1600w" sizes="(max-width: 680px) 100vw, 60vw" type="image/webp">
+        <img src="img/rehoboth-cafe-storefront.jpg" width="1600" height="684" loading="lazy" decoding="async"
              alt="Rehoboth Cafe storefront on Danforth Avenue with its red and yellow sign">
       </picture>
     </div>
