@@ -168,7 +168,7 @@ The `img/` folder also retains unused generated explorations (`ethiopian-coffee-
 | Ginger Ale | "Ginger ale", Hisakazu Watanabe | CC BY-SA 2.0 |
 | Ful | "Ful Mudammas", Tarboosh | CC0 |
 | Ful (homepage slideshow) | ["qwaider al nabulsi foul medames"](https://commons.wikimedia.org/wiki/File:Qwaider_al_nabulsi_foul_medames_(11389639565).jpg), Krista; cropped (`ful-bowl-*`) | CC BY 2.0 |
-| Firfir (slideshow, Gallery, menu) | ["Firfir"](https://www.flickr.com/photos/63669472@N00/2321878522), eekim on Flickr; cropped (`firfir-eekim-*`) | CC BY 2.0 |
+| Firfir (slideshow, Gallery, menu) | ["Kitcha fit fit"](https://commons.wikimedia.org/wiki/File:Kitcha_fit_fit.png), Merhawie; cropped (`firfir-kitcha-*`) | CC BY-SA 2.5 |
 | Misir Wot | "Misir Wot and Gomen Besiga", Andy Li | CC0 |
 | Coke | "Coca-Cola glass bottle (Germany)", Ralf Roletschek | Public domain |
 | Water | "Glass of water outside", Kurt Kaiser | CC0 |

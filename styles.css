@@ -451,6 +451,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .slides { position: relative; height: 100%; }
 .slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .8s ease, visibility 0s linear .8s; }
 .slide.is-active { opacity: 1; visibility: visible; transition: opacity .8s ease; }
+.slide picture { display: block; height: 100%; }
 .slide img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.03); transition: transform 6s ease-out; }
 .slide.is-active img { transform: scale(1); }
 .slide-cap {
@@ -700,3 +701,21 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .footer-social a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.45); color: #fff; transition: background .2s, color .2s, border-color .2s; }
 .footer-social a:hover { background: var(--gold); border-color: var(--gold); color: var(--red-dark); }
 @media (max-width: 680px) { .footer-social { justify-content: center; } }
+
+/* Small phones: keep all four menu filters visible without sideways scrolling */
+@media (max-width: 380px) {
+  .menu-filters { gap: 6px; }
+  .filter-btn { padding: 8px 10px; font-size: .86rem; }
+}
+
+/* Gallery photo viewer on phones: full screen, photo centred, controls inside the screen */
+@media (max-width: 680px) {
+  .lightbox { width: 100vw; max-width: 100vw; height: 100%; max-height: 100%; margin: 0; padding: 64px 12px 92px; box-sizing: border-box; }
+  .lightbox[open] { display: flex; align-items: center; justify-content: center; }
+  .lightbox figure { width: 100%; }
+  .lightbox img { max-height: calc(100vh - 200px); }
+  .lb-close { top: 12px; right: 12px; }
+  .lb-prev, .lb-next { top: auto; bottom: 24px; }
+  .lb-prev { left: 24px; }
+  .lb-next { right: 24px; }
+}
