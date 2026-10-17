@@ -160,6 +160,19 @@
     });
   }
 
+  // Home page: "Open now" / "Closed" badge (Toronto time). Keep hours in sync with the Visit section.
+  const openBadge = document.getElementById('open-badge');
+  if (openBadge) {
+    const parts = new Intl.DateTimeFormat('en-CA', { weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23', timeZone: 'America/Toronto' })
+      .formatToParts(new Date()).reduce((o, p) => (o[p.type] = p.value, o), {});
+    const mins = +parts.hour * 60 + +parts.minute;
+    const [open, close] = parts.weekday === 'Sun' ? [10 * 60, 19 * 60] : [9 * 60, 20 * 60];
+    const isOpen = mins >= open && mins < close;
+    openBadge.textContent = isOpen ? 'Open now' : 'Closed now';
+    openBadge.classList.add(isOpen ? 'is-open' : 'is-closed');
+    openBadge.hidden = false;
+  }
+
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
