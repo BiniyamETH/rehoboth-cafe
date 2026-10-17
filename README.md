@@ -187,7 +187,7 @@ All listed photos are from Wikimedia Commons. Each was cropped and resized.
 
 ## Before launch
 
-1. **Domain.** Replace every `https://YOUR-DOMAIN/` in all 6 HTML pages, `sitemap.xml` and `robots.txt`. The Google listing links to **rehobothcafe.com** (currently offline). Confirm whether that's the right one.
+1. **Domain.** The site is live on GitHub Pages at https://biniyameth.github.io/rehoboth-cafe/, and that address is used in all 6 HTML pages, `sitemap.xml` and `robots.txt`. To move to a custom domain, replace it everywhere. The Google listing links to **rehobothcafe.com** (currently offline). Confirm whether that's the right one.
 2. **Turn off preview mode:**
    - Delete `<meta name="robots" content="noindex, nofollow">` from all 6 pages.
    - In `robots.txt`, change `Disallow: /` to `Allow: /`.
