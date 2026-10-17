@@ -53,7 +53,7 @@ Every page shares the same header and footer:
 2. **Ribbon:** Coffee • Breakfast • Ethiopian Favourites.
 3. **Menu preview:** Cappuccino, Tibs Firfir, Ful, Shiro and Kitfo cards.
 4. **Our Story:** a short story, linking to About.
-5. **Dish slideshow:** Tibs Firfir, Kitfo, Special Kitfo, Tibs, Ful and Firfir.
+5. **Dish slideshow:** Tibs Firfir, Kitfo, Special Kitfo, Tibs and Firfir.
    - Rotates every 5 seconds, pauses on hover or focus, and stops while the browser tab is hidden.
    - Has a Pause/Play button, arrows, dots, arrow-key control and phone swipe.
    - Doesn't auto-rotate for reduced-motion users.
