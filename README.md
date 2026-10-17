@@ -53,7 +53,7 @@ Every page shares the same header and footer:
 2. **Ribbon:** Coffee • Breakfast • Ethiopian Favourites.
 3. **Menu preview:** Cappuccino, Tibs Firfir, Ful, Shiro and Kitfo cards.
 4. **Our Story:** a short story, linking to About.
-5. **Dish slideshow:** Tibs Firfir, Kitfo, Special Kitfo, Tibs and Firfir.
+5. **Dish slideshow:** Tibs Firfir, Kitfo, Special Kitfo, Tibs, Ful and Firfir.
    - Rotates every 5 seconds, pauses on hover or focus, and stops while the browser tab is hidden.
    - Has a Pause/Play button, arrows, dots, arrow-key control and phone swipe.
    - Doesn't auto-rotate for reduced-motion users.
@@ -167,6 +167,7 @@ The `img/` folder also retains unused generated explorations (`ethiopian-coffee-
 | Shiro on Menu and Gallery | "Taita and shiro", Temesgen Woldezion (ed. Merhawie W) | CC BY-SA 2.5 |
 | Ginger Ale | "Ginger ale", Hisakazu Watanabe | CC BY-SA 2.0 |
 | Ful | "Ful Mudammas", Tarboosh | CC0 |
+| Ful (homepage slideshow) | ["qwaider al nabulsi foul medames"](https://commons.wikimedia.org/wiki/File:Qwaider_al_nabulsi_foul_medames_(11389639565).jpg), Krista; cropped (`ful-bowl-*`) | CC BY 2.0 |
 | Firfir (slideshow, Gallery, menu) | ["Firfir"](https://www.flickr.com/photos/63669472@N00/2321878522), eekim on Flickr; cropped (`firfir-eekim-*`) | CC BY 2.0 |
 | Misir Wot | "Misir Wot and Gomen Besiga", Andy Li | CC0 |
 | Coke | "Coca-Cola glass bottle (Germany)", Ralf Roletschek | Public domain |
