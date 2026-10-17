@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photo Gallery | Rehoboth Cafe Toronto</title>
+<meta name="description" content="Photos of Ethiopian dishes from the Rehoboth Cafe menu, coffee and the cafe at 2737 Danforth Avenue, Toronto.">
+<meta name="theme-color" content="#9e1b1f">
+<!-- PREVIEW: remove this robots tag at launch -->
+<meta name="robots" content="noindex, nofollow">
+
+<!-- PRODUCTION URLS: replace https://YOUR-DOMAIN/ once the final domain is confirmed -->
+<link rel="canonical" href="https://YOUR-DOMAIN/gallery.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_CA">
+<meta property="og:site_name" content="Rehoboth Cafe">
+<meta property="og:title" content="Photo Gallery | Rehoboth Cafe Toronto">
+<meta property="og:description" content="Ethiopian dishes, coffee and Rehoboth Cafe on Danforth Avenue.">
+<meta property="og:url" content="https://YOUR-DOMAIN/gallery.html">
+<meta property="og:image" content="https://YOUR-DOMAIN/img/rehoboth-cafe-storefront-danforth-ave.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%239e1b1f'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial' font-weight='900' font-size='20' text-anchor='middle' fill='%23f2b705'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Libre+Caslon+Text:wght@700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="leaf-sprig" viewBox="0 0 200 260">
+    <path d="M100 255 C98 190 96 120 104 10" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M101 200 C70 190 45 165 38 132 C70 138 92 160 101 200Z M101 200 C132 190 157 165 164 132 C132 138 110 160 101 200Z"/>
+    <path d="M100 145 C72 135 52 110 48 80 C76 86 95 108 100 145Z M101 145 C129 135 149 110 153 80 C125 86 106 108 101 145Z"/>
+    <path d="M102 92 C80 82 66 60 64 36 C86 42 100 62 102 92Z M102 92 C124 82 138 60 140 36 C118 42 104 62 102 92Z"/>
+  </symbol>
+</svg>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo" aria-label="Rehoboth Cafe home">
+      <span class="logo-word" aria-hidden="true">REHOBOTH</span>
+      <span class="logo-bar" aria-hidden="true"><span>CAFE</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+      <span class="visually-hidden">Menu</span>
+      <span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="visit.html">Visit &amp; Contact</a>
+      <a href="order.html" class="nav-order-link">Order Online</a>
+    </nav>
+    <a href="order.html" class="btn btn-solid nav-cta">Order Online</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <svg class="leaf leaf-hero" aria-hidden="true" focusable="false"><use href="#leaf-sprig"/></svg>
+    <div class="container">
+      <p class="eyebrow eyebrow-ornate">Gallery</p>
+      <h1>Photo gallery</h1>
+      <p class="page-hero-text">Ethiopian dishes from our menu, coffee and our corner of Danforth Avenue.</p>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <div class="g-filters" role="group" aria-label="Filter photos">
+        <button type="button" class="filter-btn" data-g="all" aria-pressed="true">All</button>
+        <button type="button" class="filter-btn" data-g="food" aria-pressed="false">Food</button>
+        <button type="button" class="filter-btn" data-g="coffee" aria-pressed="false">Coffee</button>
+        <button type="button" class="filter-btn" data-g="cafe" aria-pressed="false">The cafe</button>
+      </div>
+      <!-- PREVIEW: illustration and placeholder photos. Replace with Rehoboth Cafe's own photos (food, interior, storefront) before launch. -->
+      <ul class="g-grid">
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Tibs Firfir">
+            <img src="img/slide-tibs-firfir-640.webp" srcset="img/slide-tibs-firfir-640.webp 640w, img/slide-tibs-firfir-1200.webp 1200w" sizes="(max-width: 680px) 50vw, 33vw" width="1200" height="675" alt="Tibs Firfir with torn injera, green peppers and herbs" loading="lazy" decoding="async" data-full="img/slide-tibs-firfir-1200.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Tibs Firfir</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Kitfo">
+            <img src="img/slide-kitfo-640.webp" srcset="img/slide-kitfo-640.webp 640w, img/slide-kitfo-1200.webp 1200w" sizes="(max-width: 680px) 50vw, 33vw" width="1200" height="675" alt="Kitfo: finely minced seasoned beef in a pan, served with injera" loading="lazy" decoding="async" data-full="img/slide-kitfo-1200.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Kitfo</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Special Kitfo">
+            <img src="img/slide-special-kitfo-640.webp" srcset="img/slide-special-kitfo-640.webp 640w, img/slide-special-kitfo-1200.webp 1200w" sizes="(max-width: 680px) 50vw, 33vw" width="1200" height="675" alt="Special Kitfo with ayib and gomen in a black clay bowl" loading="lazy" decoding="async" data-full="img/slide-special-kitfo-1200.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Special Kitfo</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Tibs">
+            <img src="img/slide-tibs-640.webp" srcset="img/slide-tibs-640.webp 640w, img/slide-tibs-1200.webp 1200w" sizes="(max-width: 680px) 50vw, 33vw" width="1200" height="675" alt="Tibs: sauteed meat with green peppers and rosemary in a clay pot" loading="lazy" decoding="async" data-full="img/slide-tibs-1200.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Tibs</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Ful">
+            <img src="img/slide-ful-640.webp" srcset="img/slide-ful-640.webp 640w, img/slide-ful-1200.webp 1200w" sizes="(max-width: 680px) 50vw, 33vw" width="1200" height="675" alt="Ful: mashed fava beans garnished with fresh mint" loading="lazy" decoding="async" data-full="img/slide-ful-1200.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Ful</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Firfir">
+            <img src="img/slide-firfir-640.webp" srcset="img/slide-firfir-640.webp 640w, img/slide-firfir-1200.webp 1200w" sizes="(max-width: 680px) 50vw, 33vw" width="1200" height="675" alt="Firfir: shredded injera in berbere sauce, topped with injera" loading="lazy" decoding="async" data-full="img/slide-firfir-1200.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Firfir</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Chechebsa">
+            <img src="img/chechebsa-400.webp" srcset="img/chechebsa-400.webp 400w, img/chechebsa-800.webp 800w" sizes="(max-width: 680px) 50vw, 33vw" width="800" height="600" alt="Chechebsa: crisp pieces of flatbread tossed in spiced butter" loading="lazy" decoding="async" data-full="img/chechebsa-800.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Chechebsa</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Genfo">
+            <img src="img/genfo-porridge-spoons-400.webp" srcset="img/genfo-porridge-spoons-400.webp 400w, img/genfo-porridge-spoons-800.webp 800w" sizes="(max-width: 680px) 50vw, 33vw" width="800" height="600" alt="Genfo porridge with a well of spiced butter, ringed by spoons" loading="lazy" decoding="async" data-full="img/genfo-porridge-spoons-800.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Genfo</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Shiro">
+            <img src="img/shiro-chickpea-stew-injera-400.webp" srcset="img/shiro-chickpea-stew-injera-400.webp 400w, img/shiro-chickpea-stew-injera-800.webp 800w" sizes="(max-width: 680px) 50vw, 33vw" width="800" height="600" alt="Shiro chickpea stew on injera with a fresh salad" loading="lazy" decoding="async" data-full="img/shiro-chickpea-stew-injera-800.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Shiro</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Kitfo">
+            <img src="img/bula-kitfo-bowl-400.webp" srcset="img/bula-kitfo-bowl-400.webp 400w, img/bula-kitfo-bowl-800.webp 800w" sizes="(max-width: 680px) 50vw, 33vw" width="800" height="600" alt="A black clay bowl of kitfo" loading="lazy" decoding="async" data-full="img/bula-kitfo-bowl-800.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Kitfo</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Kitfo, gomen &amp; ayib">
+            <img src="img/kitfo-gomen-ayib-spread-400.webp" srcset="img/kitfo-gomen-ayib-spread-400.webp 400w, img/kitfo-gomen-ayib-spread-800.webp 800w" sizes="(max-width: 680px) 50vw, 33vw" width="800" height="600" alt="A spread of kitfo, gomen and ayib in clay bowls" loading="lazy" decoding="async" data-full="img/kitfo-gomen-ayib-spread-800.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Kitfo, gomen &amp; ayib</span></p>
+        </li>
+        <li class="g-item" data-cat="food">
+          <button type="button" class="g-open" aria-label="View larger: Waffle">
+            <img src="img/waffle-fruit-cream-400.webp" srcset="img/waffle-fruit-cream-400.webp 400w, img/waffle-fruit-cream-800.webp 800w" sizes="(max-width: 680px) 50vw, 33vw" width="800" height="600" alt="Waffle topped with fresh fruit and cream" loading="lazy" decoding="async" data-full="img/waffle-fruit-cream-800.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Food</span><span class="g-name">Waffle</span></p>
+        </li>
+        <li class="g-item" data-cat="coffee">
+          <button type="button" class="g-open" aria-label="View larger: Cappuccino">
+            <img src="img/cappuccino-ethiopian-cup.webp" width="606" height="370" alt="Cappuccino dusted with cocoa in a traditional Ethiopian cup" loading="lazy" decoding="async" data-full="img/cappuccino-ethiopian-cup.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Coffee</span><span class="g-name">Cappuccino</span></p>
+        </li>
+        <li class="g-item" data-cat="coffee">
+          <button type="button" class="g-open" aria-label="View larger: Coffee from the jebena">
+            <img src="img/ethiopian-coffee-jebena-pour.webp" width="1090" height="462" alt="Coffee poured from a clay jebena into small traditional cups" loading="lazy" decoding="async" data-full="img/ethiopian-coffee-jebena-pour.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Coffee</span><span class="g-name">Coffee from the jebena</span></p>
+        </li>
+        <li class="g-item" data-cat="cafe">
+          <button type="button" class="g-open" aria-label="View larger: Our storefront on Danforth">
+            <img src="img/rehoboth-cafe-storefront-danforth-ave.webp" width="1094" height="476" alt="Rehoboth Cafe storefront on Danforth Avenue with its red and yellow sign" loading="lazy" decoding="async" data-full="img/rehoboth-cafe-storefront-danforth-ave.webp">
+          </button>
+          <p class="g-cap"><span class="g-tag">Cafe</span><span class="g-name">Our storefront on Danforth</span></p>
+        </li>
+      </ul>
+      <p class="g-note">Photos are for illustration until we add our own. Interior photos coming soon.</p>
+      <details class="photo-credits" id="photo-credits">
+        <summary>Photo credits</summary>
+        <ul>
+          <li>Kitfo: &ldquo;Kitfo, Ayib and Injera&rdquo; by Lelaw Wondimu; Special Kitfo: &ldquo;Kitfo, gomen and aybe&rdquo; by Arsupeee; Tibs: &ldquo;Siga Tibs&rdquo; by Khajitdadddy; Chechebsa: &ldquo;Chipchipsa Ethiopian dish 2014&rdquo; by Neftalem; kitfo bowl and spread: &ldquo;Ethiopia traditional food&rdquo; and &ldquo;Ethiopia most popular food&rdquo; by Yjohny. All Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, cropped.</li>
+          <li>Genfo: &ldquo;Ga'at food&rdquo; by Stefan Alfons Tzeggai; Waffle: &ldquo;Belgian waffle with fruitsalad and cream&rdquo; by Prashanthns. Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, cropped.</li>
+          <li>Shiro: &ldquo;Taita and shiro&rdquo; by Temesgen Woldezion, edited by Merhawie W. Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank" rel="noopener">CC BY-SA 2.5</a>, cropped.</li>
+          <li>Firfir: &ldquo;Firfir&rdquo; by eekim, <a href="https://www.flickr.com/photos/63669472@N00/2321878522" target="_blank" rel="noopener">Flickr</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>, cropped.</li>
+          <li>Ful: &ldquo;Ful Mudammas&rdquo; by Tarboosh, Wikimedia Commons, public domain (CC0).</li>
+          <li>Tibs Firfir, Cappuccino, coffee pour and storefront: design placeholders until Rehoboth Cafe supplies its own photos.</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <figure>
+      <img id="lightbox-img" src="" alt="">
+      <figcaption id="lightbox-cap"></figcaption>
+    </figure>
+    <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Previous photo">&larr;</button>
+    <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Next photo">&rarr;</button>
+    <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="Close photo viewer">&times;</button>
+  </dialog>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <a href="index.html" class="logo logo-light" aria-label="Rehoboth Cafe home">
+      <span class="logo-word" aria-hidden="true">REHOBOTH</span>
+      <span class="logo-bar" aria-hidden="true"><span>CAFE</span></span>
+    </a>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="visit.html">Visit &amp; Contact</a>
+      <a href="order.html">Order Online</a>
+    </nav>
+    <p class="tagline">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><ellipse cx="12" cy="12" rx="7" ry="10" transform="rotate(30 12 12)" fill="#e0a43a"/><path d="M8 20c4-4 4-12 8-16" stroke="#9e1b1f" stroke-width="1.6" fill="none"/></svg>
+      Good food. Brighter days.
+    </p>
+  </div>
+  <div class="container footer-base">
+    <address>2737 Danforth Ave, Toronto, ON M4C 1L8 &middot; <a href="tel:+14166861104">(416) 686-1104</a></address>
+    <p>Mon&ndash;Sat 9 a.m.&ndash;8 p.m. &middot; Sun 10 a.m.&ndash;7 p.m.</p>
+    <p>&copy; <span id="year">2026</span> Rehoboth Cafe</p>
+  </div>
+</footer>
+</body>
+</html>
