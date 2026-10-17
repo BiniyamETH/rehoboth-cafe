@@ -173,7 +173,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
   .cards .card, .cards .card:nth-child(4):nth-last-child(2) { grid-column: auto; }
   .cards .card:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 12px); justify-self: center; }
   .story { grid-template-columns: 1fr; }
-  .story-img img { aspect-ratio: 1090 / 462; min-height: 0; }
+  .story-img img { aspect-ratio: 3 / 2; min-height: 0; }
   .story-text { width: min(1180px, 100% - 32px); margin-inline: auto; padding: 36px 0; }
   .story-text h2 { max-width: none; }
   .visit-grid { grid-template-columns: 1fr; gap: 28px; }

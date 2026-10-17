@@ -152,6 +152,7 @@ The `img/` folder also retains unused generated explorations (`ethiopian-coffee-
 - `slide-tibs-firfir-*` and `tibs-firfir-injera-thumb`
 - Firfir (slideshow, Gallery, menu): `firfir-rehoboth-*`, illustration supplied by the site owner
 - Ful (menu preview card, slideshow, Gallery, menu): `ful-rehoboth-*`, illustration supplied by the site owner
+- Cafe interior (homepage "Our Story" and Gallery): `rehoboth-cafe-interior*`, image supplied by the site owner
 
 **Openly licensed photos**, shown for illustration and credited on each page:
 
