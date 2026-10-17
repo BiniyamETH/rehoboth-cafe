@@ -151,6 +151,7 @@ The `img/` folder also retains unused generated explorations (`ethiopian-coffee-
 - Coffee pour
 - `slide-tibs-firfir-*` and `tibs-firfir-injera-thumb`
 - Firfir (slideshow, Gallery, menu): `firfir-rehoboth-*`, illustration supplied by the site owner
+- Ful (menu preview card, slideshow, Gallery, menu): `ful-rehoboth-*`, illustration supplied by the site owner
 
 **Openly licensed photos**, shown for illustration and credited on each page:
 
@@ -167,8 +168,6 @@ The `img/` folder also retains unused generated explorations (`ethiopian-coffee-
 | Waffle | "Belgian waffle with fruitsalad and cream", Prashanthns | CC BY-SA 3.0 |
 | Shiro on Menu and Gallery | "Taita and shiro", Temesgen Woldezion (ed. Merhawie W) | CC BY-SA 2.5 |
 | Ginger Ale | "Ginger ale", Hisakazu Watanabe | CC BY-SA 2.0 |
-| Ful | "Ful Mudammas", Tarboosh | CC0 |
-| Ful (homepage slideshow) | ["qwaider al nabulsi foul medames"](https://commons.wikimedia.org/wiki/File:Qwaider_al_nabulsi_foul_medames_(11389639565).jpg), Krista; cropped (`ful-bowl-*`) | CC BY 2.0 |
 | Misir Wot | "Misir Wot and Gomen Besiga", Andy Li | CC0 |
 | Coke | "Coca-Cola glass bottle (Germany)", Ralf Roletschek | Public domain |
 | Water | "Glass of water outside", Kurt Kaiser | CC0 |
