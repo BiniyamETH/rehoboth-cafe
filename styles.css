@@ -1030,3 +1030,13 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 @media (min-width: 680.02px) and (max-width: 720px) {
   .main-nav { gap: .7rem; }
 }
+
+/* ================= Amharic names (menu + homepage cards) ================= */
+.am {
+  font-family: "Noto Sans Ethiopic", "Nyala", "Ebrima", "Kefa", var(--sans);
+  font-weight: 600; font-size: .78em; letter-spacing: 0; color: var(--gold-dark);
+  margin-left: .35em; white-space: nowrap;
+}
+.menu-category h2 .am { font-size: .62em; font-weight: 500; margin-left: .5em; vertical-align: .08em; }
+.card h3 .am { display: block; margin: 2px 0 0; font-size: .62em; font-weight: 500; }
+.home-page .menu-preview .card h3 .am { color: var(--gold-pale); }

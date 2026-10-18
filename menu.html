@@ -23,7 +23,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101514'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial' font-weight='900' font-size='20' text-anchor='middle' fill='%23d9ad68'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Libre+Caslon+Text:wght@700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Libre+Caslon+Text:wght@700&family=Outfit:wght@300;400;500&family=Noto+Sans+Ethiopic:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <!-- Menu details for Google. Built from the items below; update prices here when the menu changes. -->
 <script type="application/ld+json">
@@ -41,6 +41,7 @@
         {
           "@type": "MenuItem",
           "name": "Tibs Firfir",
+          "alternateName": "ጥብስ ፍርፍር",
           "offers": {
             "@type": "Offer",
             "price": "17.99",
@@ -51,6 +52,7 @@
         {
           "@type": "MenuItem",
           "name": "Ful",
+          "alternateName": "ፉል",
           "offers": {
             "@type": "Offer",
             "price": "14.99",
@@ -61,6 +63,7 @@
         {
           "@type": "MenuItem",
           "name": "Chechebsa",
+          "alternateName": "ጨጨብሳ",
           "offers": {
             "@type": "Offer",
             "price": "15.99",
@@ -71,6 +74,7 @@
         {
           "@type": "MenuItem",
           "name": "Firfir",
+          "alternateName": "ፍርፍር",
           "offers": {
             "@type": "Offer",
             "price": "15.99",
@@ -81,6 +85,7 @@
         {
           "@type": "MenuItem",
           "name": "Genfo",
+          "alternateName": "ገንፎ",
           "offers": {
             "@type": "Offer",
             "price": "17.99",
@@ -91,6 +96,7 @@
         {
           "@type": "MenuItem",
           "name": "Bula",
+          "alternateName": "ቡላ",
           "offers": {
             "@type": "Offer",
             "price": "16.99",
@@ -101,6 +107,7 @@
         {
           "@type": "MenuItem",
           "name": "Waffle",
+          "alternateName": "ዋፍል",
           "offers": {
             "@type": "Offer",
             "price": "9.99",
@@ -108,7 +115,8 @@
           },
           "description": "Crisp, golden waffles with your choice of toppings: mango, banana or blueberry."
         }
-      ]
+      ],
+      "alternateName": "ቁርስ"
     },
     {
       "@type": "MenuSection",
@@ -117,6 +125,7 @@
         {
           "@type": "MenuItem",
           "name": "Shiro",
+          "alternateName": "ሽሮ",
           "offers": {
             "@type": "Offer",
             "price": "16.99",
@@ -128,6 +137,7 @@
         {
           "@type": "MenuItem",
           "name": "Tibs",
+          "alternateName": "ጥብስ",
           "offers": {
             "@type": "Offer",
             "price": "23.49",
@@ -138,6 +148,7 @@
         {
           "@type": "MenuItem",
           "name": "Misir Wot / Adess",
+          "alternateName": "ምስር ወጥ",
           "offers": {
             "@type": "Offer",
             "price": "16.99",
@@ -149,6 +160,7 @@
         {
           "@type": "MenuItem",
           "name": "Kitfo",
+          "alternateName": "ክትፎ",
           "offers": {
             "@type": "Offer",
             "price": "24.99",
@@ -159,6 +171,7 @@
         {
           "@type": "MenuItem",
           "name": "Special Kitfo",
+          "alternateName": "ልዩ ክትፎ",
           "offers": {
             "@type": "Offer",
             "price": "27.99",
@@ -169,6 +182,7 @@
         {
           "@type": "MenuItem",
           "name": "Bula Kitfo",
+          "alternateName": "ቡላ ክትፎ",
           "offers": {
             "@type": "Offer",
             "price": "27.99",
@@ -186,7 +200,8 @@
           },
           "description": "A meal for three, including tibs, firfir and kitfo. A delightful and diverse tasting experience for sharing."
         }
-      ]
+      ],
+      "alternateName": "ምሳ እና እራት"
     },
     {
       "@type": "MenuSection",
@@ -232,13 +247,15 @@
         {
           "@type": "MenuItem",
           "name": "Water",
+          "alternateName": "ውሃ",
           "offers": {
             "@type": "Offer",
             "price": "1.99",
             "priceCurrency": "CAD"
           }
         }
-      ]
+      ],
+      "alternateName": "መጠጦች"
     }
   ]
 }
@@ -326,79 +343,79 @@
     <p class="menu-status" id="menu-status" role="status" aria-live="polite"></p>
 
     <section class="menu-category" id="breakfast" data-category="breakfast" aria-labelledby="cat-breakfast">
-      <h2 id="cat-breakfast">Breakfast</h2>
+      <h2 id="cat-breakfast">Breakfast <span class="am" lang="am">ቁርስ</span></h2>
       <ul class="menu-list">
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/tibs-firfir-injera-thumb.webp" width="240" height="240" alt="Tibs Firfir with injera and green peppers" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Tibs Firfir</h3><span class="leader" aria-hidden="true"></span><span class="price">$17.99</span></div>
+          <div class="item-head"><h3>Tibs Firfir <span class="am" lang="am">ጥብስ ፍርፍር</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$17.99</span></div>
           <p>A delightful combination of tender tibs meat and firfir, creating a savoury and satisfying meal.</p>
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/ful-rehoboth-thumb.webp" width="240" height="240" alt="Ful: seasoned fava beans with chopped tomato, spring onion and soft-boiled eggs in a dark bowl, with bread" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Ful</h3><span class="leader" aria-hidden="true"></span><span class="price">$14.99</span></div>
+          <div class="item-head"><h3>Ful <span class="am" lang="am">ፉል</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$14.99</span></div>
           <p>A savoury and filling dish made from fava beans, seasoned with spices, and often garnished with fresh vegetables and egg (boiled or scrambled) and some kibe, olive oil or sesame oil.</p>
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/chechebsa-thumb.webp" width="240" height="240" alt="Chechebsa: crisp pieces of flatbread tossed in spiced butter" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Chechebsa</h3><span class="leader" aria-hidden="true"></span><span class="price">$15.99</span></div>
+          <div class="item-head"><h3>Chechebsa <span class="am" lang="am">ጨጨብሳ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$15.99</span></div>
           <p>Small, bite-sized pieces of flatbread sautéed with spices and butter or oil. Made with whole wheat or white wheat, prepared with olive oil or kibe (clarified butter).</p>
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/firfir-rehoboth-thumb.webp" width="240" height="240" alt="Firfir: shredded injera in berbere sauce with boiled eggs and green peppers in a black clay bowl" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Firfir</h3><span class="leader" aria-hidden="true"></span><span class="price">$15.99</span></div>
+          <div class="item-head"><h3>Firfir <span class="am" lang="am">ፍርፍር</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$15.99</span></div>
           <p>A spicy and tangy dish made from shredded injera (Ethiopian flatbread) mixed with a rich berbere sauce.</p>
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/genfo-porridge-spoons-thumb.webp" width="240" height="240" alt="Genfo porridge with a well of spiced butter, ringed by spoons" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Genfo</h3><span class="leader" aria-hidden="true"></span><span class="price">$17.99</span></div>
+          <div class="item-head"><h3>Genfo <span class="am" lang="am">ገንፎ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$17.99</span></div>
           <p>A hearty and nutritious porridge for a comforting start to your day. Made with whole wheat or white wheat, prepared with olive oil or kibe (clarified butter).</p>
         </li>
         <li class="menu-item has-photo no-photo">
           <span class="item-thumb item-thumb-icon" aria-hidden="true"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M8 22h32a16 16 0 0 1-32 0Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M14 38h20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M18 16c0-3 3-3 3-6M25 16c0-3 3-3 3-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-          <div class="item-head"><h3>Bula</h3><span class="leader" aria-hidden="true"></span><span class="price">$16.99</span></div>
+          <div class="item-head"><h3>Bula <span class="am" lang="am">ቡላ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$16.99</span></div>
           <p>A traditional Ethiopian breakfast made from the starch of the enset plant, with a unique and wholesome flavour.</p>
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/waffle-fruit-cream-thumb.webp" width="240" height="240" alt="Waffle topped with fresh fruit and cream" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Waffle</h3><span class="leader" aria-hidden="true"></span><span class="price">$9.99</span></div>
+          <div class="item-head"><h3>Waffle <span class="am" lang="am">ዋፍል</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$9.99</span></div>
           <p>Crisp, golden waffles with your choice of toppings: mango, banana or blueberry.</p>
         </li>
       </ul>
     </section>
 
     <section class="menu-category" id="lunch-dinner" data-category="lunch-dinner" aria-labelledby="cat-lunch">
-      <h2 id="cat-lunch">Lunch &amp; Dinner</h2>
+      <h2 id="cat-lunch">Lunch &amp; Dinner <span class="am" lang="am">ምሳ እና እራት</span></h2>
       <ul class="menu-list">
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/shiro-chickpea-stew-injera-thumb.webp" width="240" height="240" alt="Shiro chickpea stew on injera with a fresh salad" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Shiro</h3><span class="leader" aria-hidden="true"></span><span class="price">$16.99</span></div>
+          <div class="item-head"><h3>Shiro <span class="am" lang="am">ሽሮ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$16.99</span></div>
           <p>A rich and creamy chickpea stew, slow-cooked with a blend of spices. Often enjoyed with injera.</p>
           <ul class="tags"><li>Vegetarian</li></ul>
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/tibs-clay-pot-injera-thumb.webp" width="240" height="240" alt="Tibs: sautéed beef with rosemary in a clay pot, with rolled injera" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Tibs</h3><span class="leader" aria-hidden="true"></span><span class="price">$23.49</span></div>
+          <div class="item-head"><h3>Tibs <span class="am" lang="am">ጥብስ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$23.49</span></div>
           <p>A traditional Ethiopian stir-fry of tender beef, lamb or goat, sautéed with onions, peppers and an aromatic blend of Ethiopian spices. Served with injera.</p>
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/misir-wot-lentils-gomen-injera-thumb.webp" width="240" height="240" alt="Misir Wot lentil stew on injera" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Misir Wot / Adess</h3><span class="leader" aria-hidden="true"></span><span class="price">$16.99</span></div>
+          <div class="item-head"><h3>Misir Wot / Adess <span class="am" lang="am">ምስር ወጥ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$16.99</span></div>
           <p>A hearty lentil stew slow-cooked with a blend of spices and herbs. Served with injera.</p>
           <ul class="tags"><li>Vegetarian</li></ul>
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/kitfo-ayib-platter-thumb.webp" width="240" height="240" alt="Kitfo in a clay bowl with ayib and injera" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Kitfo</h3><span class="leader" aria-hidden="true"></span><span class="price">$24.99</span></div>
+          <div class="item-head"><h3>Kitfo <span class="am" lang="am">ክትፎ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$24.99</span></div>
           <p>Finely minced raw beef seasoned with mitmita (a spicy chili powder) and niter kibbeh (clarified butter). Served with injera or kocho.</p>
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/special-kitfo-ayib-gomen-thumb.webp" width="240" height="240" alt="Special Kitfo with ayib and gomen in a bowl" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Special Kitfo</h3><span class="leader" aria-hidden="true"></span><span class="price">$27.99</span></div>
+          <div class="item-head"><h3>Special Kitfo <span class="am" lang="am">ልዩ ክትፎ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$27.99</span></div>
           <p>Kitfo mixed with ayib (cottage cheese) and gomen (kale).</p>
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/bula-kitfo-bowl-thumb.webp" width="240" height="240" alt="A black clay bowl of kitfo" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Bula Kitfo</h3><span class="leader" aria-hidden="true"></span><span class="price">$27.99</span></div>
+          <div class="item-head"><h3>Bula Kitfo <span class="am" lang="am">ቡላ ክትፎ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$27.99</span></div>
           <p>An enhanced version of the classic kitfo, served with bula for an extra layer of flavour and texture.</p>
         </li>
         <li class="menu-item has-photo menu-item-feature">
@@ -411,7 +428,7 @@
     </section>
 
     <section class="menu-category" id="drinks" data-category="drinks" aria-labelledby="cat-drinks">
-      <h2 id="cat-drinks">Drinks</h2>
+      <h2 id="cat-drinks">Drinks <span class="am" lang="am">መጠጦች</span></h2>
       <ul class="menu-list menu-list-compact">
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/ginger-ale-glass-thumb.webp" width="240" height="240" alt="A glass of ginger ale" loading="lazy" decoding="async">
@@ -432,7 +449,7 @@
         </li>
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/glass-of-water-thumb.webp" width="240" height="240" alt="A glass of water" loading="lazy" decoding="async">
-          <div class="item-head"><h3>Water</h3><span class="leader" aria-hidden="true"></span><span class="price">$1.99</span></div>
+          <div class="item-head"><h3>Water <span class="am" lang="am">ውሃ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$1.99</span></div>
         </li>
       </ul>
       <p class="menu-aside">Coffee and other hot drinks are served in the cafe. Please ask our team for today&rsquo;s selection and prices.</p>
