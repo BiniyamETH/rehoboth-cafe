@@ -861,3 +861,41 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
   .ribbon { font-size: .78rem; }
   .g-tag, .today-tag, .open-badge { font-size: .75rem; }
 }
+
+/* ================= FAQ with help card (home) ================= */
+.faq-inner { max-width: 1080px; }
+.faq-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 32px; align-items: start; margin-top: 28px; }
+.faq-layout .faq-list { margin-top: 0; }
+.faq-help { position: sticky; top: calc(var(--header-h) + 20px); background: var(--cream-2); border-radius: 14px; overflow: hidden; border-top: 3px solid var(--gold); box-shadow: 0 4px 14px rgba(var(--shadow-rgb), .08); }
+.faq-help img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.faq-help-body { padding: 20px 22px 24px; }
+.faq-help h3 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 1.3rem; margin-bottom: 4px; }
+.faq-help p { font-weight: 300; line-height: 1.5; color: var(--text-soft); }
+.faq-help-phone { display: inline-block; margin: 10px 0 12px; padding: 4px 0; font-family: var(--serif); font-weight: 700; font-size: 1.35rem; color: var(--red); }
+.faq-help-phone:hover { text-decoration: underline; text-underline-offset: 4px; }
+.faq-help-hours { display: grid; gap: 4px; padding: 10px 0; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }
+.faq-help-hours div { display: flex; justify-content: space-between; gap: 12px; }
+.faq-help-hours dt { color: var(--text-soft); }
+.faq-help-hours dd { font-weight: 500; font-variant-numeric: tabular-nums; }
+.faq-help-address { margin: 12px 0 16px; }
+.faq-help .btn { width: 100%; }
+@media (max-width: 960px) {
+  .faq-layout { grid-template-columns: 1fr; }
+  .faq-help { position: static; max-width: 520px; width: 100%; margin-inline: auto; }
+}
+
+/* ================= Gallery: Instagram tile ================= */
+.g-more-link {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center;
+  aspect-ratio: 4 / 3; padding: 16px; border-radius: 10px; background: var(--red); color: var(--white);
+  transition: background-color .2s;
+}
+.g-more-link:hover { background: var(--red-dark); }
+.g-more-link:focus-visible { outline-offset: 3px; }
+.g-more-title { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; line-height: 1.25; }
+.g-more-handle { font-size: .9rem; color: var(--peach); }
+@media (max-width: 680px) {
+  .g-more-title { font-size: 1rem; }
+  .g-more-handle { display: none; }
+  .g-more-link svg { width: 30px; height: 30px; }
+}
