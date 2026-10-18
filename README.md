@@ -52,9 +52,10 @@ Every page shares the same header and footer:
    - Includes the View Menu and Get Directions buttons and the Google rating line.
    - The photo fills the background on desktop and phone. A lighter desktop overlay shows its warm colours while keeping text readable; the phone overlay darkens behind the copy.
 2. **Highlights:** guest rating, seven-day hours, vegetarian options and dine-in/takeout information on a dark feature strip.
-3. **Menu preview:** Cappuccino, Tibs Firfir, Ful, Shiro and Kitfo cards on a cream section.
+3. **Menu preview:** Cappuccino, Tibs Firfir, Ful, Shiro and Kitfo cards on a cream section; each card links to the matching menu item and price.
 4. **Rehoboth Special and Our Story:** a featured dish and a short story linking to About.
 5. **Dish slideshow:** Tibs Firfir, Kitfo, Special Kitfo, Tibs, Ful and Firfir.
+   - Each dish link opens its matching item and price on the menu.
    - Rotates every 5 seconds, pauses on hover or focus, and stops while the browser tab is hidden.
    - Has a Pause/Play button, arrows, dots, arrow-key control and phone swipe.
    - Doesn't auto-rotate for reduced-motion users.
