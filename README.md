@@ -47,7 +47,7 @@ Every page shares the same header and footer:
 - Refinements: faint gold leaf watermarks, gold lines beside section labels, generous spacing, gentle fade-ins and hover zooms.
 
 ### Homepage
-1. **Hero:** one H1, "Ethiopian Cafe on Danforth Avenue, Toronto", with "Big flavours. Warm welcomes." as a styled slogan and the supplied Ethiopian platter image.
+1. **Hero:** one H1, "Ethiopian Restaurant & Cafe on Danforth Avenue, Toronto", with "Real Ethiopian flavour. Real warm welcome." as a styled slogan and the supplied Ethiopian platter image.
    - Includes the View Menu and Get Directions buttons and the Google rating line.
    - On phones and tablets the photo moves below the text.
 2. **Ribbon:** Coffee • Breakfast • Ethiopian Favourites.

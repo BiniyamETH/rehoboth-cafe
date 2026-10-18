@@ -899,3 +899,10 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
   .g-more-handle { display: none; }
   .g-more-link svg { width: 30px; height: 30px; }
 }
+
+/* ================= Hero: keep text clear of the photo on desktop ================= */
+@media (min-width: 960.02px) {
+  .hero .slogan { max-width: 540px; }
+  .hero h1 { max-width: min(540px, 44vw); }
+  .hero .slogan { font-size: clamp(2.3rem, 3.6vw, 2.8rem); line-height: 1.08; }
+}
