@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Visit Rehoboth Cafe | 2737 Danforth Ave, Toronto</title>
-<meta name="description" content="Visit Rehoboth Cafe at 2737 Danforth Ave, Toronto, ON M4C 1L8. Opening hours, phone number, map and directions.">
+<title>Hours &amp; Directions | Rehoboth Cafe, 2737 Danforth Ave</title>
+<meta name="description" content="Rehoboth Cafe, 2737 Danforth Ave, Toronto, ON M4C 1L8, near Main Street Station. Open 7 days: Mon&ndash;Sat 9 a.m.&ndash;8 p.m., Sun 10 a.m.&ndash;7 p.m. Phone, map and directions.">
 <meta name="theme-color" content="#9e1b1f">
 <!-- PREVIEW: remove this robots tag at launch -->
 <meta name="robots" content="noindex, nofollow">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_CA">
 <meta property="og:site_name" content="Rehoboth Cafe">
-<meta property="og:title" content="Visit Rehoboth Cafe | 2737 Danforth Ave, Toronto">
+<meta property="og:title" content="Hours &amp; Directions | Rehoboth Cafe, 2737 Danforth Ave">
 <meta property="og:description" content="Address, hours, phone and directions for Rehoboth Cafe on Danforth Avenue.">
 <meta property="og:url" content="https://biniyameth.github.io/rehoboth-cafe/visit.html">
 <meta property="og:image" content="https://biniyameth.github.io/rehoboth-cafe/img/rehoboth-cafe-storefront.jpg">
@@ -25,6 +25,34 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Libre+Caslon+Text:wght@700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<!-- Business details for Google. Keep identical to the JSON-LD in index.html. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Rehoboth Cafe",
+  "url": "https://biniyameth.github.io/rehoboth-cafe/",
+  "image": "https://biniyameth.github.io/rehoboth-cafe/img/rehoboth-cafe-storefront.jpg",
+  "servesCuisine": ["Ethiopian", "Coffee"],
+  "sameAs": ["https://www.instagram.com/rehobothcafetoronto/", "https://www.facebook.com/rehobothcafetoronto"],
+  "telephone": "+1-416-686-1104",
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.6889002, "longitude": -79.2974896 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "09:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "19:00" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2737 Danforth Ave",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "postalCode": "M4C 1L8",
+    "addressCountry": "CA"
+  },
+  "hasMenu": "https://biniyameth.github.io/rehoboth-cafe/menu.html",
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Rehoboth+Cafe+2737+Danforth+Ave+Toronto+ON+M4C+1L8"
+}
+</script>
 <script src="script.js" defer></script>
 </head>
 <body>
@@ -121,6 +149,17 @@
       </div>
     </div>
   </section>
+  <nav class="explore" aria-labelledby="explore-title">
+    <div class="container">
+      <h2 class="explore-title" id="explore-title">Explore more</h2>
+      <ul class="explore-list">
+        <li><a class="explore-card" href="menu.html"><span class="explore-name">Our Menu <span class="arrow" aria-hidden="true">&rarr;</span></span><span class="explore-desc">Ethiopian breakfast, lunch, dinner and drinks, with prices.</span></a></li>
+        <li><a class="explore-card" href="about.html"><span class="explore-name">Our Story <span class="arrow" aria-hidden="true">&rarr;</span></span><span class="explore-desc">Your neighbourhood Ethiopian cafe on Danforth.</span></a></li>
+        <li><a class="explore-card" href="gallery.html"><span class="explore-name">Photo Gallery <span class="arrow" aria-hidden="true">&rarr;</span></span><span class="explore-desc">Dishes, coffee and the cafe itself.</span></a></li>
+        <li><a class="explore-card" href="order.html"><span class="explore-name">Order for Pickup <span class="arrow" aria-hidden="true">&rarr;</span></span><span class="explore-desc">Call ahead or order online.</span></a></li>
+      </ul>
+    </div>
+  </nav>
 </main>
 
 <footer class="site-footer">
