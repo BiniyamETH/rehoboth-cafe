@@ -691,7 +691,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .faq-list summary { cursor: pointer; list-style: none; padding: 18px 28px 18px 0; position: relative; font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 1.1rem; }
 .faq-list summary::-webkit-details-marker { display: none; }
 .faq-list summary::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-size: 1.5rem; font-weight: 300; color: var(--gold-text); }
-.faq-list details[open] summary::after { content: "\2212"; }
+.faq-list details[open] summary::after { content: "2"; }
 .faq-list details p { padding: 0 0 18px; line-height: 1.55; font-weight: 300; }
 @media (max-width: 680px) { .faq { padding: 52px 0 48px; } }
 .review-meta { font-weight: 300; color: var(--ink-soft); }
@@ -719,48 +719,3 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
   .lb-prev { left: 24px; }
   .lb-next { right: 24px; }
 }
-
-/* ================= Quick info bar (home) ================= */
-.quick-info { background: var(--cream-2); border-bottom: 1px solid #eadfcd; }
-.quick-info-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.qi-item { display: flex; align-items: center; gap: 14px; padding: 18px 20px; }
-.qi-item + .qi-item { border-left: 1px solid #e6d6bd; }
-.qi-item > svg { color: var(--red); flex-shrink: 0; }
-.qi-item a { display: block; }
-.qi-label { display: block; font-size: .78rem; text-transform: uppercase; letter-spacing: .2em; color: var(--gold-text); font-weight: 500; }
-.qi-label .open-badge { letter-spacing: 0; text-transform: none; margin-left: 4px; }
-.qi-value { display: block; font-family: var(--serif); font-weight: 700; color: var(--ink); font-size: 1.05rem; }
-.qi-item a:hover .qi-value { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
-@media (max-width: 960px) {
-  .quick-info-list { grid-template-columns: 1fr; max-width: 520px; }
-  .qi-item { padding: 14px 4px; }
-  .qi-item + .qi-item { border-left: 0; border-top: 1px solid #e6d6bd; }
-}
-
-/* ================= Follow along (home) ================= */
-.social { padding: 68px 0 40px; }
-.social-intro { font-weight: 300; font-size: 1.08rem; margin-top: .6rem; color: var(--ink-soft); }
-.social-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
-.social-grid a { display: block; border-radius: 10px; overflow: hidden; }
-.social-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform .5s ease, filter .3s; }
-.social-grid a:hover img { transform: scale(1.05); filter: saturate(1.1); }
-.social-actions { justify-content: center; margin-top: 28px; }
-@media (max-width: 680px) {
-  .social { padding: 52px 0 24px; }
-  .social-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (prefers-reduced-motion: reduce) { .social-grid a:hover img { transform: none; } }
-
-/* ================= Explore more (inner pages) ================= */
-.explore { padding: 48px 0 56px; border-top: 1px solid #eadfcd; }
-.explore-title { font-family: var(--serif); color: var(--red); font-size: 1.5rem; text-align: center; margin-bottom: 22px; }
-.explore-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-.explore-card { display: flex; flex-direction: column; gap: 4px; height: 100%; padding: 18px 20px; background: var(--cream-2); border-radius: 12px; border-top: 3px solid var(--gold); box-shadow: 0 4px 14px rgba(80,40,20,.06); transition: transform .2s, box-shadow .2s; }
-.explore-card:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(80,40,20,.12); }
-.explore-name { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 1.12rem; }
-.explore-name .arrow { display: inline-block; transition: transform .2s; }
-.explore-card:hover .explore-name .arrow { transform: translateX(3px); }
-.explore-desc { font-weight: 300; line-height: 1.45; color: var(--ink-soft); }
-@media (max-width: 960px) { .explore-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .explore-list { grid-template-columns: 1fr; } .explore { padding: 40px 0 44px; } }
-@media (prefers-reduced-motion: reduce) { .explore-card:hover, .explore-card:hover .explore-name .arrow { transform: none; } }
