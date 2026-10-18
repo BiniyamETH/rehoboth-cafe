@@ -42,6 +42,11 @@
   --open-bg: #e3f0d8;
   --open-text: #2f5418;
   --closed-bg: #f6dede;
+  /* Instagram brand colours: only the pink to blue part sits behind text (white text 5.1:1 or more) */
+  --ig-orange: #f58529;
+  --ig-pink: #c13584;
+  --ig-purple: #8134af;
+  --ig-blue: #515bd4;
 
   /* Channels for translucent colours: rgba(var(--x-rgb), alpha) */
   --shadow-rgb: 57, 36, 21;
@@ -1103,3 +1108,15 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
   .review-card { flex: 0 0 82%; scroll-snap-align: start; }
   .swipe-hint { display: block; text-align: center; font-size: .85rem; color: var(--text-soft); margin-top: 4px; }
 }
+
+/* Gallery: Instagram tile in Instagram colours */
+.g-more-link {
+  background: radial-gradient(circle at 0% 100%, var(--ig-orange) 0%, rgba(245, 133, 41, 0) 26%),
+              linear-gradient(135deg, var(--ig-pink) 0%, var(--ig-purple) 55%, var(--ig-blue) 100%);
+  box-shadow: 0 6px 18px rgba(var(--shadow-rgb), .18); transition: transform .2s, box-shadow .2s;
+}
+.g-more-link:hover { background: radial-gradient(circle at 0% 100%, var(--ig-orange) 0%, rgba(245, 133, 41, 0) 26%), linear-gradient(135deg, var(--ig-pink) 0%, var(--ig-purple) 55%, var(--ig-blue) 100%); transform: translateY(-3px); box-shadow: 0 12px 26px rgba(var(--shadow-rgb), .24); }
+.g-more-link svg { width: 52px; height: 52px; margin-bottom: 4px; }
+.g-more-handle { color: var(--white); opacity: .92; }
+@media (max-width: 680px) { .g-more-link svg { width: 34px; height: 34px; margin-bottom: 0; } }
+@media (prefers-reduced-motion: reduce) { .g-more-link:hover { transform: none; } }
