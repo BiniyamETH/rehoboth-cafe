@@ -955,7 +955,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .btn-solid:hover, .nav-cta:hover { background: var(--gold-hover); border-color: var(--gold-hover); }
 
 .home-page .hero { min-height: 590px; background: var(--coffee); }
-.home-page .hero-photo img { object-position: 54% center; }
+.home-page .hero-photo img { object-position: 58% center; }
 .home-page .hero::before {
   background: linear-gradient(90deg, rgba(var(--charcoal-rgb), .95) 0%, rgba(var(--charcoal-rgb), .84) 29%, rgba(var(--charcoal-rgb), .34) 58%, rgba(var(--charcoal-rgb), .1) 100%);
 }
@@ -989,7 +989,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 @media (min-width: 960.02px) {
   .home-page .hero .slogan { max-width: 660px; font-size: clamp(3.3rem, 4.7vw, 4.6rem); }
   .home-page .hero::before {
-    background: linear-gradient(90deg, rgba(var(--overlay-rgb), .78) 0%, rgba(var(--overlay-rgb), .64) 32%, rgba(var(--overlay-rgb), .2) 58%, rgba(var(--overlay-rgb), .02) 100%);
+    background: linear-gradient(90deg, rgba(var(--overlay-rgb), .9) 0%, rgba(var(--overlay-rgb), .78) 32%, rgba(var(--overlay-rgb), .28) 60%, rgba(var(--overlay-rgb), .02) 100%);
   }
 }
 
@@ -1000,7 +1000,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 }
 @media (max-width: 680px) {
   .home-page .hero { min-height: 675px; align-items: flex-end; }
-  .home-page .hero-photo img { object-position: 64% center; }
+  .home-page .hero-photo img { object-position: 74% center; }
   .home-page .hero::before {
     background: linear-gradient(180deg, rgba(var(--charcoal-rgb), .16) 0%, rgba(var(--charcoal-rgb), .24) 26%, rgba(var(--charcoal-rgb), .86) 48%, rgba(var(--charcoal-rgb), .98) 75%);
   }

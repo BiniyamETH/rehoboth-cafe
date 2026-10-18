@@ -32,7 +32,7 @@ Every page shares the same header and footer:
 | `styles.css` | All styles, shared by every page |
 | `script.js` | Mobile menu, fade-ins, homepage slideshow, gallery viewer, today's hours |
 | `menu.js` | Menu search and filters |
-| `img/` | Site images in WebP, JPG and PNG, including the generated homepage hero and retained drafts |
+| `img/` | Site images in WebP, JPG and PNG, including the supplied homepage hero and retained drafts |
 | `sitemap.xml` | All 6 page URLs (domain placeholder) |
 | `robots.txt` | Currently **blocks** all crawlers (preview mode) |
 | `owner-review/menu-approval-checklist.html` | Checklist for the owner. **Do not upload.** |
@@ -48,7 +48,7 @@ Every page shares the same header and footer:
 - Faint gold leaf watermarks, gold lines beside section labels, generous spacing, gentle fade-ins and hover zooms remain part of the design.
 
 ### Homepage
-1. **Hero:** one H1, "Ethiopian Restaurant & Cafe on Danforth Avenue, Toronto", with "From Ethiopia. With Love." as the styled slogan and a generated Ethiopian coffee ceremony image (`img/rehoboth-home-hero-v2.png`).
+1. **Hero:** one H1, "Ethiopian Restaurant & Cafe on Danforth Avenue, Toronto", with "From Ethiopia. With Love." as the styled slogan and the supplied cafe interior image (`img/rehoboth-home-interior-1536.webp`).
    - Includes the View Menu and Get Directions buttons and the Google rating line.
    - The photo fills the background on desktop and phone. A lighter desktop overlay shows its warm colours while keeping text readable; the phone overlay darkens behind the copy.
 2. **Highlights:** guest rating, seven-day hours, vegetarian options and dine-in/takeout information on a dark feature strip.
@@ -99,7 +99,7 @@ Every page shares the same header and footer:
 - **`prefers-reduced-motion`:** turns off smooth scrolling, fade-ins, zooms and slideshow auto-rotation.
 - **Images:**
   - every image has descriptive alt text and a set width and height, so nothing jumps while loading
-  - responsive `srcset` sizes for many larger photos; the generated homepage PNG is preloaded at its native size
+  - responsive `srcset` sizes for many larger photos; the homepage WebP is preloaded with responsive sizes
   - lazy loading below the hero
   - responsive sizes for the storefront, Gallery platter and Kitfo images
 - **Map:** the map on Visit & Contact loads lazily.
@@ -137,7 +137,7 @@ Content changed on purpose until the owner confirms it:
 
 | Asset | Where it appears | Files and treatment |
 |---|---|---|
-| Generated Ethiopian coffee ceremony | Homepage hero | `rehoboth-home-hero-v2.png` (1672×941); preloaded on the homepage and displayed behind the copy with separate desktop and phone overlays. It is an illustrative generated image, not a photograph taken at Rehoboth Cafe. |
+| User-supplied cafe interior image | Homepage hero | `rehoboth-home-interior-{700,1100,1536}.webp` (1536×1024 original); preloaded on the homepage and displayed behind the copy with separate desktop and phone overlays. Treat it as an illustrative image until the owner confirms it shows the cafe. |
 | Generated Ethiopian food platter draft | Retained but not displayed | `rehoboth-home-food-hero-v2.png` (1672×941); generated as an alternate homepage background before the coffee image was chosen. |
 | User-provided Ethiopian platter | Gallery | `ethiopian-platter-injera.jpg`, `ethiopian-platter-injera.webp` (1400×787) and `ethiopian-platter-injera-800.webp` (800×450); the gallery crop favours the food on the right. |
 | User-provided Rehoboth Cafe storefront | Home Visit Us, Visit & Contact, Gallery, and the Open Graph image on all six pages | `rehoboth-cafe-storefront.jpg`, `rehoboth-cafe-storefront.webp` (1600×684) and `rehoboth-cafe-storefront-800.webp` (800×342). The homepage business JSON-LD also points to the new JPG. |
@@ -146,13 +146,13 @@ Content changed on purpose until the owner confirms it:
 
 The five-card menu preview shows Cappuccino, Tibs Firfir, Ful, Shiro and Kitfo. Its CSS grid uses three columns on wide screens with the last two centred, two on tablets with the last card centred, and one on phones. The Kitfo photo also replaces the older Kitfo image in the slideshow, Gallery and menu; the Special Kitfo and Bula Kitfo photos are separate assets.
 
-The `img/` folder also retains unused generated explorations (`rehoboth-home-food-hero-v2`, `ethiopian-coffee-and-platter-generated`, `shiro-preview`, `shekla-shiro-preview` and `shekla-shiro-generated`) and older Kitfo, hero and storefront assets. These are not referenced by the current pages. Remove unused drafts when preparing a deployment package, after deciding which source files to keep.
+The `img/` folder also retains unused generated explorations (`rehoboth-home-hero-v2`, `rehoboth-home-food-hero-v2`, `ethiopian-coffee-and-platter-generated`, `shiro-preview`, `shekla-shiro-preview` and `shekla-shiro-generated`) and older Kitfo, hero and storefront assets. These are not referenced by the current pages. Remove unused drafts when preparing a deployment package, after deciding which source files to keep.
 
-**Checks completed for the current hero and palette:** inspected the generated hero images, checked image dimensions and homepage paths, verified that all six pages load the shared stylesheet and use the updated browser theme colour, checked representative text and button contrast, and ran `git diff --check`. A browser layout check was not run for the palette update.
+**Checks completed for the current hero and palette:** checked image dimensions and homepage paths, verified that all six pages load the shared stylesheet and use the updated browser theme colour, checked representative text and button contrast, and ran `git diff --check`.
 
 **Placeholders cut from the design mockup.** Replace these with the cafe's own photos:
 - Cappuccino, Tibs Firfir and Ful cards
-- Coffee pour on About and Gallery (the homepage uses the separate generated ceremony image)
+- Coffee pour on About and Gallery (the homepage uses the supplied interior image)
 - `slide-tibs-firfir-*` and `tibs-firfir-injera-thumb`
 - Firfir (slideshow, Gallery, menu): `firfir-rehoboth-*`, illustration supplied by the site owner
 - Ful (menu preview card, slideshow, Gallery, menu): `ful-rehoboth-*`, illustration supplied by the site owner
@@ -213,7 +213,7 @@ All listed photos are from Wikimedia Commons. Each was cropped and resized.
    - their story (optional)
    - email or social media accounts (optional)
 4. **Order link.** In `order.html`, replace the Google-listing button with the cafe's direct ordering link once it's known.
-5. **Real photos.** The homepage coffee ceremony image and alternate food hero are generated visuals, not photos from the cafe. Replace the hero if the owner wants only on-site photography. Confirm the supplied storefront and Gallery platter visuals represent the cafe; get current owner photos in landscape and daylight where needed:
+5. **Real photos.** The homepage interior image may be illustrative, and the alternate food hero is generated. Confirm whether the interior image, storefront and Gallery platter visuals represent the cafe; get current owner photos in landscape and daylight where needed:
    - the storefront and interior (the Gallery says the interior is "coming soon")
    - the cappuccino and other coffee
    - every dish, especially the generated Shiro preview, Kitfo, Tibs Firfir, Bula and Crush
