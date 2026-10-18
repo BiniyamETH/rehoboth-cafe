@@ -1112,6 +1112,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .g-more-link {
   background: radial-gradient(circle at 0% 100%, var(--ig-orange) 0%, rgba(245, 133, 41, 0) 26%),
               linear-gradient(135deg, var(--ig-pink) 0%, var(--ig-purple) 55%, var(--ig-blue) 100%);
+  background-color: var(--ig-purple); /* fallback if gradients are not drawn; white text 6.9:1 */
   box-shadow: 0 6px 18px rgba(var(--shadow-rgb), .18); transition: transform .2s, box-shadow .2s;
 }
 .g-more-link:hover { background: radial-gradient(circle at 0% 100%, var(--ig-orange) 0%, rgba(245, 133, 41, 0) 26%), linear-gradient(135deg, var(--ig-pink) 0%, var(--ig-purple) 55%, var(--ig-blue) 100%); transform: translateY(-3px); box-shadow: 0 12px 26px rgba(var(--shadow-rgb), .24); }
@@ -1119,3 +1120,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .g-more-handle { color: var(--white); opacity: .92; }
 @media (max-width: 680px) { .g-more-link svg { width: 34px; height: 34px; margin-bottom: 0; } }
 @media (prefers-reduced-motion: reduce) { .g-more-link:hover { transform: none; } }
+
+/* Menu: "Popular" tag stands out from the other tags */
+.tags li.tag-popular { background: var(--red); color: var(--white); }
+.review-sep { margin: 0 .4em; color: var(--gold-dark); }
