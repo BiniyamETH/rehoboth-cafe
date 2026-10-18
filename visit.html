@@ -30,16 +30,46 @@
 {
   "@context": "https://schema.org",
   "@type": "CafeOrCoffeeShop",
+  "@id": "https://biniyameth.github.io/rehoboth-cafe/#cafe",
   "name": "Rehoboth Cafe",
+  "description": "Ethiopian restaurant and cafe on Danforth Avenue in Toronto serving Ethiopian breakfast, lunch, dinner and freshly brewed coffee.",
+  "servesCuisine": [
+    "Ethiopian",
+    "Coffee"
+  ],
+  "priceRange": "$$",
   "url": "https://biniyameth.github.io/rehoboth-cafe/",
   "image": "https://biniyameth.github.io/rehoboth-cafe/img/rehoboth-cafe-storefront.jpg",
-  "servesCuisine": ["Ethiopian", "Coffee"],
-  "sameAs": ["https://www.instagram.com/rehobothcafetoronto/", "https://www.facebook.com/rehobothcafetoronto"],
+  "sameAs": [
+    "https://www.instagram.com/rehobothcafetoronto/",
+    "https://www.facebook.com/rehobothcafetoronto"
+  ],
   "telephone": "+1-416-686-1104",
-  "geo": { "@type": "GeoCoordinates", "latitude": 43.6889002, "longitude": -79.2974896 },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.6889002,
+    "longitude": -79.2974896
+  },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "09:00", "closes": "20:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "19:00" }
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "10:00",
+      "closes": "19:00"
+    }
   ],
   "address": {
     "@type": "PostalAddress",
@@ -51,6 +81,27 @@
   },
   "hasMenu": "https://biniyameth.github.io/rehoboth-cafe/menu.html",
   "hasMap": "https://www.google.com/maps/search/?api=1&query=Rehoboth+Cafe+2737+Danforth+Ave+Toronto+ON+M4C+1L8"
+}
+</script>
+<!-- Breadcrumb for Google search results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://biniyameth.github.io/rehoboth-cafe/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Visit & Contact",
+      "item": "https://biniyameth.github.io/rehoboth-cafe/visit.html"
+    }
+  ]
 }
 </script>
 <script src="script.js" defer></script>
