@@ -764,3 +764,65 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 @media (max-width: 960px) { .explore-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .explore-list { grid-template-columns: 1fr; } .explore { padding: 40px 0 44px; } }
 @media (prefers-reduced-motion: reduce) { .explore-card:hover, .explore-card:hover .explore-name .arrow { transform: none; } }
+
+/* ================= Phone layout: shorter pages, quick actions ================= */
+.phone-bar { display: none; }
+.swipe-hint { display: none; }
+@media (max-width: 680px) {
+  /* Quick-action bar fixed to the bottom of the screen */
+  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+  .phone-bar {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    padding: 6px 6px calc(6px + env(safe-area-inset-bottom));
+    background: var(--cream); border-top: 1px solid #e6d6bd; box-shadow: 0 -6px 18px rgba(80,40,20,.10);
+  }
+  .phone-bar a {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+    min-height: 52px; border-radius: 10px; color: var(--red); font-size: .78rem; font-weight: 500;
+  }
+  .phone-bar a[aria-current="page"] { background: var(--cream-2); }
+  .phone-bar .phone-bar-main { background: var(--red); color: #fff; }
+  .phone-bar .phone-bar-main[aria-current="page"] { background: var(--red-dark); }
+  .phone-bar a:focus-visible { outline-offset: -3px; }
+
+  /* Menu preview and reviews: swipe sideways instead of a long stack */
+  .cards, .review-cards {
+    display: flex; gap: 14px; max-width: none;
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px;
+    margin-inline: -16px; padding: 4px 16px 14px;
+    scrollbar-width: none;
+  }
+  .cards::-webkit-scrollbar, .review-cards::-webkit-scrollbar { display: none; }
+  .cards .card, .cards .card:last-child:nth-child(odd), .review-card { flex: 0 0 80%; width: auto; scroll-snap-align: start; }
+  .card:hover { transform: none; }
+  .swipe-hint { display: block; text-align: center; font-size: .85rem; color: var(--ink-soft); margin-top: 2px; }
+
+  /* Ways to enjoy: icon beside text */
+  .way-card { display: grid; grid-template-columns: 44px 1fr; column-gap: 16px; text-align: left; padding: 18px 18px 14px; }
+  .way-card svg { grid-row: span 3; margin-top: 4px; }
+  .way-card h3 { margin: 0 0 2px; font-size: 1.25rem; }
+  .way-card p { margin-bottom: 0; }
+  .ways-cards { gap: 14px; }
+
+  /* Coffee ceremony: number beside text */
+  .ceremony-steps { gap: 12px; margin-top: 28px; }
+  .ceremony-steps li { display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; text-align: left; padding: 16px; }
+  .ceremony-steps .step-num { grid-row: span 2; }
+  .ceremony-steps h3 { margin: 6px 0 2px; font-size: 1.2rem; }
+
+  /* Explore more: 2 x 2 */
+  .explore-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .explore-card { padding: 14px; justify-content: center; min-height: 64px; }
+  .explore-desc, .explore-name .arrow { display: none; }
+  .explore-card { align-items: center; text-align: center; }
+  .explore-name { font-size: 1.02rem; }
+  .explore { padding: 36px 0 40px; }
+
+  /* Bigger tap areas */
+  .slide-cap a { padding: 10px 0; margin-top: 2px; }
+  .photo-credits summary { padding: 10px 0; }
+}
+@media (max-width: 680px) and (prefers-reduced-motion: no-preference) {
+  .cards, .review-cards { scroll-behavior: smooth; }
+}
