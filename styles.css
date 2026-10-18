@@ -765,27 +765,9 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 @media (max-width: 520px) { .explore-list { grid-template-columns: 1fr; } .explore { padding: 40px 0 44px; } }
 @media (prefers-reduced-motion: reduce) { .explore-card:hover, .explore-card:hover .explore-name .arrow { transform: none; } }
 
-/* ================= Phone layout: shorter pages, quick actions ================= */
-.phone-bar { display: none; }
+/* ================= Phone layout: shorter pages ================= */
 .swipe-hint { display: none; }
 @media (max-width: 680px) {
-  /* Quick-action bar fixed to the bottom of the screen */
-  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
-  .phone-bar {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
-    padding: 6px 6px calc(6px + env(safe-area-inset-bottom));
-    background: var(--cream); border-top: 1px solid #e6d6bd; box-shadow: 0 -6px 18px rgba(80,40,20,.10);
-  }
-  .phone-bar a {
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
-    min-height: 52px; border-radius: 10px; color: var(--red); font-size: .78rem; font-weight: 500;
-  }
-  .phone-bar a[aria-current="page"] { background: var(--cream-2); }
-  .phone-bar .phone-bar-main { background: var(--red); color: #fff; }
-  .phone-bar .phone-bar-main[aria-current="page"] { background: var(--red-dark); }
-  .phone-bar a:focus-visible { outline-offset: -3px; }
-
   /* Menu preview and reviews: swipe sideways instead of a long stack */
   .cards, .review-cards {
     display: flex; gap: 14px; max-width: none;
