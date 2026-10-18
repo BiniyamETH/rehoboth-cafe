@@ -1,7 +1,7 @@
 :root {
-  /* Coffee and gold brand palette. --red is the brand primary (now coffee brown); name kept so existing rules still work */
-  --red: #4a2b20;
-  --red-dark: #2f1c16;
+  /* Red and gold brand palette */
+  --red: #9e1b1f;
+  --red-dark: #6e1215;
   --gold: #d9ad68;
   --gold-line: #b98a47;
   --gold-dark: #76512a;
@@ -10,7 +10,7 @@
   --cream-2: #f0e3d0;
   --text: #251914;
   --text-soft: #58483d;
-  --text-muted: #756457;
+  --text-muted: #675649;
   --white: #fff;
   --black: #000;
   --focus: #1f5fbf;
@@ -49,8 +49,8 @@
   --overlay-rgb: 20, 10, 7;   /* warm photo overlays */
   --charcoal-rgb: 9, 10, 9;   /* cool photo overlays */
   --overlay-2-rgb: 25, 17, 12;
-  --red-rgb: 74, 43, 32;
-  --red-dark-rgb: 47, 28, 22;
+  --red-rgb: 158, 27, 31;
+  --red-dark-rgb: 110, 18, 21;
   --gold-rgb: 217, 173, 104;
   --gold-line-rgb: 185, 138, 71;
   --cream-rgb: 248, 241, 228;
@@ -980,11 +980,11 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .home-page .highlight strong { color: var(--on-dark-strong); }
 .home-page .menu-preview { background: var(--cream); }
 .home-page .menu-preview .eyebrow { color: var(--star); }
-.home-page .menu-preview h2 { color: var(--text); }
-.home-page .menu-preview .card { background: var(--charcoal-2); box-shadow: 0 8px 22px rgba(var(--shadow-rgb), .18); }
-.home-page .menu-preview .card-body { background: var(--charcoal-2); }
-.home-page .menu-preview .card h3 { color: var(--gold); }
-.home-page .menu-preview .card p { color: var(--on-dark-soft); }
+.home-page .menu-preview h2 { color: var(--red); }
+.home-page .menu-preview .card { background: var(--cream-2); box-shadow: 0 8px 22px rgba(var(--shadow-rgb), .18); }
+.home-page .menu-preview .card-body { background: var(--cream-2); }
+.home-page .menu-preview .card h3 { color: var(--red); }
+.home-page .menu-preview .card p { color: var(--text-soft); }
 .home-page .menu-preview .card-rule { background: var(--gold); }
 
 @media (min-width: 960.02px) {
@@ -1018,7 +1018,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 
 /* Keyboard focus stays visible on the dark sections */
 .hero :focus-visible, .highlights :focus-visible, .special :focus-visible, .ceremony :focus-visible,
-.menu-preview .card :focus-visible, .main-nav a:focus-visible { outline-color: var(--gold-pale); }
+.main-nav a:focus-visible { outline-color: var(--gold-pale); }
 
 /* Tablets: keep each menu link on one line */
 .main-nav a { white-space: nowrap; }
@@ -1039,7 +1039,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 }
 .menu-category h2 .am { font-size: .62em; font-weight: 500; margin-left: .5em; vertical-align: .08em; }
 .card h3 .am { display: block; margin: 2px 0 0; font-size: .62em; font-weight: 500; }
-.home-page .menu-preview .card h3 .am { color: var(--gold-pale); }
+.home-page .menu-preview .card h3 .am { color: var(--gold-dark); }
 
 /* ================= Menu page photos ================= */
 /* Top banner: platter photo under a dark overlay, matching the homepage hero */
