@@ -37,6 +37,7 @@
     {
       "@type": "MenuSection",
       "name": "Breakfast",
+      "alternateName": "ቁርስ",
       "hasMenuItem": [
         {
           "@type": "MenuItem",
@@ -115,12 +116,12 @@
           },
           "description": "Crisp, golden waffles with your choice of toppings: mango, banana or blueberry."
         }
-      ],
-      "alternateName": "ቁርስ"
+      ]
     },
     {
       "@type": "MenuSection",
       "name": "Lunch & Dinner",
+      "alternateName": "ምሳ እና እራት",
       "hasMenuItem": [
         {
           "@type": "MenuItem",
@@ -200,13 +201,57 @@
           },
           "description": "A meal for three, including tibs, firfir and kitfo. A delightful and diverse tasting experience for sharing."
         }
-      ],
-      "alternateName": "ምሳ እና እራት"
+      ]
     },
     {
       "@type": "MenuSection",
       "name": "Drinks",
+      "alternateName": "መጠጦች",
       "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Cappuccino",
+          "alternateName": "ካፑቺኖ",
+          "offers": {
+            "@type": "Offer",
+            "price": "3.99",
+            "priceCurrency": "CAD"
+          },
+          "description": "Rich espresso with steamed milk and a creamy cap of foam."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Macchiato",
+          "alternateName": "ማኪያቶ",
+          "offers": {
+            "@type": "Offer",
+            "price": "3.49",
+            "priceCurrency": "CAD"
+          },
+          "description": "Espresso topped with a small dollop of steamed milk foam."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tea",
+          "alternateName": "ሻይ",
+          "offers": {
+            "@type": "Offer",
+            "price": "2.49",
+            "priceCurrency": "CAD"
+          },
+          "description": "Classic hot tea, gently steeped for an aromatic cup."
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Organic Ginger Tea",
+          "alternateName": "ዝንጅብል ሻይ",
+          "offers": {
+            "@type": "Offer",
+            "price": "5.99",
+            "priceCurrency": "CAD"
+          },
+          "description": "A soothing, aromatic tea made from organic ginger, perfect for relaxation."
+        },
         {
           "@type": "MenuItem",
           "name": "Ginger Ale",
@@ -254,8 +299,7 @@
             "priceCurrency": "CAD"
           }
         }
-      ],
-      "alternateName": "መጠጦች"
+      ]
     }
   ]
 }
@@ -436,6 +480,31 @@
     <section class="menu-category" id="drinks" data-category="drinks" aria-labelledby="cat-drinks">
       <h2 id="cat-drinks">Drinks <span class="am" lang="am">መጠጦች</span></h2>
       <figure class="cat-banner"><img src="img/ethiopian-coffee-jebena-pour.webp" srcset="img/ethiopian-coffee-jebena-pour.webp 1090w" sizes="(max-width: 1180px) 100vw, 1180px" width="1090" height="462" loading="lazy" decoding="async" alt="Coffee poured from a clay jebena into small traditional cups" style="object-position: center 40%"></figure>
+      <!-- Hot drinks and prices from the cafe's Uber Eats menu (checked 18 Oct 2026). EDIT: owner to confirm in-cafe prices. -->
+      <p class="menu-sub">Hot drinks <span class="am" lang="am">ትኩስ መጠጦች</span></p>
+      <ul class="menu-list menu-list-compact">
+        <li class="menu-item has-photo" data-keywords="coffee espresso">
+          <img class="item-thumb" src="img/cappuccino-ethiopian-cup-thumb.webp" width="240" height="240" alt="Cappuccino dusted with cocoa in a traditional Ethiopian cup" loading="lazy" decoding="async">
+          <div class="item-head"><h3>Cappuccino <span class="am" lang="am">ካፑቺኖ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$3.99</span></div>
+          <p>Rich espresso with steamed milk and a creamy cap of foam.</p>
+        </li>
+        <li class="menu-item has-photo no-photo" data-keywords="coffee espresso">
+          <span class="item-thumb item-thumb-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V9Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 3.5c0 1.5-1 1.5-1 3M12.5 3.5c0 1.5-1 1.5-1 3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+          <div class="item-head"><h3>Macchiato <span class="am" lang="am">ማኪያቶ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$3.49</span></div>
+          <p>Espresso topped with a small dollop of steamed milk foam.</p>
+        </li>
+        <li class="menu-item has-photo no-photo">
+          <span class="item-thumb item-thumb-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V9Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 3.5c0 1.5-1 1.5-1 3M12.5 3.5c0 1.5-1 1.5-1 3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+          <div class="item-head"><h3>Tea <span class="am" lang="am">ሻይ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$2.49</span></div>
+          <p>Classic hot tea, gently steeped for an aromatic cup.</p>
+        </li>
+        <li class="menu-item has-photo no-photo">
+          <span class="item-thumb item-thumb-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V9Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 3.5c0 1.5-1 1.5-1 3M12.5 3.5c0 1.5-1 1.5-1 3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+          <div class="item-head"><h3>Organic Ginger Tea <span class="am" lang="am">ዝንጅብል ሻይ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$5.99</span></div>
+          <p>A soothing, aromatic tea made from organic ginger, perfect for relaxation.</p>
+        </li>
+      </ul>
+      <p class="menu-sub">Cold drinks <span class="am" lang="am">ቀዝቃዛ መጠጦች</span></p>
       <ul class="menu-list menu-list-compact">
         <li class="menu-item has-photo">
           <img class="item-thumb" src="img/ginger-ale-glass-thumb.webp" width="240" height="240" alt="A glass of ginger ale" loading="lazy" decoding="async">
@@ -459,7 +528,7 @@
           <div class="item-head"><h3>Water <span class="am" lang="am">ውሃ</span></h3><span class="leader" aria-hidden="true"></span><span class="price">$1.99</span></div>
         </li>
       </ul>
-      <p class="menu-aside">Coffee and other hot drinks are served in the cafe. Please ask our team for today&rsquo;s selection and prices.</p>
+      <p class="menu-aside">Ask our team about other coffee drinks served in the cafe.</p>
     </section>
 
     <p class="menu-empty" id="menu-empty" hidden>No dishes match your search. Try another word, or <button type="button" class="link-btn" id="menu-reset">show the full menu</button>.</p>

@@ -13,9 +13,14 @@
 
   categories.forEach(cat => {
     cat.querySelectorAll('.menu-item').forEach(item => {
-      item.dataset.search = normalise(item.textContent + ' ' + cat.querySelector('h2').textContent);
+      // data-keywords adds search words that are not in the visible text (e.g. "coffee" for espresso drinks)
+      item.dataset.search = normalise(item.textContent + ' ' + (item.dataset.keywords || '') + ' ' + cat.querySelector('h2').textContent);
     });
   });
+
+  // Match the start of a word, so "tea" finds Tea but not "steamed"
+  const escapeRe = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const matches = (text, term) => new RegExp('(^|[\\s/(\\-])' + escapeRe(term)).test(text);
 
   function apply() {
     const terms = normalise(search.value.trim()).split(/\s+/).filter(Boolean);
@@ -26,13 +31,13 @@
       const inFilter = filter === 'all' || cat.dataset.category === filter;
       let visibleInCat = 0;
       cat.querySelectorAll('.menu-item').forEach(item => {
-        const match = inFilter && terms.every(t => item.dataset.search.includes(t));
+        const match = inFilter && terms.every(t => matches(item.dataset.search, t));
         item.hidden = !match;
         if (match) visibleInCat++;
       });
       // A search like "coffee" matches the note under Drinks rather than an item, so keep that note in view
       const aside = cat.querySelector('.menu-aside');
-      const asideMatch = inFilter && terms.length > 0 && aside !== null && terms.every(t => normalise(aside.textContent).includes(t));
+      const asideMatch = inFilter && terms.length > 0 && aside !== null && terms.every(t => matches(normalise(aside.textContent), t));
       if (asideMatch) notesShown++;
       cat.hidden = visibleInCat === 0 && !asideMatch;
       shown += visibleInCat;

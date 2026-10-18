@@ -1070,3 +1070,36 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
   .menu-tools-wrap { position: static; }
   .menu-category { scroll-margin-top: calc(var(--header-h) + 12px); }
 }
+
+/* ================= Glossary: each word as a small card ================= */
+.glossary-title { text-align: center; }
+.glossary-list { gap: 12px; }
+.glossary-list > div { background: var(--cream-2); border-radius: 10px; border-left: 3px solid var(--gold); padding: 12px 14px; }
+.glossary-list dt { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 1.05rem; line-height: 1.3; }
+.glossary-list dt .am { display: block; margin: 2px 0 4px; font-size: .78em; }
+.glossary-list dd { font-size: .95rem; }
+@media (max-width: 680px) {
+  .glossary { padding: 18px 14px; }
+  .glossary-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .glossary-list > div { padding: 10px 11px; }
+  .glossary-list dt { font-size: .98rem; }
+  .glossary-list dd { font-size: .86rem; line-height: 1.4; }
+}
+
+/* ================= Menu: hot and cold drink groups ================= */
+.menu-sub { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 1.1rem; margin: 6px 0 2px; }
+.menu-sub + .menu-list { margin-top: 0; }
+.menu-list + .menu-sub { margin-top: 22px; }
+
+/* ================= Reviews: side by side on phones ================= */
+.swipe-hint { display: none; }
+@media (max-width: 680px) {
+  .review-cards {
+    display: flex; gap: 14px; max-width: none;
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px;
+    margin-inline: -16px; padding: 4px 16px 14px; scrollbar-width: none;
+  }
+  .review-cards::-webkit-scrollbar { display: none; }
+  .review-card { flex: 0 0 82%; scroll-snap-align: start; }
+  .swipe-hint { display: block; text-align: center; font-size: .85rem; color: var(--text-soft); margin-top: 4px; }
+}
