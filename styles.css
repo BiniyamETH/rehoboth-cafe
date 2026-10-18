@@ -691,7 +691,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .faq-list summary { cursor: pointer; list-style: none; padding: 18px 28px 18px 0; position: relative; font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 1.1rem; }
 .faq-list summary::-webkit-details-marker { display: none; }
 .faq-list summary::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-size: 1.5rem; font-weight: 300; color: var(--gold-text); }
-.faq-list details[open] summary::after { content: "2"; }
+.faq-list details[open] summary::after { content: "\2212"; }
 .faq-list details p { padding: 0 0 18px; line-height: 1.55; font-weight: 300; }
 @media (max-width: 680px) { .faq { padding: 52px 0 48px; } }
 .review-meta { font-weight: 300; color: var(--ink-soft); }
@@ -719,3 +719,27 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
   .lb-prev { left: 24px; }
   .lb-next { right: 24px; }
 }
+
+/* ================= Highlights strip (home) ================= */
+.highlights { background: var(--cream-2); border-bottom: 1px solid #eadfcd; }
+.highlight-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.highlight { display: flex; align-items: center; gap: 14px; padding: 22px 18px; }
+.highlight + .highlight { border-left: 1px solid #e6d6bd; }
+.highlight svg { color: var(--red); flex-shrink: 0; }
+.highlight:first-child svg { color: var(--gold-line); }
+.highlight span { color: var(--ink-soft); font-size: .92rem; line-height: 1.35; }
+.highlight strong { display: block; font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 1.08rem; }
+@media (max-width: 960px) {
+  .highlight-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .highlight:nth-child(3) { border-left: 0; }
+  .highlight:nth-child(n+3) { border-top: 1px solid #e6d6bd; }
+}
+@media (max-width: 680px) {
+  .highlight { flex-direction: column; align-items: flex-start; gap: 6px; padding: 16px 12px; }
+  .highlight strong { font-size: 1rem; }
+  .highlight span { font-size: .86rem; }
+}
+
+/* ================= Section colour rhythm (home) ================= */
+.visit { background: var(--cream-2); }
+.visit .hours-card { background: var(--cream); }
