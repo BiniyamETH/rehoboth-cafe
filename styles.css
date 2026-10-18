@@ -765,10 +765,8 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .special-text { padding: 40px 44px; align-self: center; }
 .special-text .eyebrow { color: var(--gold); }
 .special-text .eyebrow-line::before { background: var(--gold); }
-.special-text h2 { color: #fff; margin: 6px 0 4px; }
-.special-meta { color: var(--gold); font-size: 1.05rem; margin-bottom: 12px; }
-.special-meta strong { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; }
-.special-text p:not(.eyebrow):not(.special-meta) { font-weight: 300; line-height: 1.55; max-width: 44ch; margin-bottom: 22px; }
+.special-text h2 { color: #fff; margin: 6px 0 12px; }
+.special-text p:not(.eyebrow) { font-weight: 300; line-height: 1.55; max-width: 44ch; margin-bottom: 22px; }
 .special .btn-outline { color: #fff; border-color: rgba(255,255,255,.7); background: transparent; }
 .special .btn-outline:hover { background: #fff; color: var(--red); }
 .special :focus-visible { outline-color: #fff; }
