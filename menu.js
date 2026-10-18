@@ -20,6 +20,7 @@
   function apply() {
     const terms = normalise(search.value.trim()).split(/\s+/).filter(Boolean);
     let shown = 0;
+    let notesShown = 0;
 
     categories.forEach(cat => {
       const inFilter = filter === 'all' || cat.dataset.category === filter;
@@ -29,15 +30,21 @@
         item.hidden = !match;
         if (match) visibleInCat++;
       });
-      cat.hidden = visibleInCat === 0;
+      // A search like "coffee" matches the note under Drinks rather than an item, so keep that note in view
+      const aside = cat.querySelector('.menu-aside');
+      const asideMatch = inFilter && terms.length > 0 && aside !== null && terms.every(t => normalise(aside.textContent).includes(t));
+      if (asideMatch) notesShown++;
+      cat.hidden = visibleInCat === 0 && !asideMatch;
       shown += visibleInCat;
     });
 
-    empty.hidden = shown !== 0;
+    empty.hidden = shown !== 0 || notesShown !== 0;
     const where = filter === 'all' ? '' : ' in ' + document.querySelector(`[data-filter="${filter}"]`).textContent;
-    status.textContent = terms.length || filter !== 'all'
-      ? `Showing ${shown} ${shown === 1 ? 'item' : 'items'}${where}.`
-      : '';
+    status.textContent = shown === 0 && notesShown !== 0
+      ? 'No menu items match, but see the note below.'
+      : terms.length || filter !== 'all'
+        ? `Showing ${shown} ${shown === 1 ? 'item' : 'items'}${where}.`
+        : '';
   }
 
   function setFilter(value, updateHash = true) {

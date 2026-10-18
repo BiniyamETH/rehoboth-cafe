@@ -804,3 +804,20 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
   .guide-tips, .glossary-list { grid-template-columns: 1fr; }
   .glossary { padding: 20px; }
 }
+
+/* ================= Fixes from live check ================= */
+/* Anything with the hidden attribute stays hidden, even if a rule sets display (menu search) */
+[hidden] { display: none !important; }
+
+@media (max-width: 680px) {
+  /* Bigger tap areas on phones */
+  .slide-cap a { padding: 10px 0; margin-top: 2px; }
+  .address-card a, .info-big a, .menu-cta-inner address a { display: inline-block; padding: 8px 0; }
+  .photo-credits summary { padding: 10px 0; }
+  .dot { width: 34px; height: 34px; }
+  .dot::after { inset: 12px; }
+
+  /* Small labels stay readable on phones */
+  .ribbon { font-size: .78rem; }
+  .g-tag, .today-tag, .open-badge { font-size: .75rem; }
+}
