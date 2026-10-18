@@ -1060,3 +1060,13 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
   .cat-banner { margin-bottom: 16px; border-radius: 10px; }
   .cat-banner img { aspect-ratio: 16 / 7; }
 }
+
+/* Order page: the Google listing link sits under the Uber Eats button */
+.order-card .order-alt { display: inline-block; margin-top: 2px; }
+.order-card-main .order-alt { color: inherit; }
+
+/* Phones: the search and filters scroll away with the page instead of covering a third of the screen */
+@media (max-width: 680px) {
+  .menu-tools-wrap { position: static; }
+  .menu-category { scroll-margin-top: calc(var(--header-h) + 12px); }
+}
