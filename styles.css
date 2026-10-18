@@ -1007,6 +1007,12 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .home-page .menu-preview .card p { color: #e5d9c5; }
 .home-page .menu-preview .card-rule { background: var(--home-gold); }
 
+@media (min-width: 960.02px) {
+  .home-page .hero::before {
+    background: linear-gradient(90deg, rgba(18, 11, 7, .78) 0%, rgba(18, 11, 7, .64) 32%, rgba(18, 11, 7, .2) 58%, rgba(18, 11, 7, .02) 100%);
+  }
+}
+
 @media (max-width: 960px) {
   .home-page .hero { min-height: 590px; }
   .home-page .hero-photo img { object-position: 60% center; }
