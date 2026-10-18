@@ -755,8 +755,8 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 
 /* Small phones: keep all four menu filters visible without sideways scrolling */
 @media (max-width: 380px) {
-  .menu-filters { gap: 6px; }
-  .filter-btn { padding: 8px 10px; font-size: .86rem; }
+  .menu-filters { gap: 6px; flex-wrap: wrap; overflow-x: visible; }
+  .filter-btn { flex: 1 1 calc(50% - 6px); padding: 8px 10px; font-size: .86rem; }
 }
 
 /* Gallery photo viewer on phones: full screen, photo centred, controls inside the screen */
@@ -1009,6 +1009,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .home-page .menu-preview .card-rule { background: var(--home-gold); }
 
 @media (min-width: 960.02px) {
+  .home-page .hero .slogan { max-width: 660px; font-size: clamp(3.3rem, 4.7vw, 4.6rem); }
   .home-page .hero::before {
     background: linear-gradient(90deg, rgba(18, 11, 7, .78) 0%, rgba(18, 11, 7, .64) 32%, rgba(18, 11, 7, .2) 58%, rgba(18, 11, 7, .02) 100%);
   }
