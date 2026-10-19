@@ -2,4 +2,4 @@
 User-agent: *
 Disallow: /
 
-Sitemap: https://biniyameth.github.io/rehoboth-cafe/sitemap.xml
+Sitemap: https://rehobothcafe.com/sitemap.xml

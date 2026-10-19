@@ -116,7 +116,7 @@ Every page shares the same header and footer:
 | Phone (416) 686-1104 | Google Maps listing | Owner to confirm |
 | Hours: Mon–Sat 9 a.m.–8 p.m., Sun 10 a.m.–7 p.m. | Google Maps listing | Owner to confirm |
 | Dine-in, takeout, "Order online" | Google Maps listing | Owner to confirm the ordering service |
-| Rating 4.9 from 45 reviews | Google Maps, 16 Oct 2026 | Changes over time. Update or remove it. |
+| Rating 4.9 from 46 reviews | Google Maps, 16 Oct 2026 | Changes over time. Update or remove it. |
 | Menu items and prices | Google Maps menu tab | Owner to confirm (checklist) |
 | "Short walk east of Main Street subway station" | Google Maps map view | Visible on the map |
 
@@ -195,7 +195,7 @@ All listed photos are from Wikimedia Commons. Each was cropped and resized.
 
 ## Before launch
 
-1. **Domain.** The site is live on GitHub Pages at https://biniyameth.github.io/rehoboth-cafe/, and that address is used in all 6 HTML pages, `sitemap.xml` and `robots.txt`. To move to a custom domain, replace it everywhere. The Google listing links to **rehobothcafe.com** (currently offline). Confirm whether that's the right one.
+1. **Domain.** The site uses the custom domain https://rehobothcafe.com/ (set in the `CNAME` file). That address is used in all 6 HTML pages, `sitemap.xml` and `robots.txt`.
 2. **Turn off preview mode:**
    - Delete `<meta name="robots" content="noindex, nofollow">` from all 6 pages.
    - In `robots.txt`, change `Disallow: /` to `Allow: /`.
