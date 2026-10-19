@@ -138,6 +138,7 @@ Content changed on purpose until the owner confirms it:
 
 | Asset | Where it appears | Files and treatment |
 |---|---|---|
+| User-supplied Ethiopian coffee and food table image | Homepage Our Story | `rehoboth-home-story-table-{800,1536}.webp` (1536×1024 source); responsive sizes in the split section. Treat it as illustrative until the owner confirms it shows the cafe. |
 | User-supplied Ethiopian coffee service image | About page, Our Story | `rehoboth-about-coffee-service-{800,1536}.webp` (1672×941 source); responsive sizes and a 4:3 crop in the split layout. Treat it as illustrative until the owner confirms it shows the cafe. |
 | User-supplied cafe interior image | Homepage hero | `rehoboth-home-interior-{700,1100,1536}.webp` (1536×1024 original); preloaded on the homepage and displayed behind the copy with separate desktop and phone overlays. Treat it as an illustrative image until the owner confirms it shows the cafe. |
 | Generated Ethiopian food platter draft | Retained but not displayed | `rehoboth-home-food-hero-v2.png` (1672×941); generated as an alternate homepage background before the coffee image was chosen. |
@@ -158,7 +159,7 @@ The `img/` folder also retains unused generated explorations (`rehoboth-home-her
 - `slide-tibs-firfir-*` and `tibs-firfir-injera-thumb`
 - Firfir (slideshow, Gallery, menu): `firfir-rehoboth-*`, illustration supplied by the site owner
 - Ful (menu preview card, slideshow, Gallery, menu): `ful-rehoboth-*`, illustration supplied by the site owner
-- Cafe interior (homepage "Our Story" and Gallery): `rehoboth-cafe-interior*`, image supplied by the site owner
+- Cafe interior (homepage FAQ and Gallery): `rehoboth-cafe-interior*`, image supplied by the site owner
 
 **Openly licensed photos**, shown for illustration and credited on each page:
 
