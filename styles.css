@@ -532,7 +532,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .dot { width: 28px; height: 28px; padding: 0; border: 0; background: transparent; cursor: pointer; position: relative; }
 .dot::after { content: ""; position: absolute; inset: 9px; border-radius: 50%; background: var(--dot); transition: background-color .2s, transform .2s; }
 .dot[aria-current]::after { background: var(--red); transform: scale(1.25); }
-.dishes .photo-credits { margin-top: 18px; }
+.dishes .photo-credits, .offer .photo-credits { margin-top: 18px; }
 @media (max-width: 680px) {
   .dishes { padding: 52px 0 36px; }
   .carousel { aspect-ratio: 4 / 5; }
@@ -1124,3 +1124,18 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 /* Menu: "Popular" tag stands out from the other tags */
 .tags li.tag-popular { background: var(--red); color: var(--white); }
 .review-sep { margin: 0 .4em; color: var(--gold-dark); }
+
+/* ================= Phone fixes ================= */
+.nowrap { white-space: nowrap; }
+/* Highlights: the nested hour spans keep the strip's own text style */
+.highlight span .nowrap { display: inline; font-size: inherit; color: inherit; }
+@media (max-width: 960px) {
+  /* The Visit section right below repeats this card's phone, hours and directions */
+  .faq-help { display: none; }
+}
+@media (max-width: 680px) {
+  /* Menu section headings: wrap naturally, Amharic beside the name, no squeezed rule line */
+  .menu-category h2 { display: block; font-size: 1.75rem; text-wrap: wrap; }
+  .menu-category h2::after { display: none; }
+  .menu-category h2 .am { white-space: nowrap; }
+}
