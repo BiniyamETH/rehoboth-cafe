@@ -228,7 +228,11 @@ Done in Google Search Console (Oct 21, 2026):
 - The JSON-LD passed the Rich Results Test: a valid Local business item and a valid Organization item.
 - The site icon is now served as real files, so Google can replace the old crest it had cached. That can take a few weeks.
 
-1. **Google Business Profile.** The owner should claim the listing at <https://business.google.com>, set its website to `https://rehobothcafe.com`, and make sure the address, phone and hours match the site exactly. This matters most for local searches such as "Ethiopian cafe Danforth".
+1. **Google Business Profile.** As of Oct 21, 2026, the public Google Maps listing matches the site. It links to `https://rehobothcafe.com` and has the same address, phone, hours (Mon–Sat 9–8, Sun 10–7), rating (4.9, 46 reviews) and map pin. Its only category is "Cafe".
+   - **Check who manages it (small risk).** The listing shows no "Claim this business" link, so someone has already claimed it. That may not be the owner; it could be the old developer. Whoever manages it can change the hours, phone and website shown on Google. The owner should sign in to their own Google account at <https://business.google.com> and search for the cafe:
+     - If it opens for editing, the owner already manages it.
+     - If it says "managed by someone else", click **Request access** and choose Owner. If there's no reply within about 7 days, Google usually lets the owner claim it directly.
+   - **Once the owner has access:** remove anyone under **People and access** who shouldn't be there, add the category "Ethiopian restaurant", and keep the address, phone and hours identical to the site.
 2. **Owner confirmation.** Ask the owner to confirm:
    - all 23 prices, and whether they include tax
    - which meat goes in Tibs Firfir
