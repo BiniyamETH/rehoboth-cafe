@@ -141,7 +141,7 @@ Content changed on purpose until the owner confirms it:
 | User-supplied Ethiopian coffee and food table image | Homepage Our Story | `rehoboth-home-story-table-{800,1536}.webp` (1536×1024 source); responsive sizes in the split section. Treat it as illustrative until the owner confirms it shows the cafe. |
 | User-supplied Ethiopian coffee service image | About page, Our Story | `rehoboth-about-coffee-service-{800,1536}.webp` (1672×941 source); responsive sizes and a 4:3 crop in the split layout. Treat it as illustrative until the owner confirms it shows the cafe. |
 | User-supplied cafe interior image | Homepage hero | `rehoboth-home-interior-{700,1100,1536}.webp` (1536×1024 original); preloaded on the homepage and displayed behind the copy with separate desktop and phone overlays. Treat it as an illustrative image until the owner confirms it shows the cafe. |
-| User-selected generated Ethiopian food platter | Homepage Rehoboth Special section | `rehoboth-special-sharing-{400,800}.webp`, cropped 4:3 from an owner-supplied screenshot with the rounded screenshot corners trimmed. It is an illustration, not a photograph of the cafe's actual dish. |
+| User-selected generated Ethiopian food platter | Homepage Rehoboth Special section and its menu thumbnail | `rehoboth-special-sharing-{400,800}.webp` and a square `rehoboth-special-sharing-thumb.webp`, cropped 4:3 from an owner-supplied screenshot with the rounded screenshot corners trimmed. It is an illustration, not a photograph of the cafe's actual dish. |
 | User-provided Ethiopian platter | Gallery | `ethiopian-platter-injera.webp` (1400×787) and `ethiopian-platter-injera-800.webp` (800×450); the gallery crop favours the food on the right. |
 | User-provided Rehoboth Cafe storefront | Home Visit Us, Visit & Contact, Gallery, and the Open Graph image on all six pages | `rehoboth-cafe-storefront.jpg`, `rehoboth-cafe-storefront.webp` (1600×684) and `rehoboth-cafe-storefront-800.webp` (800×342). The homepage business JSON-LD also points to the new JPG. |
 | Selected generated Shekla Shiro image (option 1, bright woven tray) | Fourth homepage menu-preview card | `shekla-shiro-bright-woven-tray.jpg` and `shekla-shiro-bright-woven-tray.webp` (800×480). This is an illustration, not a photograph of a Rehoboth Cafe dish. |
@@ -170,7 +170,7 @@ Unused drafts and source files have been removed from `img/`; earlier versions r
 | Tibs | "Siga Tibs", Khajitdadddy | CC BY-SA 4.0 |
 | Chechebsa | "Chipchipsa Ethiopian dish 2014", Neftalem | CC BY-SA 4.0 |
 | Bula Kitfo (kitfo bowl) | "Ethiopia traditional food", Yjohny | CC BY-SA 4.0 |
-| Rehoboth Special (kitfo spread) | "Ethiopia most popular food", Yjohny | CC BY-SA 4.0 |
+| Gallery (kitfo spread) | "Ethiopia most popular food", Yjohny | CC BY-SA 4.0 |
 | Perrier | "PERRIER (10)", Dinkun Chen | CC BY-SA 4.0 |
 | Genfo | "Ga'at food", Stefan Alfons Tzeggai | CC BY-SA 3.0 |
 | Waffle | "Belgian waffle with fruitsalad and cream", Prashanthns | CC BY-SA 3.0 |
