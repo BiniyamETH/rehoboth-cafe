@@ -753,7 +753,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 @media (max-width: 680px) { .footer-social { justify-content: center; } }
 
 /* Small phones: keep all four menu filters visible without sideways scrolling */
-@media (max-width: 380px) {
+@media (max-width: 400px) {
   .menu-filters { gap: 6px; flex-wrap: wrap; overflow-x: visible; }
   .filter-btn { flex: 1 1 calc(50% - 6px); padding: 8px 10px; font-size: .86rem; }
 }

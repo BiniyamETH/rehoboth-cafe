@@ -64,7 +64,7 @@
   search.addEventListener('keydown', e => { if (e.key === 'Escape') { search.value = ''; apply(); } });
   reset.addEventListener('click', () => { search.value = ''; setFilter('all'); search.focus(); });
 
-  // Support links such as menu.html#breakfast
+  // Support links such as menu#breakfast
   const fromHash = location.hash.slice(1);
   setFilter(validFilters.includes(fromHash) ? fromHash : 'all', false);
 })();
