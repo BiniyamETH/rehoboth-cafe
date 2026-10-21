@@ -32,7 +32,7 @@ Every page shares the same header and footer:
 | `styles.css` | All styles, shared by every page |
 | `script.js` | Mobile menu, fade-ins, homepage slideshow, gallery viewer, today's hours |
 | `menu.js` | Menu search and filters |
-| `img/` | Site images in WebP, JPG and PNG, including the supplied homepage hero and retained drafts |
+| `img/` | Site images in WebP and JPG; every file is used by a page |
 | `sitemap.xml` | All 6 page URLs (domain placeholder) |
 | `robots.txt` | Currently **blocks** all crawlers (preview mode) |
 | `owner-review/menu-approval-checklist.html` | Checklist for the owner. **Do not upload.** |
@@ -141,15 +141,15 @@ Content changed on purpose until the owner confirms it:
 | User-supplied Ethiopian coffee and food table image | Homepage Our Story | `rehoboth-home-story-table-{800,1536}.webp` (1536×1024 source); responsive sizes in the split section. Treat it as illustrative until the owner confirms it shows the cafe. |
 | User-supplied Ethiopian coffee service image | About page, Our Story | `rehoboth-about-coffee-service-{800,1536}.webp` (1672×941 source); responsive sizes and a 4:3 crop in the split layout. Treat it as illustrative until the owner confirms it shows the cafe. |
 | User-supplied cafe interior image | Homepage hero | `rehoboth-home-interior-{700,1100,1536}.webp` (1536×1024 original); preloaded on the homepage and displayed behind the copy with separate desktop and phone overlays. Treat it as an illustrative image until the owner confirms it shows the cafe. |
-| User-selected generated Ethiopian food platter | Homepage Rehoboth Special section | Source `rehoboth-special-selected.jpg` (1028×741, cropped from the owner-supplied screenshot); its rounded screenshot corners are trimmed and it is saved 4:3 as `rehoboth-special-sharing-{400,800}.webp`. It is an illustration, not a photograph of the cafe's actual dish. The previous `rehoboth-special-platter-{400,800}.webp` images are retained but unused. |
-| User-provided Ethiopian platter | Gallery | `ethiopian-platter-injera.jpg`, `ethiopian-platter-injera.webp` (1400×787) and `ethiopian-platter-injera-800.webp` (800×450); the gallery crop favours the food on the right. |
+| User-selected generated Ethiopian food platter | Homepage Rehoboth Special section | `rehoboth-special-sharing-{400,800}.webp`, cropped 4:3 from an owner-supplied screenshot with the rounded screenshot corners trimmed. It is an illustration, not a photograph of the cafe's actual dish. |
+| User-provided Ethiopian platter | Gallery | `ethiopian-platter-injera.webp` (1400×787) and `ethiopian-platter-injera-800.webp` (800×450); the gallery crop favours the food on the right. |
 | User-provided Rehoboth Cafe storefront | Home Visit Us, Visit & Contact, Gallery, and the Open Graph image on all six pages | `rehoboth-cafe-storefront.jpg`, `rehoboth-cafe-storefront.webp` (1600×684) and `rehoboth-cafe-storefront-800.webp` (800×342). The homepage business JSON-LD also points to the new JPG. |
-| Selected generated Shekla Shiro image (option 1, bright woven tray) | Fourth homepage menu-preview card | `shekla-shiro-bright-woven-tray.jpg` and `shekla-shiro-bright-woven-tray.webp` (800×480); the source PNG is retained in `img/`. This is an illustration, not a photograph of a Rehoboth Cafe dish. |
+| Selected generated Shekla Shiro image (option 1, bright woven tray) | Fourth homepage menu-preview card | `shekla-shiro-bright-woven-tray.jpg` and `shekla-shiro-bright-woven-tray.webp` (800×480). This is an illustration, not a photograph of a Rehoboth Cafe dish. |
 | Kitfo photo by Vipon8 from Wikimedia Commons | Fifth homepage menu-preview card, homepage dish slideshow, Gallery, and Kitfo menu thumbnail | `kitfo-ayib-platter-1200.webp` (1200×675), `kitfo-ayib-platter-640.webp` (640×360) and `kitfo-ayib-platter-thumb.webp` (240×240). Cropped/resized from the [CC0 original](https://commons.wikimedia.org/wiki/File:Kitfo_(%E1%8A%AD%E1%89%B5%E1%8D%8E).jpg); credits and alt text were updated on the affected pages. |
 
 The five-card menu preview shows Cappuccino, Tibs Firfir, Ful, Shiro and Kitfo. Its CSS grid uses three columns on wide screens with the last two centred, two on tablets with the last card centred, and one on phones. The Kitfo photo also replaces the older Kitfo image in the slideshow, Gallery and menu; the Special Kitfo and Bula Kitfo photos are separate assets.
 
-The `img/` folder also retains unused generated explorations (`rehoboth-home-hero-v2`, `rehoboth-home-food-hero-v2`, `ethiopian-coffee-and-platter-generated`, `shiro-preview`, `shekla-shiro-preview` and `shekla-shiro-generated`) and older Kitfo, hero and storefront assets. These are not referenced by the current pages. Remove unused drafts when preparing a deployment package, after deciding which source files to keep.
+Unused drafts and source files have been removed from `img/`; earlier versions remain in the git history.
 
 **Checks completed for the current hero and palette:** checked image dimensions and homepage paths, verified that all six pages load the shared stylesheet and use the updated browser theme colour, checked representative text and button contrast, and ran `git diff --check`.
 
