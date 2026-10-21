@@ -9,7 +9,7 @@
   let filter = 'all';
 
   // Accent-insensitive matching, so "sauteed" finds "sautéed"
-  const normalise = str => str.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const normalise = str => (str.normalize ? str.normalize('NFD').replace(/[̀-ͯ]/g, '') : str).toLowerCase();
 
   categories.forEach(cat => {
     cat.querySelectorAll('.menu-item').forEach(item => {

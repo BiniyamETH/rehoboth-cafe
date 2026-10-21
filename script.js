@@ -10,6 +10,12 @@
   const navLinks = nav.querySelectorAll('a');
   const mobileQuery = window.matchMedia('(max-width: 680px)');
 
+  // Safari before 14 only has the older addListener on media queries
+  function onMediaChange(query, fn) {
+    if (query.addEventListener) query.addEventListener('change', fn);
+    else if (query.addListener) query.addListener(fn);
+  }
+
   function setMenu(open) {
     header.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', String(open));
@@ -30,22 +36,24 @@
   document.addEventListener('click', e => {
     if (header.classList.contains('open') && !header.contains(e.target)) setMenu(false);
   });
-  mobileQuery.addEventListener('change', e => { if (!e.matches) setMenu(false); });
+  onMediaChange(mobileQuery, e => { if (!e.matches) setMenu(false); });
 
-  // Mark the nav link for the section currently in view
+  // Mark the nav link for the section currently in view (skipped on browsers without IntersectionObserver)
   const sections = [...navLinks]
     .filter(a => a.getAttribute('href').startsWith('#'))
     .map(a => document.querySelector(a.getAttribute('href')));
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach(a => {
-        if (a.getAttribute('href') === '#' + entry.target.id) a.setAttribute('aria-current', 'true');
-        else a.removeAttribute('aria-current');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(a => {
+          if (a.getAttribute('href') === '#' + entry.target.id) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
       });
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  sections.forEach(s => s && observer.observe(s));
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => s && observer.observe(s));
+  }
 
   // Gentle fade-in as sections enter the viewport (skipped for reduced motion)
   const revealEls = document.querySelectorAll('.reveal');
@@ -79,7 +87,7 @@
       // Load the next image ahead of time so it is ready to fade in
       const next = slides[(index + 1) % slides.length].querySelector('img');
       if (next.loading === 'lazy') next.loading = 'eager';
-      dots.forEach((d, i) => d.toggleAttribute('aria-current', i === index));
+      dots.forEach((d, i) => { if (i === index) d.setAttribute('aria-current', ''); else d.removeAttribute('aria-current'); });
     }
     function schedule() {
       clearInterval(timer);
@@ -168,9 +176,9 @@
   // Home page: "Open now" / "Closed" badge (Toronto time). Keep hours in sync with the Visit section.
   const openBadge = document.getElementById('open-badge');
   if (openBadge) {
-    const parts = new Intl.DateTimeFormat('en-CA', { weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23', timeZone: 'America/Toronto' })
+    const parts = new Intl.DateTimeFormat('en-CA', { weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false, timeZone: 'America/Toronto' })
       .formatToParts(new Date()).reduce((o, p) => (o[p.type] = p.value, o), {});
-    const mins = +parts.hour * 60 + +parts.minute;
+    const mins = (+parts.hour % 24) * 60 + +parts.minute; // some older browsers write midnight as 24
     const [open, close] = parts.weekday === 'Sun' ? [10 * 60, 19 * 60] : [9 * 60, 20 * 60];
     const isOpen = mins >= open && mins < close;
     openBadge.textContent = isOpen ? 'Open now' : 'Closed now';

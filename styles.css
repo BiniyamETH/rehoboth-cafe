@@ -1,3 +1,14 @@
+/* ================= Fonts =================
+   Self-hosted copies of the Google Fonts files (Latin letters only), so phones do not wait on a second server.
+   The Amharic font is cut down to the letters used on the site; new Amharic letters fall back to the phone's own Ethiopic font. */
+@font-face { font-family: "Bowlby One"; font-weight: 400; font-display: swap; src: url(fonts/bowlby-one-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Libre Caslon Text"; font-weight: 700; font-display: swap; src: url(fonts/libre-caslon-text-700-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Outfit"; font-weight: 300; font-display: swap; src: url(fonts/outfit-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Outfit"; font-weight: 400; font-display: swap; src: url(fonts/outfit-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Outfit"; font-weight: 500; font-display: swap; src: url(fonts/outfit-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Noto Sans Ethiopic"; font-weight: 500; font-display: swap; src: url(fonts/noto-sans-ethiopic-subset.woff2) format("woff2"); unicode-range: U+1203, U+120b, U+120d, U+1218, U+121a-121b, U+121d, U+122b-122e, U+1233, U+1235, U+123b, U+123d, U+1240-1241, U+1243, U+1245, U+1260-1261, U+1264-1265, U+1275-1276, U+127a, U+127d, U+1293, U+1295-1296, U+12a0, U+12a5, U+12a9-12ab, U+12ad, U+12c8, U+12cb, U+12cd, U+12db, U+12dd, U+12e9, U+12eb, U+12ed, U+1305, U+1308, U+130e, U+1320, U+1323, U+1325-1326, U+1328, U+1349, U+134d-134e, U+1351; }
+@font-face { font-family: "Noto Sans Ethiopic"; font-weight: 600; font-display: swap; src: url(fonts/noto-sans-ethiopic-subset.woff2) format("woff2"); unicode-range: U+1203, U+120b, U+120d, U+1218, U+121a-121b, U+121d, U+122b-122e, U+1233, U+1235, U+123b, U+123d, U+1240-1241, U+1243, U+1245, U+1260-1261, U+1264-1265, U+1275-1276, U+127a, U+127d, U+1293, U+1295-1296, U+12a0, U+12a5, U+12a9-12ab, U+12ad, U+12c8, U+12cb, U+12cd, U+12db, U+12dd, U+12e9, U+12eb, U+12ed, U+1305, U+1308, U+130e, U+1320, U+1323, U+1325-1326, U+1328, U+1349, U+134d-134e, U+1351; }
+
 :root {
   /* Red and gold brand palette */
   --red: #9e1b1f;
@@ -146,12 +157,12 @@ address { font-style: normal; }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; isolation: isolate; overflow: hidden; min-height: 545px; display: flex; align-items: center; background: var(--coffee); color: var(--white); }
-.hero-photo { position: absolute; inset: 0; width: 100%; z-index: -2; }
+.hero-photo { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; z-index: -2; }
 .hero-photo img {
   width: 100%; height: 100%; object-fit: cover; object-position: center;
 }
 .hero::before {
-  content: ""; position: absolute; inset: 0; z-index: -1;
+  content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1;
   background: linear-gradient(90deg, rgba(var(--overlay-rgb), .96) 0%, rgba(var(--overlay-rgb), .88) 28%, rgba(var(--overlay-rgb), .48) 53%, rgba(var(--overlay-rgb), .08) 100%);
 }
 .hero-content { position: relative; padding: 72px 0; }
@@ -499,7 +510,7 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .dishes { padding: 72px 0 48px; }
 .carousel { position: relative; margin-top: 28px; border-radius: 14px; overflow: hidden; background: var(--coffee); aspect-ratio: 16 / 9; max-height: 640px; width: 100%; }
 .slides { position: relative; height: 100%; }
-.slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .8s ease, visibility 0s linear .8s; }
+.slide { position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0; visibility: hidden; transition: opacity .8s ease, visibility 0s linear .8s; }
 .slide.is-active { opacity: 1; visibility: visible; transition: opacity .8s ease; }
 .slide picture { display: block; height: 100%; }
 .slide img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.03); transition: transform 6s ease-out; }
@@ -1048,9 +1059,9 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 /* ================= Menu page photos ================= */
 /* Top banner: platter photo under a dark overlay, matching the homepage hero */
 .menu-hero { position: relative; isolation: isolate; overflow: hidden; background: var(--coffee); border-bottom: 0; padding: 80px 0 72px; }
-.menu-hero-photo { position: absolute; inset: 0; z-index: -2; }
+.menu-hero-photo { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -2; }
 .menu-hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; }
-.menu-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(var(--overlay-rgb), .74), rgba(var(--overlay-rgb), .82)); }
+.menu-hero::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; background: linear-gradient(180deg, rgba(var(--overlay-rgb), .74), rgba(var(--overlay-rgb), .82)); }
 .menu-hero .eyebrow { color: var(--gold-pale); }
 .menu-hero h1 { color: var(--white); }
 .menu-hero-text { color: var(--on-dark); }
@@ -1060,9 +1071,19 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 .cat-banner { margin: 0 0 22px; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(var(--shadow-rgb), .12); }
 .cat-banner img { width: 100%; aspect-ratio: 16 / 4.5; object-fit: cover; }
 @media (max-width: 680px) {
-  .menu-hero { padding: 56px 0 48px; }
-  .cat-banner { margin-bottom: 16px; border-radius: 10px; }
+  /* Phones (most QR-code visitors): a shorter banner and each section's photo moved below its dishes, so names and prices reach the first screen */
+  .menu-hero { padding: 28px 0 26px; }
+  .menu-category { display: flex; flex-direction: column; }
+  .menu-category > .cat-banner { order: 1; margin: 18px 0 0; border-radius: 10px; }
+  .menu-category > .menu-sub:first-of-type { margin-top: 0; }
+  .menu-hero-text { font-size: 1rem; margin-top: .7rem; }
+  /* The status line only takes space once a filter or search is in use */
+  .menu-status:empty { min-height: 0; margin-top: 0; }
+  .menu-category:first-of-type { padding-top: 14px; }
   .cat-banner img { aspect-ratio: 16 / 7; }
+}
+@media (max-width: 400px) {
+  .menu-hero h1 { font-size: 1.9rem; }
 }
 
 /* Order page: the Google listing link sits under the Uber Eats button */

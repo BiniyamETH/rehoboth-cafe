@@ -33,10 +33,9 @@ Every page shares the same header and footer:
 | `script.js` | Mobile menu, fade-ins, homepage slideshow, gallery viewer, today's hours |
 | `menu.js` | Menu search and filters |
 | `img/` | Site images in WebP and JPG; every file is used by a page |
-| `sitemap.xml` | All 6 page URLs (domain placeholder) |
-| `robots.txt` | Currently **blocks** all crawlers (preview mode) |
-| `owner-review/menu-approval-checklist.html` | Checklist for the owner. **Do not upload.** |
-| `f426d464-…png` | The original design mockup. **Do not upload.** |
+| `fonts/` | Self-hosted copies of the Google Fonts files (Bowlby One, Libre Caslon Text, Outfit: Latin letters only; SIL Open Font License). `noto-sans-ethiopic-subset.woff2` holds only the Amharic letters used on the site, so new Amharic words show in the phone's own Ethiopic font until it is regenerated. |
+| `sitemap.xml` | All 6 page URLs |
+| `robots.txt` | Allows all crawlers and points to the sitemap |
 
 ---
 

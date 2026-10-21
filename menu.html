@@ -19,11 +19,6 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101514'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial' font-weight='900' font-size='20' text-anchor='middle' fill='%23d9ad68'%3ER%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Libre+Caslon+Text:wght@700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<!-- Amharic font, cut down to only the letters used on the site (about 36 KB instead of 230 KB). Add any new Amharic letters to text= -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@500;600&text=%E1%88%83%E1%88%8B%E1%88%8D%E1%88%98%E1%88%9A%E1%88%9B%E1%88%9D%E1%88%AB%E1%88%AC%E1%88%AD%E1%88%AE%E1%88%B3%E1%88%B5%E1%88%BB%E1%88%BD%E1%89%80%E1%89%81%E1%89%83%E1%89%85%E1%89%A0%E1%89%A1%E1%89%A4%E1%89%A5%E1%89%B5%E1%89%B6%E1%89%BA%E1%89%BD%E1%8A%93%E1%8A%95%E1%8A%96%E1%8A%A0%E1%8A%A5%E1%8A%A9%E1%8A%AA%E1%8A%AB%E1%8A%AD%E1%8B%88%E1%8B%8B%E1%8B%8D%E1%8B%9B%E1%8B%9D%E1%8B%A9%E1%8B%AB%E1%8B%AD%E1%8C%85%E1%8C%88%E1%8C%8E%E1%8C%A0%E1%8C%A3%E1%8C%A5%E1%8C%A6%E1%8C%A8%E1%8D%89%E1%8D%8D%E1%8D%8E%E1%8D%91&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <!-- Menu details for Google. Built from the items below; update prices here when the menu changes. -->
 <script type="application/ld+json">
@@ -361,6 +356,8 @@
 <main id="main">
   <section class="menu-hero" aria-labelledby="menu-page-title">
     <picture class="menu-hero-photo">
+      <!-- Phones get a lighter square-ish crop; the photo sits under a dark overlay -->
+      <source media="(max-width: 680px)" srcset="img/ethiopian-platter-injera-mobile.webp" type="image/webp" width="640" height="582">
       <img src="img/ethiopian-platter-injera.webp" srcset="img/ethiopian-platter-injera-800.webp 800w, img/ethiopian-platter-injera.webp 1400w" sizes="100vw"
            width="1400" height="787" alt="" fetchpriority="high" decoding="async">
     </picture>
@@ -392,7 +389,7 @@
 
     <section class="menu-category" id="breakfast" data-category="breakfast" aria-labelledby="cat-breakfast">
       <h2 id="cat-breakfast">Breakfast <span class="am" lang="am">ቁርስ</span></h2>
-      <figure class="cat-banner"><img src="img/firfir-rehoboth-1200.webp" srcset="img/firfir-rehoboth-640.webp 640w, img/firfir-rehoboth-1200.webp 1200w" sizes="(max-width: 1180px) 100vw, 1180px" width="1200" height="675" loading="lazy" decoding="async" alt="Firfir: shredded injera in berbere sauce with boiled eggs and green peppers in a black clay bowl" style="object-position: center 55%"></figure>
+      <figure class="cat-banner"><img src="img/firfir-rehoboth-1200.webp" srcset="img/firfir-rehoboth-640.webp 640w, img/firfir-rehoboth-800.webp 800w, img/firfir-rehoboth-1200.webp 1200w" sizes="(max-width: 1212px) calc(100vw - 32px), 1180px" width="1200" height="675" loading="lazy" decoding="async" alt="Firfir: shredded injera in berbere sauce with boiled eggs and green peppers in a black clay bowl" style="object-position: center 55%"></figure>
       <ul class="menu-list">
         <li class="menu-item has-photo" id="item-tibs-firfir">
           <img class="item-thumb" src="img/tibs-firfir-injera-thumb.webp" width="240" height="240" alt="Tibs Firfir with injera and green peppers" loading="lazy" decoding="async">
@@ -437,7 +434,7 @@
 
     <section class="menu-category" id="lunch-dinner" data-category="lunch-dinner" aria-labelledby="cat-lunch">
       <h2 id="cat-lunch">Lunch &amp; Dinner <span class="am" lang="am">ምሳ እና እራት</span></h2>
-      <figure class="cat-banner"><img src="img/slide-tibs-1200.webp" srcset="img/slide-tibs-640.webp 640w, img/slide-tibs-1200.webp 1200w" sizes="(max-width: 1180px) 100vw, 1180px" width="1200" height="675" loading="lazy" decoding="async" alt="Tibs: sauteed beef with green peppers and rosemary in a clay pot" style="object-position: center 45%"></figure>
+      <figure class="cat-banner"><img src="img/slide-tibs-1200.webp" srcset="img/slide-tibs-640.webp 640w, img/slide-tibs-800.webp 800w, img/slide-tibs-1200.webp 1200w" sizes="(max-width: 1212px) calc(100vw - 32px), 1180px" width="1200" height="675" loading="lazy" decoding="async" alt="Tibs: sauteed beef with green peppers and rosemary in a clay pot" style="object-position: center 45%"></figure>
       <ul class="menu-list">
         <li class="menu-item has-photo" id="item-shiro">
           <img class="item-thumb" src="img/shiro-woven-tray-thumb.webp" width="240" height="240" alt="Shiro chickpea stew in a black clay pot on a woven tray with injera" loading="lazy" decoding="async">
@@ -483,7 +480,7 @@
 
     <section class="menu-category" id="drinks" data-category="drinks" aria-labelledby="cat-drinks">
       <h2 id="cat-drinks">Drinks <span class="am" lang="am">መጠጦች</span></h2>
-      <figure class="cat-banner"><img src="img/ethiopian-coffee-jebena-pour.webp" srcset="img/ethiopian-coffee-jebena-pour.webp 1090w" sizes="(max-width: 1180px) 100vw, 1180px" width="1090" height="462" loading="lazy" decoding="async" alt="Coffee poured from a clay jebena into small traditional cups" style="object-position: center 40%"></figure>
+      <figure class="cat-banner"><img src="img/ethiopian-coffee-jebena-pour.webp" srcset="img/ethiopian-coffee-jebena-pour.webp 1090w" sizes="(max-width: 1212px) calc(100vw - 32px), 1180px" width="1090" height="462" loading="lazy" decoding="async" alt="Coffee poured from a clay jebena into small traditional cups" style="object-position: center 40%"></figure>
       <!-- "Popular" tags match the cafe's Uber Eats menu (18 Oct 2026). Hot drinks from the cafe's Uber Eats menu. Prices confirmed by the owner, 18 Oct 2026. -->
       <p class="menu-sub">Hot drinks <span class="am" lang="am">ትኩስ መጠጦች</span></p>
       <ul class="menu-list menu-list-compact">
