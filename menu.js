@@ -11,10 +11,18 @@
   // Accent-insensitive matching, so "sauteed" finds "sautéed"
   const normalise = str => (str.normalize ? str.normalize('NFD').replace(/[̀-ͯ]/g, '') : str).toLowerCase();
 
+  // The small heading above a list, e.g. "Hot drinks", or null
+  const subHeading = list => {
+    const prev = list.previousElementSibling;
+    return prev && prev.classList.contains('menu-sub') ? prev : null;
+  };
+
   categories.forEach(cat => {
     cat.querySelectorAll('.menu-item').forEach(item => {
-      // data-keywords adds search words that are not in the visible text (e.g. "coffee" for espresso drinks)
-      item.dataset.search = normalise(item.textContent + ' ' + (item.dataset.keywords || '') + ' ' + cat.querySelector('h2').textContent);
+      // data-keywords adds search words that are not in the visible text (e.g. "coffee" for espresso drinks);
+      // the section and sub-heading names let "cold drinks" or "hot drinks" find every drink in that group
+      const sub = subHeading(item.parentElement);
+      item.dataset.search = normalise(item.textContent + ' ' + (item.dataset.keywords || '') + ' ' + cat.querySelector('h2').textContent + ' ' + (sub ? sub.textContent : ''));
     });
   });
 
@@ -34,6 +42,14 @@
         const match = inFilter && terms.every(t => matches(item.dataset.search, t));
         item.hidden = !match;
         if (match) visibleInCat++;
+      });
+      // Hide a sub-heading (and its empty list) when none of its items are showing
+      cat.querySelectorAll('.menu-list').forEach(list => {
+        const sub = subHeading(list);
+        if (!sub) return;
+        const anyShown = [].some.call(list.querySelectorAll('.menu-item'), item => !item.hidden);
+        sub.hidden = !anyShown;
+        list.hidden = !anyShown;
       });
       // A search like "coffee" matches the note under Drinks rather than an item, so keep that note in view
       const aside = cat.querySelector('.menu-aside');

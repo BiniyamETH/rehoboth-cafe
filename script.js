@@ -148,8 +148,9 @@
       current = visible().indexOf(item);
     };
     const step = dir => { const list = visible(); show(list[(current + dir + list.length) % list.length]); };
+    // Each photo is a link to its large JPEG; browsers with <dialog> (Safari 15.4+) open the viewer instead
     if (box && typeof box.showModal === 'function') {
-      items.forEach(item => item.querySelector('.g-open').addEventListener('click', () => { show(item); box.showModal(); }));
+      items.forEach(item => item.querySelector('.g-open').addEventListener('click', e => { e.preventDefault(); show(item); box.showModal(); }));
       document.getElementById('lb-prev').addEventListener('click', () => step(-1));
       document.getElementById('lb-next').addEventListener('click', () => step(1));
       document.getElementById('lb-close').addEventListener('click', () => box.close());
@@ -176,14 +177,21 @@
   // Home page: "Open now" / "Closed" badge (Toronto time). Keep hours in sync with the Visit section.
   const openBadge = document.getElementById('open-badge');
   if (openBadge) {
-    const parts = new Intl.DateTimeFormat('en-CA', { weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false, timeZone: 'America/Toronto' })
-      .formatToParts(new Date()).reduce((o, p) => (o[p.type] = p.value, o), {});
-    const mins = (+parts.hour % 24) * 60 + +parts.minute; // some older browsers write midnight as 24
-    const [open, close] = parts.weekday === 'Sun' ? [10 * 60, 19 * 60] : [9 * 60, 20 * 60];
-    const isOpen = mins >= open && mins < close;
-    openBadge.textContent = isOpen ? 'Open now' : 'Closed now';
-    openBadge.classList.add(isOpen ? 'is-open' : 'is-closed');
-    openBadge.hidden = false;
+    const updateBadge = () => {
+      const parts = new Intl.DateTimeFormat('en-CA', { weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false, timeZone: 'America/Toronto' })
+        .formatToParts(new Date()).reduce((o, p) => (o[p.type] = p.value, o), {});
+      const mins = (+parts.hour % 24) * 60 + +parts.minute; // some older browsers write midnight as 24
+      const [open, close] = parts.weekday === 'Sun' ? [10 * 60, 19 * 60] : [9 * 60, 20 * 60];
+      const isOpen = mins >= open && mins < close;
+      openBadge.textContent = isOpen ? 'Open now' : 'Closed now';
+      openBadge.classList.toggle('is-open', isOpen);
+      openBadge.classList.toggle('is-closed', !isOpen);
+      openBadge.hidden = false;
+    };
+    updateBadge();
+    // Stay correct if the page is left open past opening or closing time
+    setInterval(updateBadge, 60000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) updateBadge(); });
   }
 
   const year = document.getElementById('year');

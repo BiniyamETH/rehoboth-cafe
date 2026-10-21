@@ -17,7 +17,7 @@ To preview locally, run `npx serve` in this folder and open the address it print
 | Home | `index.html` | Hero, menu highlights, our story, rotating dish slideshow, visit summary |
 | Menu | `menu.html` | All 23 items with prices, a small photo beside every dish, search and category filters. This is the page the table QR codes open. |
 | About | `about.html` | Our story, what we serve, a note on Ethiopian coffee, rating / hours / location facts |
-| Gallery | `gallery.html` | 17 photos with Food / Coffee / The cafe filters and a full-size photo viewer |
+| Gallery | `gallery.html` | 17 photos with Food / Coffee / The cafe filters and a full-size photo viewer. Each photo is also a plain link to its large JPEG, so it still opens on browsers without the viewer. |
 | Visit & Contact | `visit.html` | Address, phone, opening hours (today highlighted), Google map, directions, storefront |
 | Order Online | `order.html` | Call ahead for pickup, order online via the Google listing, dine in |
 
@@ -71,7 +71,7 @@ Every page shares the same header and footer:
   - **Lunch & Dinner:** Shiro $16.99, Tibs $23.49, Misir Wot / Adess $16.99, Kitfo $24.99, Special Kitfo $27.99, Bula Kitfo $27.99, Rehoboth Special (Meal for 3) $59.99
   - **Drinks:** Cappuccino $3.99, Macchiato $3.49, Tea $2.49, Organic Ginger Tea $5.99, Ginger Ale $1.99, Coke $1.99, Perrier $2.99, Crush $1.99, Water $1.99
 - **Real HTML text**, not an image.
-- **Search** ignores accents, and there are **category filters**. Links such as `menu#breakfast` open with that filter on, and `menu#item-shiro` jumps to one dish.
+- **Search** ignores accents and also matches section and sub-heading names, so "cold drinks" or "hot drinks" find every drink in that group; a sub-heading hides when none of its drinks match. There are **category filters**, and links such as `menu#breakfast` open with that filter on, while `menu#item-shiro` jumps to one dish.
 - **A small photo beside every dish**, in the style of the Habesha Kitchen menu:
   - 22 dishes have photos.
   - Bula shows an icon tile.
@@ -82,11 +82,11 @@ Every page shares the same header and footer:
 
 ### Menu on phones (QR code visitors)
 Most people reach the menu by scanning the table QR code, so on screens up to 680px wide:
-- The dark banner at the top is shorter, and on screens 400px wide or less the title is slightly smaller.
+- The dark banner at the top is shorter, and on screens 400px wide or less the title is slightly smaller. On the smallest phones (340px or less, e.g. 320×568) the intro sentence is hidden; the address is still in the "Visit us" box and footer.
 - Each section's wide photo (Breakfast, Lunch & Dinner, Drinks) appears **after** that section's dishes instead of above them.
 - The "Showing N items" line only takes space once search or a filter is in use.
 
-The result: at least one dish name and price is on the first screen of every phone size tested (360×640 to 430×932); before, most sizes showed none. Desktop and tablet layouts are unchanged. These rules sit in one `@media (max-width: 680px)` block in `styles.css`, right after the `.cat-banner` rules.
+The result: at least one dish name and price is on the first screen of every phone size tested (320×568 to 430×932); before, most sizes showed none. Desktop and tablet layouts are unchanged. These rules sit in the `@media (max-width: 680px)`, `(max-width: 400px)` and `(max-width: 340px)` blocks right after the `.cat-banner` rules in `styles.css`.
 
 ### SEO
 - **Page titles:**
@@ -114,8 +114,8 @@ The result: at least one dish name and price is on the first screen of every pho
   - responsive sizes for the storefront, Gallery platter and Kitfo images
 - **Map:** the map on Visit & Contact loads lazily.
 - **Fonts:** self-hosted in `fonts/` with `font-display: swap`, so text shows straight away in the phone's own font and switches when the site fonts arrive. There are no requests to Google Fonts.
-- **Phone-sized photos on the menu:** a lighter phone crop of the top banner (`ethiopian-platter-injera-mobile.webp`, 66 KB instead of up to 190 KB) and 800px versions of the section photos.
-- **Older phones:** `script.js` works on iPhones before iOS 14 (it falls back to the older media-query listener, and skips the nav highlight and fade-ins when `IntersectionObserver` is missing). Overlay CSS avoids `inset` so the menu banner stays readable before iOS 14.5. The menu stays fully readable with JavaScript turned off.
+- **Phone-sized photos on the menu:** each dish thumbnail has 120, 160 and 240px versions (`*-thumb-120.webp`, `*-thumb-160.webp`, `*-thumb.webp`) and phones pick the smallest one that is still sharp; the Breakfast and Lunch & Dinner photos have phone versions cut to the wide strip shape (`*-phone-{720,1080}.webp`); the top banner has a phone crop (`ethiopian-platter-injera-mobile.webp`, 640×400). On a typical Android phone the menu's first-screen images dropped from 261 KB to 152 KB, and the whole scrolled menu from 503 KB to 262 KB.
+- **Older phones:** every photo has a JPEG copy next to its WebP. Pages use `<picture>` with `<source type="image/webp">` first and a JPEG `<img>`, so iOS 13 and earlier (no WebP) still show photos while modern browsers keep downloading WebP only. Standalone images are wrapped in `<picture class="webp-fallback">`, which uses `display: contents` so the layout is unchanged. `script.js` works on iPhones before iOS 14 (older media-query listener, and no nav highlight or fade-ins without `IntersectionObserver`), the gallery opens photos as normal links where `<dialog>` is missing (Safari before 15.4), and the homepage "Open now" badge re-checks every minute. Overlay CSS avoids `inset` so the menu banner stays readable before iOS 14.5. The menu stays fully readable with JavaScript turned off.
 - **Speed (Lighthouse, simulated phone, before and after the Oct 2026 speed work):**
 
   | Page | Phone | Score | First text | Data |
@@ -249,8 +249,8 @@ The printed table cards and sign open **https://rehobothcafe.com/menu**. The cod
 - **Navigation:** the header and footer are repeated in all 6 pages. Change a link in every page.
 - **Prices or dishes:** edit the `<li class="menu-item …">` blocks in `menu.html`. Search and filters update automatically.
 - **Dish photo on the menu:**
-  - Save a square 240×240 WebP in `img/`.
-  - Point that dish's `<img class="item-thumb" …>` at it. For Bula, replace its `<span class="item-thumb item-thumb-icon">…</span>`.
+  - Save a square 240×240 WebP in `img/`, plus 120 and 160px versions (`name-thumb-120.webp`, `name-thumb-160.webp`) and a JPEG copy of each (`.jpg`) for older iPhones.
+  - Copy an existing dish's `<picture class="webp-fallback">…</picture>` and change the file names and alt text. For Bula, replace its `<span class="item-thumb item-thumb-icon">…</span>`.
 - **Hours or phone:** keep these identical in every place they appear:
   - `visit.html` (address block, phone block and hours table)
   - the Visit Us section of `index.html`
@@ -262,5 +262,6 @@ The printed table cards and sign open **https://rehobothcafe.com/menu**. The cod
 - **Homepage menu preview:** each card is an `<li class="card">` inside `.cards` in `index.html`. Update the image, alt text, name and description together. The responsive grid is in `styles.css`.
 - **Slideshow:** each slide is an `<li class="slide">` in `index.html`, with 1200px and 640px WebP images (16:9) and a matching dot button.
 - **Amharic names:** the Amharic font in `fonts/noto-sans-ethiopic-subset.woff2` only contains the letters used today. After adding new Amharic words, regenerate it from Google Fonts with `family=Noto+Sans+Ethiopic:wght@500;600&text=` followed by every Amharic letter on the site, and update its `unicode-range` at the top of `styles.css`. Until then, new letters show in the phone's own Ethiopic font.
+- **Adding any photo:** save it as WebP and also as JPEG with the same name, then use the `<picture>` pattern already on the page (WebP `<source>` first, JPEG `<img>`). Older iPhones only show the JPEG.
 - **Menu layout on phones:** see "Menu on phones" above; keep a dish name and price on the first phone screen when changing the menu banner or filters.
 - **Colours:** edit the shared tokens at the top of `styles.css` (`--red` is the current espresso-brown accent, alongside `--gold`, `--cream`, and their RGB companions). If the header palette changes, update the favicon and `<meta name="theme-color">` in all six HTML pages too.
