@@ -260,7 +260,7 @@ The printed table cards and sign open **https://rehobothcafe.com/menu**. The cod
   - the JSON-LD in `index.html`
 - **Gallery:** each photo is an `<li class="g-item" data-cat="food|coffee|cafe">` in `gallery.html`. Credit any new photo that isn't the cafe's own.
 - **Homepage menu preview:** each card is an `<li class="card">` inside `.cards` in `index.html`. Update the image, alt text, name and description together. The responsive grid is in `styles.css`.
-- **Slideshow:** each slide is an `<li class="slide">` in `index.html`, with 1200px and 640px WebP images (16:9) and a matching dot button.
+- **Slideshow:** each slide is a `<div class="slide" role="group">` inside `<div class="slides">` in `index.html` (not a list, so the group role stays valid for screen readers), with 1200px and 640px WebP images (16:9) and a matching dot button.
 - **Amharic names:** the Amharic font in `fonts/noto-sans-ethiopic-subset.woff2` only contains the letters used today. After adding new Amharic words, regenerate it from Google Fonts with `family=Noto+Sans+Ethiopic:wght@500;600&text=` followed by every Amharic letter on the site, and update its `unicode-range` at the top of `styles.css`. Until then, new letters show in the phone's own Ethiopic font.
 - **Adding any photo:** save it as WebP and also as JPEG with the same name, then use the `<picture>` pattern already on the page (WebP `<source>` first, JPEG `<img>`). Older iPhones only show the JPEG.
 - **Menu layout on phones:** see "Menu on phones" above; keep a dish name and price on the first phone screen when changing the menu banner or filters.

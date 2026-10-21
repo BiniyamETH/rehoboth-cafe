@@ -223,8 +223,8 @@
         <li class="card">
           <a class="card-link" href="menu#item-shiro" aria-label="View Shiro details and price on the menu">
             <picture>
-              <source srcset="img/shekla-shiro-bright-woven-tray.webp" type="image/webp">
-              <img src="img/shekla-shiro-bright-woven-tray.jpg" width="800" height="480" loading="lazy" decoding="async"
+              <source srcset="img/shekla-shiro-bright-woven-tray-720.webp 720w, img/shekla-shiro-bright-woven-tray.webp 800w" sizes="(max-width: 680px) calc(100vw - 32px), (max-width: 960px) 50vw, 33vw" type="image/webp">
+              <img src="img/shekla-shiro-bright-woven-tray.jpg" srcset="img/shekla-shiro-bright-woven-tray-720.jpg 720w, img/shekla-shiro-bright-woven-tray.jpg 800w" sizes="(max-width: 680px) calc(100vw - 32px), (max-width: 960px) 50vw, 33vw" width="800" height="480" loading="lazy" decoding="async"
                    alt="Shiro chickpea stew in a black clay pot on a woven tray with injera">
             </picture>
             <div class="card-body">
@@ -238,8 +238,8 @@
         <li class="card">
           <a class="card-link" href="menu#item-kitfo" aria-label="View Kitfo details and price on the menu">
             <picture>
-              <source srcset="img/kitfo-ayib-platter-640.webp 640w, img/kitfo-ayib-platter-1200.webp 1200w" sizes="(max-width: 680px) 100vw, (max-width: 960px) 50vw, 33vw" type="image/webp">
-              <img src="img/kitfo-ayib-platter-1200.jpg" width="1200" height="675" loading="lazy" decoding="async"
+              <source srcset="img/kitfo-ayib-platter-640.webp 640w, img/kitfo-ayib-platter-1200.webp 1200w" sizes="(max-width: 680px) calc(100vw - 32px), (max-width: 960px) 50vw, 33vw" type="image/webp">
+              <img src="img/kitfo-ayib-platter-1200.jpg" srcset="img/kitfo-ayib-platter-640.jpg 640w, img/kitfo-ayib-platter-1200.jpg 1200w" sizes="(max-width: 680px) calc(100vw - 32px), (max-width: 960px) 50vw, 33vw" width="1200" height="675" loading="lazy" decoding="async"
                    alt="Kitfo served in clay bowls with ayib and injera">
             </picture>
             <div class="card-body">
@@ -262,8 +262,8 @@
   <section class="special" aria-labelledby="special-title">
     <div class="container special-inner reveal">
       <picture class="special-img">
-        <source type="image/webp" srcset="img/rehoboth-special-sharing-400.webp 400w, img/rehoboth-special-sharing-800.webp 800w" sizes="(max-width: 680px) 100vw, 45vw"><img src="img/rehoboth-special-sharing-800.jpg" srcset="img/rehoboth-special-sharing-400.jpg 400w, img/rehoboth-special-sharing-800.jpg 800w"
-             sizes="(max-width: 680px) 100vw, 45vw" width="800" height="600" loading="lazy" decoding="async"
+        <source type="image/webp" srcset="img/rehoboth-special-sharing-400.webp 400w, img/rehoboth-special-sharing-720.webp 720w, img/rehoboth-special-sharing-800.webp 800w" sizes="(max-width: 680px) calc(100vw - 32px), 45vw"><img src="img/rehoboth-special-sharing-800.jpg" srcset="img/rehoboth-special-sharing-400.jpg 400w, img/rehoboth-special-sharing-720.jpg 720w, img/rehoboth-special-sharing-800.jpg 800w"
+             sizes="(max-width: 680px) calc(100vw - 32px), 45vw" width="800" height="600" loading="lazy" decoding="async"
              alt="A shared injera platter with sautéed meat, stews and greens beside an Ethiopian coffee service">
       </picture>
       <div class="special-text">
@@ -301,8 +301,8 @@
       <h2 class="center reveal" id="dishes-title">Ethiopian &amp; Eritrean favourites on our menu</h2>
       <!-- PREVIEW: illustration photos (see credits below). Replace with Rehoboth's own dish photos before launch. -->
       <div class="carousel" aria-roledescription="carousel" aria-label="Ethiopian and Eritrean dishes on the Rehoboth Cafe menu">
-        <ul class="slides" id="slides" aria-live="off">
-        <li class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 6: Tibs Firfir">
+        <div class="slides" id="slides" aria-live="off">
+        <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 6: Tibs Firfir">
           <picture class="webp-fallback"><source type="image/webp" srcset="img/slide-tibs-firfir-640.webp 640w, img/slide-tibs-firfir-1200.webp 1200w" sizes="(max-width: 1180px) 100vw, 1180px"><img src="img/slide-tibs-firfir-1200.jpg" srcset="img/slide-tibs-firfir-640.jpg 640w, img/slide-tibs-firfir-1200.jpg 1200w"
                sizes="(max-width: 1180px) 100vw, 1180px" width="1200" height="675" loading="lazy" decoding="async" alt="Tibs Firfir with torn injera, green peppers and herbs in a dark pan"></picture>
           <div class="slide-cap">
@@ -311,8 +311,8 @@
             <p>Tibs mixed with injera in a flavourful sauce.</p>
             <a href="menu#item-tibs-firfir" tabindex="0">See it on the menu <span aria-hidden="true">&rarr;</span></a>
           </div>
-        </li>
-        <li class="slide" role="group" aria-roledescription="slide" aria-label="2 of 6: Kitfo" aria-hidden="true">
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 6: Kitfo" aria-hidden="true">
           <picture class="webp-fallback"><source type="image/webp" srcset="img/kitfo-ayib-platter-640.webp 640w, img/kitfo-ayib-platter-1200.webp 1200w" sizes="(max-width: 1180px) 100vw, 1180px"><img src="img/kitfo-ayib-platter-1200.jpg" srcset="img/kitfo-ayib-platter-640.jpg 640w, img/kitfo-ayib-platter-1200.jpg 1200w"
                sizes="(max-width: 1180px) 100vw, 1180px" width="1200" height="675" loading="lazy" decoding="async" alt="Kitfo and accompaniments in clay bowls with ayib and injera"></picture>
           <div class="slide-cap">
@@ -321,8 +321,8 @@
             <p>Finely minced beef seasoned with mitmita and niter kibbeh.</p>
             <a href="menu#item-kitfo" tabindex="-1">See it on the menu <span aria-hidden="true">&rarr;</span></a>
           </div>
-        </li>
-        <li class="slide" role="group" aria-roledescription="slide" aria-label="3 of 6: Special Kitfo" aria-hidden="true">
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 6: Special Kitfo" aria-hidden="true">
           <picture class="webp-fallback"><source type="image/webp" srcset="img/slide-special-kitfo-640.webp 640w, img/slide-special-kitfo-1200.webp 1200w" sizes="(max-width: 1180px) 100vw, 1180px"><img src="img/slide-special-kitfo-1200.jpg" srcset="img/slide-special-kitfo-640.jpg 640w, img/slide-special-kitfo-1200.jpg 1200w"
                sizes="(max-width: 1180px) 100vw, 1180px" width="1200" height="675" loading="lazy" decoding="async" alt="Special Kitfo with ayib and gomen in a black clay bowl"></picture>
           <div class="slide-cap">
@@ -331,8 +331,8 @@
             <p>Kitfo mixed with ayib and gomen.</p>
             <a href="menu#item-special-kitfo" tabindex="-1">See it on the menu <span aria-hidden="true">&rarr;</span></a>
           </div>
-        </li>
-        <li class="slide" role="group" aria-roledescription="slide" aria-label="4 of 6: Tibs" aria-hidden="true">
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 6: Tibs" aria-hidden="true">
           <picture class="webp-fallback"><source type="image/webp" srcset="img/slide-tibs-640.webp 640w, img/slide-tibs-1200.webp 1200w" sizes="(max-width: 1180px) 100vw, 1180px"><img src="img/slide-tibs-1200.jpg" srcset="img/slide-tibs-640.jpg 640w, img/slide-tibs-1200.jpg 1200w"
                sizes="(max-width: 1180px) 100vw, 1180px" width="1200" height="675" loading="lazy" decoding="async" alt="Tibs: sauteed meat with green peppers and rosemary in a clay pot"></picture>
           <div class="slide-cap">
@@ -341,8 +341,8 @@
             <p>Stir-fried meat with onions, peppers and Ethiopian and Eritrean spices.</p>
             <a href="menu#item-tibs" tabindex="-1">See it on the menu <span aria-hidden="true">&rarr;</span></a>
           </div>
-        </li>
-        <li class="slide" role="group" aria-roledescription="slide" aria-label="5 of 6: Ful" aria-hidden="true">
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="5 of 6: Ful" aria-hidden="true">
           <picture>
             <source media="(max-width: 680px)" srcset="img/ful-rehoboth-mobile.webp" width="480" height="600" type="image/webp"><source media="(max-width: 680px)" srcset="img/ful-rehoboth-mobile.jpg" width="480" height="600" type="image/jpeg">
             <source type="image/webp" srcset="img/ful-rehoboth-640.webp 640w, img/ful-rehoboth-768.webp 768w" sizes="(max-width: 1180px) 100vw, 1180px"><img src="img/ful-rehoboth-768.jpg" srcset="img/ful-rehoboth-640.jpg 640w, img/ful-rehoboth-768.jpg 768w"
@@ -354,8 +354,8 @@
             <p>Seasoned fava beans with tomato, spring onion and egg.</p>
             <a href="menu#item-ful" tabindex="-1">See it on the menu <span aria-hidden="true">&rarr;</span></a>
           </div>
-        </li>
-        <li class="slide" role="group" aria-roledescription="slide" aria-label="6 of 6: Firfir" aria-hidden="true">
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="6 of 6: Firfir" aria-hidden="true">
           <picture>
             <source media="(max-width: 680px)" srcset="img/firfir-rehoboth-mobile.webp" width="720" height="900" type="image/webp"><source media="(max-width: 680px)" srcset="img/firfir-rehoboth-mobile.jpg" width="720" height="900" type="image/jpeg">
             <source type="image/webp" srcset="img/firfir-rehoboth-640.webp 640w, img/firfir-rehoboth-1200.webp 1200w" sizes="(max-width: 1180px) 100vw, 1180px"><img src="img/firfir-rehoboth-1200.jpg" srcset="img/firfir-rehoboth-640.jpg 640w, img/firfir-rehoboth-1200.jpg 1200w"
@@ -367,8 +367,8 @@
             <p>Shredded injera in a rich berbere sauce.</p>
             <a href="menu#item-firfir" tabindex="-1">See it on the menu <span aria-hidden="true">&rarr;</span></a>
           </div>
-        </li>
-        </ul>
+        </div>
+        </div>
         <button type="button" class="car-btn car-prev" aria-controls="slides" aria-label="Previous dish">&larr;</button>
         <button type="button" class="car-btn car-next" aria-controls="slides" aria-label="Next dish">&rarr;</button>
       </div>
