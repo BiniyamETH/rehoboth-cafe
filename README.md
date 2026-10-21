@@ -221,7 +221,15 @@ All listed photos are from Wikimedia Commons. Each was cropped and resized.
 
 Done: custom domain with HTTPS, search engines allowed (`robots.txt` and no `noindex` tags), clean URLs, and a printable menu QR code.
 
-1. **Owner confirmation.** Ask the owner to confirm:
+Done in Google Search Console (Oct 21, 2026):
+- The domain property `rehobothcafe.com` is verified.
+- `sitemap.xml` was submitted and read successfully, with 6 pages found.
+- Indexing was requested for the homepage, Menu, About and Visit.
+- The JSON-LD passed the Rich Results Test: a valid Local business item and a valid Organization item.
+- The site icon is now served as real files, so Google can replace the old crest it had cached. That can take a few weeks.
+
+1. **Google Business Profile.** The owner should claim the listing at <https://business.google.com>, set its website to `https://rehobothcafe.com`, and make sure the address, phone and hours match the site exactly. This matters most for local searches such as "Ethiopian cafe Danforth".
+2. **Owner confirmation.** Ask the owner to confirm:
    - all 23 prices, and whether they include tax
    - which meat goes in Tibs Firfir
    - gluten-free options and vegetarian labels
@@ -230,15 +238,12 @@ Done: custom domain with HTTPS, search engines allowed (`robots.txt` and no `noi
    - permission to show the Google rating
    - the online ordering service, and whether they take pickup orders by phone
    - their story, email or social media accounts (optional)
-2. **Order link.** In `order.html`, replace the Google-listing button with the cafe's direct ordering link once it's known.
-3. **Real photos.** The homepage interior image may be illustrative, and several dish images are generated illustrations. Get current owner photos in landscape and daylight where needed:
+3. **Order link.** In `order.html`, replace the Google-listing button with the cafe's direct ordering link once it's known.
+4. **Real photos.** The homepage interior image may be illustrative, and several dish images are generated illustrations. Get current owner photos in landscape and daylight where needed:
    - the storefront and interior (the Gallery says the interior is "coming soon")
    - the cappuccino and other coffee
    - every dish, especially the generated Shiro preview, Rehoboth Special, Kitfo, Tibs Firfir and Bula
-4. **Check and submit.**
-   - Test the JSON-LD at <https://search.google.com/test/rich-results>.
-   - Submit `sitemap.xml` in Google Search Console.
-   - Make sure the address, phone and hours match the Google Business Profile.
+5. **Watch indexing.** Every few days, search `site:rehobothcafe.com` on Google, or open **Indexing → Pages** in Search Console. All 6 pages should appear within about two weeks. After editing the JSON-LD, test it again at <https://search.google.com/test/rich-results>.
 
 ### Menu QR code
 The printed table cards and sign open **https://rehobothcafe.com/menu**. The code only holds that address, so menu edits never need new codes. They stop working only if the menu page moves to a different address or the domain lapses (keep Namecheap auto-renew on). The print file is kept outside this folder.
