@@ -38,6 +38,7 @@ Every page shares the same header and footer:
 | `fonts/` | Self-hosted copies of the Google Fonts files (Bowlby One, Libre Caslon Text, Outfit: Latin letters only; SIL Open Font License). `noto-sans-ethiopic-subset.woff2` holds only the Amharic letters used on the site, so new Amharic words show in the phone's own Ethiopic font until it is regenerated. |
 | `sitemap.xml` | All 6 page URLs |
 | `robots.txt` | Allows all crawlers and points to the sitemap |
+| `favicon.ico`, `favicon.svg`, `apple-touch-icon.png` | The gold "R" site icon. They are real files, not inline, so Google Search can show the icon next to the site. |
 | `CNAME` | The custom domain (`rehobothcafe.com`) for GitHub Pages. Don't delete it. |
 
 ---
@@ -264,4 +265,4 @@ The printed table cards and sign open **https://rehobothcafe.com/menu**. The cod
 - **Amharic names:** the Amharic font in `fonts/noto-sans-ethiopic-subset.woff2` only contains the letters used today. After adding new Amharic words, regenerate it from Google Fonts with `family=Noto+Sans+Ethiopic:wght@500;600&text=` followed by every Amharic letter on the site, and update its `unicode-range` at the top of `styles.css`. Until then, new letters show in the phone's own Ethiopic font.
 - **Adding any photo:** save it as WebP and also as JPEG with the same name, then use the `<picture>` pattern already on the page (WebP `<source>` first, JPEG `<img>`). Older iPhones only show the JPEG.
 - **Menu layout on phones:** see "Menu on phones" above; keep a dish name and price on the first phone screen when changing the menu banner or filters.
-- **Colours:** edit the shared tokens at the top of `styles.css` (`--red` is the current espresso-brown accent, alongside `--gold`, `--cream`, and their RGB companions). If the header palette changes, update the favicon and `<meta name="theme-color">` in all six HTML pages too.
+- **Colours:** edit the shared tokens at the top of `styles.css` (`--red` is the current espresso-brown accent, alongside `--gold`, `--cream`, and their RGB companions). If the header palette changes, redraw the three icon files (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`) and update `<meta name="theme-color">` in all six HTML pages too.
