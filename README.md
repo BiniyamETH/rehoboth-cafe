@@ -2,9 +2,11 @@
 
 Website for **Rehoboth Cafe**, an Ethiopian cafe at **2737 Danforth Ave, Toronto, ON M4C 1L8**.
 
-It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build step and no framework. Open `index.html` in a browser, or upload the folder to any static host.
+It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build step and no framework. It is hosted on GitHub Pages at **https://rehobothcafe.com/** (repo `BiniyamETH/rehoboth-cafe`, branch `main`). Every push to `main` deploys automatically.
 
-> **Status: PREVIEW.** All pages are hidden from search engines until the owner confirms the menu, prices, photos and domain. See [Before launch](#before-launch).
+To preview locally, run `npx serve` in this folder and open the address it prints. A local server is needed because pages link to clean addresses such as `/menu` instead of `menu.html`.
+
+> **Status: LIVE.** Launched on rehobothcafe.com with HTTPS and open to search engines. Some owner confirmations are still open; see [Still to do](#still-to-do).
 
 ---
 
@@ -13,9 +15,9 @@ It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build ste
 | Page | File | What's on it |
 |---|---|---|
 | Home | `index.html` | Hero, menu highlights, our story, rotating dish slideshow, visit summary |
-| Menu | `menu.html` | All 19 items with prices, a small photo beside every dish, search and category filters |
+| Menu | `menu.html` | All 23 items with prices, a small photo beside every dish, search and category filters. This is the page the table QR codes open. |
 | About | `about.html` | Our story, what we serve, a note on Ethiopian coffee, rating / hours / location facts |
-| Gallery | `gallery.html` | 15 photos with Food / Coffee / The cafe filters and a full-size photo viewer |
+| Gallery | `gallery.html` | 17 photos with Food / Coffee / The cafe filters and a full-size photo viewer |
 | Visit & Contact | `visit.html` | Address, phone, opening hours (today highlighted), Google map, directions, storefront |
 | Order Online | `order.html` | Call ahead for pickup, order online via the Google listing, dine in |
 
@@ -30,12 +32,13 @@ Every page shares the same header and footer:
 | File / folder | What it is |
 |---|---|
 | `styles.css` | All styles, shared by every page |
-| `script.js` | Mobile menu, fade-ins, homepage slideshow, gallery viewer, today's hours |
+| `script.js` | Mobile menu, fade-ins, homepage slideshow, gallery viewer, today's hours, the homepage open/closed badge, and tidying old `.html` addresses to the short form |
 | `menu.js` | Menu search and filters |
 | `img/` | Site images in WebP and JPG; every file is used by a page |
 | `fonts/` | Self-hosted copies of the Google Fonts files (Bowlby One, Libre Caslon Text, Outfit: Latin letters only; SIL Open Font License). `noto-sans-ethiopic-subset.woff2` holds only the Amharic letters used on the site, so new Amharic words show in the phone's own Ethiopic font until it is regenerated. |
 | `sitemap.xml` | All 6 page URLs |
 | `robots.txt` | Allows all crawlers and points to the sitemap |
+| `CNAME` | The custom domain (`rehobothcafe.com`) for GitHub Pages. Don't delete it. |
 
 ---
 
@@ -63,20 +66,27 @@ Every page shares the same header and footer:
 7. **Visit Us:** address, phone, hours, Get Directions, View on Google Maps, and a link to Visit & Contact.
 
 ### Menu
-- **19 items in 3 categories**, taken from the Google Maps listing on 16 Oct 2026:
+- **23 items in 3 categories**, taken from the Google Maps listing on 16 Oct 2026 plus the hot drinks added later:
   - **Breakfast:** Tibs Firfir $17.99, Ful $14.99, Chechebsa $15.99, Firfir $15.99, Genfo $17.99, Bula $16.99, Waffle $9.99
   - **Lunch & Dinner:** Shiro $16.99, Tibs $23.49, Misir Wot / Adess $16.99, Kitfo $24.99, Special Kitfo $27.99, Bula Kitfo $27.99, Rehoboth Special (Meal for 3) $59.99
-  - **Drinks:** Ginger Ale $1.99, Coke $1.99, Perrier $2.99, Crush $1.99, Water $1.99
+  - **Drinks:** Cappuccino $3.99, Macchiato $3.49, Tea $2.49, Organic Ginger Tea $5.99, Ginger Ale $1.99, Coke $1.99, Perrier $2.99, Crush $1.99, Water $1.99
 - **Real HTML text**, not an image.
-- **Search** ignores accents, and there are **category filters**. Links such as `menu.html#breakfast` open with that filter on.
+- **Search** ignores accents, and there are **category filters**. Links such as `menu#breakfast` open with that filter on, and `menu#item-shiro` jumps to one dish.
 - **A small photo beside every dish**, in the style of the Habesha Kitchen menu:
-  - 16 dishes have photos.
-  - Bula and Crush show an icon tile.
+  - 22 dishes have photos.
+  - Bula shows an icon tile.
 - **Labels and notices:**
-  - "Preview menu — awaiting owner confirmation"
   - "Prices in CAD. Prices and availability may change."
   - "Please tell our staff about any food allergies before ordering."
-  - Hot drinks: a line asking customers to check with staff. No prices were invented.
+  - Drinks: "Ask our team about other coffee drinks served in the cafe."
+
+### Menu on phones (QR code visitors)
+Most people reach the menu by scanning the table QR code, so on screens up to 680px wide:
+- The dark banner at the top is shorter, and on screens 400px wide or less the title is slightly smaller.
+- Each section's wide photo (Breakfast, Lunch & Dinner, Drinks) appears **after** that section's dishes instead of above them.
+- The "Showing N items" line only takes space once search or a filter is in use.
+
+The result: at least one dish name and price is on the first screen of every phone size tested (360×640 to 430×932); before, most sizes showed none. Desktop and tablet layouts are unchanged. These rules sit in one `@media (max-width: 680px)` block in `styles.css`, right after the `.cat-banner` rules.
 
 ### SEO
 - **Page titles:**
@@ -103,6 +113,19 @@ Every page shares the same header and footer:
   - lazy loading below the hero
   - responsive sizes for the storefront, Gallery platter and Kitfo images
 - **Map:** the map on Visit & Contact loads lazily.
+- **Fonts:** self-hosted in `fonts/` with `font-display: swap`, so text shows straight away in the phone's own font and switches when the site fonts arrive. There are no requests to Google Fonts.
+- **Phone-sized photos on the menu:** a lighter phone crop of the top banner (`ethiopian-platter-injera-mobile.webp`, 66 KB instead of up to 190 KB) and 800px versions of the section photos.
+- **Older phones:** `script.js` works on iPhones before iOS 14 (it falls back to the older media-query listener, and skips the nav highlight and fade-ins when `IntersectionObserver` is missing). Overlay CSS avoids `inset` so the menu banner stays readable before iOS 14.5. The menu stays fully readable with JavaScript turned off.
+- **Speed (Lighthouse, simulated phone, before and after the Oct 2026 speed work):**
+
+  | Page | Phone | Score | First text | Data |
+  |---|---|---|---|---|
+  | Menu | Mid-range (4G, 4x slower CPU) | 79 → 96 | 2.87 → 1.67 s | 748 → 574 KB |
+  | Menu | Budget (slow 3G, 6x slower CPU) | 61 → 71 | 5.82 → 3.62 s | 748 → 574 KB |
+  | Home | Mid-range | 82 → 90 | 2.81 → 1.68 s | 793 → 801 KB |
+  | Home | Budget | 60 → 68 | 5.84 → 3.62 s | 793 → 801 KB |
+
+  Measured on a local server, not on real phones; re-check the live site with PageSpeed Insights.
 - **Layout:** the five homepage preview cards use three columns on wide screens (with the final two centred), two on tablets (with the fifth centred), and one on phones.
 
 ---
@@ -141,7 +164,8 @@ Content changed on purpose until the owner confirms it:
 | User-supplied Ethiopian coffee service image | About page, Our Story | `rehoboth-about-coffee-service-{800,1536}.webp` (1672×941 source); responsive sizes and a 4:3 crop in the split layout. Treat it as illustrative until the owner confirms it shows the cafe. |
 | User-supplied cafe interior image | Homepage hero | `rehoboth-home-interior-{700,1100,1536}.webp` (1536×1024 original); preloaded on the homepage and displayed behind the copy with separate desktop and phone overlays. Treat it as an illustrative image until the owner confirms it shows the cafe. |
 | User-selected generated Ethiopian food platter | Homepage Rehoboth Special section and its menu thumbnail | `rehoboth-special-sharing-{400,800}.webp` and a square `rehoboth-special-sharing-thumb.webp`, cropped 4:3 from an owner-supplied screenshot with the rounded screenshot corners trimmed. It is an illustration, not a photograph of the cafe's actual dish. |
-| User-provided Ethiopian platter | Gallery | `ethiopian-platter-injera.webp` (1400×787) and `ethiopian-platter-injera-800.webp` (800×450); the gallery crop favours the food on the right. |
+| User-provided Ethiopian platter | Gallery and the Menu page banner | `ethiopian-platter-injera.webp` (1400×787) and `ethiopian-platter-injera-800.webp` (800×450); the gallery crop favours the food on the right. Phones get `ethiopian-platter-injera-mobile.webp` (640×582, centre crop) behind the menu banner's dark overlay. |
+| Menu section photos | Breakfast and Lunch & Dinner on the Menu page | `firfir-rehoboth-{640,800,1200}.webp` and `slide-tibs-{640,800,1200}.webp`; the 800px versions were added for phones. |
 | User-provided Rehoboth Cafe storefront | Home Visit Us, Visit & Contact, Gallery, and the Open Graph image on all six pages | `rehoboth-cafe-storefront.jpg`, `rehoboth-cafe-storefront.webp` (1600×684) and `rehoboth-cafe-storefront-800.webp` (800×342). The homepage business JSON-LD also points to the new JPG. |
 | Selected generated Shekla Shiro image (option 1, bright woven tray) | Fourth homepage menu-preview card | `shekla-shiro-bright-woven-tray.jpg` and `shekla-shiro-bright-woven-tray.webp` (800×480). This is an illustration, not a photograph of a Rehoboth Cafe dish. |
 | Kitfo photo by Vipon8 from Wikimedia Commons | Fifth homepage menu-preview card, homepage dish slideshow, Gallery, and Kitfo menu thumbnail | `kitfo-ayib-platter-1200.webp` (1200×675), `kitfo-ayib-platter-640.webp` (640×360) and `kitfo-ayib-platter-thumb.webp` (240×240). Cropped/resized from the [CC0 original](https://commons.wikimedia.org/wiki/File:Kitfo_(%E1%8A%AD%E1%89%B5%E1%8D%8E).jpg); credits and alt text were updated on the affected pages. |
@@ -192,38 +216,31 @@ All listed photos are from Wikimedia Commons. Each was cropped and resized.
 
 ---
 
-## Before launch
+## Still to do
 
-1. **Domain.** The site uses the custom domain https://rehobothcafe.com/ (set in the `CNAME` file). That address is used in all 6 HTML pages, `sitemap.xml` and `robots.txt`.
-2. **Turn off preview mode:**
-   - Delete `<meta name="robots" content="noindex, nofollow">` from all 6 pages.
-   - In `robots.txt`, change `Disallow: /` to `Allow: /`.
-   - Remove the "Preview menu" label in `menu.html`.
-3. **Owner confirmation.** Send the owner the checklist (`owner-review/menu-approval-checklist.html`, or its shared link). It covers:
-   - all 19 prices
-   - hot drinks and their prices
-   - whether prices include tax
+Done: custom domain with HTTPS, search engines allowed (`robots.txt` and no `noindex` tags), clean URLs, and a printable menu QR code.
+
+1. **Owner confirmation.** Ask the owner to confirm:
+   - all 23 prices, and whether they include tax
    - which meat goes in Tibs Firfir
-   - gluten-free options
-   - vegetarian labels
+   - gluten-free options and vegetarian labels
    - spelling (Perrier, Misir Wot / Adess)
    - hours and phone
    - permission to show the Google rating
-   - the domain
-   - the online ordering service
-   - whether they take pickup orders by phone
-   - their story (optional)
-   - email or social media accounts (optional)
-4. **Order link.** In `order.html`, replace the Google-listing button with the cafe's direct ordering link once it's known.
-5. **Real photos.** The homepage interior image may be illustrative, and the alternate food hero is generated. Confirm whether the interior image, storefront and Gallery platter visuals represent the cafe; get current owner photos in landscape and daylight where needed:
+   - the online ordering service, and whether they take pickup orders by phone
+   - their story, email or social media accounts (optional)
+2. **Order link.** In `order.html`, replace the Google-listing button with the cafe's direct ordering link once it's known.
+3. **Real photos.** The homepage interior image may be illustrative, and several dish images are generated illustrations. Get current owner photos in landscape and daylight where needed:
    - the storefront and interior (the Gallery says the interior is "coming soon")
    - the cappuccino and other coffee
-   - every dish, especially the generated Shiro preview, Kitfo, Tibs Firfir, Bula and Crush
-6. **Check and submit.**
+   - every dish, especially the generated Shiro preview, Rehoboth Special, Kitfo, Tibs Firfir and Bula
+4. **Check and submit.**
    - Test the JSON-LD at <https://search.google.com/test/rich-results>.
    - Submit `sitemap.xml` in Google Search Console.
    - Make sure the address, phone and hours match the Google Business Profile.
-7. **Don't upload** `owner-review/` or the mockup PNG.
+
+### Menu QR code
+The printed table cards and sign open **https://rehobothcafe.com/menu**. The code only holds that address, so menu edits never need new codes. They stop working only if the menu page moves to a different address or the domain lapses (keep Namecheap auto-renew on). The print file is kept outside this folder.
 
 ---
 
@@ -233,7 +250,7 @@ All listed photos are from Wikimedia Commons. Each was cropped and resized.
 - **Prices or dishes:** edit the `<li class="menu-item …">` blocks in `menu.html`. Search and filters update automatically.
 - **Dish photo on the menu:**
   - Save a square 240×240 WebP in `img/`.
-  - Point that dish's `<img class="item-thumb" …>` at it. For Bula or Crush, replace their `<span class="item-thumb item-thumb-icon">…</span>`.
+  - Point that dish's `<img class="item-thumb" …>` at it. For Bula, replace its `<span class="item-thumb item-thumb-icon">…</span>`.
 - **Hours or phone:** keep these identical in every place they appear:
   - `visit.html` (address block, phone block and hours table)
   - the Visit Us section of `index.html`
@@ -244,4 +261,6 @@ All listed photos are from Wikimedia Commons. Each was cropped and resized.
 - **Gallery:** each photo is an `<li class="g-item" data-cat="food|coffee|cafe">` in `gallery.html`. Credit any new photo that isn't the cafe's own.
 - **Homepage menu preview:** each card is an `<li class="card">` inside `.cards` in `index.html`. Update the image, alt text, name and description together. The responsive grid is in `styles.css`.
 - **Slideshow:** each slide is an `<li class="slide">` in `index.html`, with 1200px and 640px WebP images (16:9) and a matching dot button.
+- **Amharic names:** the Amharic font in `fonts/noto-sans-ethiopic-subset.woff2` only contains the letters used today. After adding new Amharic words, regenerate it from Google Fonts with `family=Noto+Sans+Ethiopic:wght@500;600&text=` followed by every Amharic letter on the site, and update its `unicode-range` at the top of `styles.css`. Until then, new letters show in the phone's own Ethiopic font.
+- **Menu layout on phones:** see "Menu on phones" above; keep a dish name and price on the first phone screen when changing the menu banner or filters.
 - **Colours:** edit the shared tokens at the top of `styles.css` (`--red` is the current espresso-brown accent, alongside `--gold`, `--cream`, and their RGB companions). If the header palette changes, update the favicon and `<meta name="theme-color">` in all six HTML pages too.
