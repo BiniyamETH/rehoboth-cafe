@@ -1,4 +1,9 @@
 (() => {
+  // Old .html links still open the page, so tidy the address bar to the short form (menu.html -> menu, index.html -> /)
+  if (/^https?:$/.test(location.protocol) && /\.html$/.test(location.pathname)) {
+    history.replaceState(history.state, '', location.pathname.replace(/(index)?\.html$/, '') + location.search + location.hash);
+  }
+
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.getElementById('primary-nav');
