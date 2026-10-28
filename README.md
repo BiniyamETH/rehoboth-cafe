@@ -4,6 +4,15 @@ Website for **Rehoboth Cafe**, an Ethiopian cafe at **2737 Danforth Ave, Toronto
 
 It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build step and no framework. It is hosted on GitHub Pages at **https://rehobothcafe.com/** (repo `BiniyamETH/rehoboth-cafe`, branch `main`). Every push to `main` deploys automatically.
 
+### Cafe photo update — 27 October 2026
+
+- The new owner-supplied photographs replace the Ful, Bula Kitfo and Rehoboth Special placeholders wherever those dishes appear on the homepage, menu and gallery. Bula now has its own menu photo instead of an icon. Responsive WebP assets include JPEG fallbacks and small menu thumbnails.
+- The gallery correctly labels Bula Kitfo and adds Bula, Rehoboth Special and two beef photographs. It now contains 21 photos.
+- The menu includes a “More from our kitchen” photo section using the supplied red-sauce beef image and a still captured at 19.5 seconds from the supplied WhatsApp video. These use descriptive captions, because the media alone does not establish the cafe's exact menu names, recipes or prices. They are not assigned to Tibs or added as priced menu items.
+- All 23 existing menu items and prices are preserved. Photo credits and alternative text distinguish the new cafe photos from remaining illustrations.
+- New assets use `ful-cafe-*`, `bula-cafe-*`, `bula-kitfo-cafe-*`, `rehoboth-special-cafe-*`, `beef-red-sauce-cafe.*` and `beef-injera-video-cafe.*`. The older placeholder assets remain in Git history and the checkout but are no longer referenced by the updated pages. Earlier asset notes below describe the previous illustrations.
+- Local checks verify image references, decodable image files, unique HTML IDs, valid structured data, unchanged prices and the four photo/menu mappings. Working images, original video frames and verification scripts are in ignored `owner-review/`.
+
 To preview locally, run `npx serve` in this folder and open the address it prints. A local server is needed because pages link to clean addresses such as `/menu` instead of `menu.html`.
 
 > **Status: LIVE.** Launched on rehobothcafe.com with HTTPS and open to search engines. Some owner confirmations are still open; see [Still to do](#still-to-do).
@@ -17,7 +26,7 @@ To preview locally, run `npx serve` in this folder and open the address it print
 | Home | `index.html` | Hero, menu highlights, our story, rotating dish slideshow, visit summary |
 | Menu | `menu.html` | All 23 items with prices, a small photo beside every dish, search and category filters. This is the page the table QR codes open. |
 | About | `about.html` | Our story, what we serve, a note on Ethiopian coffee, rating / hours / location facts |
-| Gallery | `gallery.html` | 17 photos with Food / Coffee / The cafe filters and a full-size photo viewer. Each photo is also a plain link to its large JPEG, so it still opens on browsers without the viewer. |
+| Gallery | `gallery.html` | 21 photos with Food / Coffee / The cafe filters and a full-size photo viewer. Each photo is also a plain link to its large JPEG, so it still opens on browsers without the viewer. |
 | Visit & Contact | `visit.html` | Address, phone, opening hours (today highlighted), Google map, directions, storefront |
 | Order Online | `order.html` | Call ahead for pickup, order online via the Google listing, dine in |
 
@@ -74,8 +83,7 @@ Every page shares the same header and footer:
 - **Real HTML text**, not an image.
 - **Search** ignores accents and also matches section and sub-heading names, so "cold drinks" or "hot drinks" find every drink in that group; a sub-heading hides when none of its drinks match. There are **category filters**, and links such as `menu#breakfast` open with that filter on, while `menu#item-shiro` jumps to one dish.
 - **A small photo beside every dish**, in the style of the Habesha Kitchen menu:
-  - 22 dishes have photos.
-  - Bula shows an icon tile.
+  - All 23 items have photos, including the cafe's own Bula photograph.
 - **Labels and notices:**
   - "Prices in CAD. Prices and availability may change."
   - "Please tell our staff about any food allergies before ordering."

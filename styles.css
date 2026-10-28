@@ -335,6 +335,14 @@ h2 { font-family: var(--serif); font-weight: 700; color: var(--red); font-size: 
 
 .menu-empty { margin: 32px 0; padding: 24px; text-align: center; background: var(--cream-2); border-radius: 12px; }
 .link-btn { font: inherit; color: var(--red); background: none; border: 0; padding: 0; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.kitchen-photos { margin-top: 40px; }
+.kitchen-photos > p { margin: 12px 0 20px; color: var(--text-soft); }
+.kitchen-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.kitchen-photo { margin: 0; }
+.kitchen-photo a { display: block; overflow: hidden; border-radius: 10px; background: var(--today); }
+.kitchen-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.kitchen-photo figcaption { margin-top: 10px; font-weight: 500; }
+@media (max-width: 480px) { .kitchen-photo-grid { grid-template-columns: 1fr; } }
 .menu-notice { margin-top: 36px; padding: 16px 20px; border-left: 4px solid var(--gold); background: var(--today); border-radius: 0 8px 8px 0; }
 .menu-notice p { line-height: 1.5; }
 .menu-notice strong { color: var(--red); font-weight: 500; }
