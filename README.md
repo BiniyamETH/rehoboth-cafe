@@ -4,6 +4,11 @@ Website for **Rehoboth Cafe**, an Ethiopian cafe at **2737 Danforth Ave, Toronto
 
 It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build step and no framework. It is hosted on GitHub Pages at **https://rehobothcafe.com/** (repo `BiniyamETH/rehoboth-cafe`, branch `main`). Every push to `main` deploys automatically.
 
+### Tira Sega menu update — 27 October 2026
+
+- Tira Sega is a regular Lunch & Dinner item, with the owner-supplied name and photo, a CAD price of $22.00, responsive thumbnails, search aliases, a direct item link and matching menu structured data. The matching gallery caption is also Tira Sega. Its previous generic kitchen photo card is removed.
+- The current Rehoboth Cafe Uber Eats listing was checked directly; Tira Sega was not listed there. At the user's request to use another restaurant as the price reference, the price matches the comparable raw-beef dish Kurt at nearby Kera Restaurant, 2741 Danforth Ave: [Uber Eats menu](https://www.ubereats.com/ca/store/kera-restaurant/omJp0l5LRh6uOCWiyzCzZg), CAD $22.00, checked directly on 27 October 2026. This is a competitor reference, not a verified Rehoboth Uber Eats price.
+
 ### Cafe photo update — 27 October 2026
 
 - The new owner-supplied photographs replace the Ful, Bula Kitfo and Rehoboth Special placeholders wherever those dishes appear on the homepage, menu and gallery. Bula now has its own menu photo instead of an icon. Responsive WebP assets include JPEG fallbacks and small menu thumbnails.
@@ -24,7 +29,7 @@ To preview locally, run `npx serve` in this folder and open the address it print
 | Page | File | What's on it |
 |---|---|---|
 | Home | `index.html` | Hero, menu highlights, our story, rotating dish slideshow, visit summary |
-| Menu | `menu.html` | All 23 items with prices, a small photo beside every dish, search and category filters. This is the page the table QR codes open. |
+| Menu | `menu.html` | All 24 items with prices, a small photo beside every dish, search and category filters. This is the page the table QR codes open. |
 | About | `about.html` | Our story, what we serve, a note on Ethiopian coffee, rating / hours / location facts |
 | Gallery | `gallery.html` | 21 photos with Food / Coffee / The cafe filters and a full-size photo viewer. Each photo is also a plain link to its large JPEG, so it still opens on browsers without the viewer. |
 | Visit & Contact | `visit.html` | Address, phone, opening hours (today highlighted), Google map, directions, storefront |
@@ -76,14 +81,14 @@ Every page shares the same header and footer:
 7. **Visit Us:** address, phone, hours, Get Directions, View on Google Maps, and a link to Visit & Contact.
 
 ### Menu
-- **23 items in 3 categories**, taken from the Google Maps listing on 16 Oct 2026 plus the hot drinks added later:
+- **24 items in 3 categories**, from the Google Maps listing on 16 Oct 2026, hot drinks added later, and the owner-requested Tira Sega addition using the competitor price reference documented above:
   - **Breakfast:** Tibs Firfir $17.99, Ful $14.99, Chechebsa $15.99, Firfir $15.99, Genfo $17.99, Bula $16.99, Waffle $9.99
-  - **Lunch & Dinner:** Shiro $16.99, Tibs $23.49, Misir Wot / Adess $16.99, Kitfo $24.99, Special Kitfo $27.99, Bula Kitfo $27.99, Rehoboth Special (Meal for 3) $59.99
+  - **Lunch & Dinner:** Shiro $16.99, Tibs $23.49, Misir Wot / Adess $16.99, Kitfo $24.99, Special Kitfo $27.99, Bula Kitfo $27.99, Tira Sega $22.00, Rehoboth Special (Meal for 3) $59.99
   - **Drinks:** Cappuccino $3.99, Macchiato $3.49, Tea $2.49, Organic Ginger Tea $5.99, Ginger Ale $1.99, Coke $1.99, Perrier $2.99, Crush $1.99, Water $1.99
 - **Real HTML text**, not an image.
 - **Search** ignores accents and also matches section and sub-heading names, so "cold drinks" or "hot drinks" find every drink in that group; a sub-heading hides when none of its drinks match. There are **category filters**, and links such as `menu#breakfast` open with that filter on, while `menu#item-shiro` jumps to one dish.
 - **A small photo beside every dish**, in the style of the Habesha Kitchen menu:
-  - All 23 items have photos, including the cafe's own Bula photograph.
+  - All 24 items have photos, including the cafe's own Bula photograph.
 - **Labels and notices:**
   - "Prices in CAD. Prices and availability may change."
   - "Please tell our staff about any food allergies before ordering."
