@@ -4,6 +4,10 @@ Website for **Rehoboth Cafe**, an Ethiopian cafe at **2737 Danforth Ave, Toronto
 
 It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build step and no framework. It is hosted on GitHub Pages at **https://rehobothcafe.com/** (repo `BiniyamETH/rehoboth-cafe`, branch `main`). Every push to `main` deploys automatically.
 
+### Photo removal — 27 October 2026
+
+- Removed the beef-in-red-sauce photograph from the menu and gallery at the owner's request, along with its unused image assets, kitchen photo section and styles. The gallery now has 20 photos. Tira Sega remains a regular menu item at CAD $22.00.
+
 ### Tira Sega menu update — 27 October 2026
 
 - Tira Sega is a regular Lunch & Dinner item, with the owner-supplied name and photo, a CAD price of $22.00, responsive thumbnails, search aliases, a direct item link and matching menu structured data. The matching gallery caption is also Tira Sega. Its previous generic kitchen photo card is removed.
@@ -31,7 +35,7 @@ To preview locally, run `npx serve` in this folder and open the address it print
 | Home | `index.html` | Hero, menu highlights, our story, rotating dish slideshow, visit summary |
 | Menu | `menu.html` | All 24 items with prices, a small photo beside every dish, search and category filters. This is the page the table QR codes open. |
 | About | `about.html` | Our story, what we serve, a note on Ethiopian coffee, rating / hours / location facts |
-| Gallery | `gallery.html` | 21 photos with Food / Coffee / The cafe filters and a full-size photo viewer. Each photo is also a plain link to its large JPEG, so it still opens on browsers without the viewer. |
+| Gallery | `gallery.html` | 20 photos with Food / Coffee / The cafe filters and a full-size photo viewer. Each photo is also a plain link to its large JPEG, so it still opens on browsers without the viewer. |
 | Visit & Contact | `visit.html` | Address, phone, opening hours (today highlighted), Google map, directions, storefront |
 | Order Online | `order.html` | Call ahead for pickup, order online via the Google listing, dine in |
 
