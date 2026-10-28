@@ -4,6 +4,10 @@ Website for **Rehoboth Cafe**, an Ethiopian cafe at **2737 Danforth Ave, Toronto
 
 It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build step and no framework. It is hosted on GitHub Pages at **https://rehobothcafe.com/** (repo `BiniyamETH/rehoboth-cafe`, branch `main`). Every push to `main` deploys automatically.
 
+### Unused image cleanup — 27 October 2026
+
+- Deleted 36 image files that no page referenced any more: the beef-with-injera video still and the older Ful, Bula Kitfo and Rehoboth Special placeholders (`beef-injera-video-cafe.*`, `ful-rehoboth-*`, `bula-kitfo-bowl-*`, `rehoboth-special-sharing-*`). They remain in Git history.
+
 ### Photo removal — 27 October 2026
 
 - Removed the beef-in-red-sauce photograph from the menu and gallery at the owner's request, along with its unused image assets, kitchen photo section and styles. The gallery now has 20 photos. Tira Sega remains a regular menu item at CAD $22.00.
@@ -19,7 +23,7 @@ It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build ste
 - The gallery correctly labels Bula Kitfo and adds Bula, Rehoboth Special and two beef photographs. It now contains 21 photos.
 - The menu includes a “More from our kitchen” photo section using the supplied red-sauce beef image and a still captured at 19.5 seconds from the supplied WhatsApp video. These use descriptive captions, because the media alone does not establish the cafe's exact menu names, recipes or prices. They are not assigned to Tibs or added as priced menu items.
 - All 23 existing menu items and prices are preserved. Photo credits and alternative text distinguish the new cafe photos from remaining illustrations.
-- New assets use `ful-cafe-*`, `bula-cafe-*`, `bula-kitfo-cafe-*`, `rehoboth-special-cafe-*` and `beef-injera-video-cafe.*` (`beef-red-sauce-cafe.*` was later deleted; see Photo removal above). The older placeholder assets remain in Git history and the checkout but are no longer referenced by the updated pages. Earlier asset notes below describe the previous illustrations.
+- New assets use `ful-cafe-*`, `bula-cafe-*`, `bula-kitfo-cafe-*`, `rehoboth-special-cafe-*` and `beef-injera-video-cafe.*` (both beef images were later deleted; see above). The older placeholder assets were later deleted too and remain in Git history. Earlier asset notes below describe the previous illustrations.
 - Local checks verify image references, decodable image files, unique HTML IDs, valid structured data, unchanged prices and the four photo/menu mappings. Working images, original video frames and verification scripts are in ignored `owner-review/`.
 
 To preview locally, run `npx serve` in this folder and open the address it prints. A local server is needed because pages link to clean addresses such as `/menu` instead of `menu.html`.
@@ -181,7 +185,6 @@ Content changed on purpose until the owner confirms it:
 | User-supplied Ethiopian coffee and food table image | Homepage Our Story | `rehoboth-home-story-table-{800,1536}.webp` (1536×1024 source); responsive sizes in the split section. Treat it as illustrative until the owner confirms it shows the cafe. |
 | User-supplied Ethiopian coffee service image | About page, Our Story | `rehoboth-about-coffee-service-{800,1536}.webp` (1672×941 source); responsive sizes and a 4:3 crop in the split layout. Treat it as illustrative until the owner confirms it shows the cafe. |
 | User-supplied cafe interior image | Homepage hero | `rehoboth-home-interior-{700,1100,1536}.webp` (1536×1024 original); preloaded on the homepage and displayed behind the copy with separate desktop and phone overlays. Treat it as an illustrative image until the owner confirms it shows the cafe. |
-| User-selected generated Ethiopian food platter | Homepage Rehoboth Special section and its menu thumbnail | `rehoboth-special-sharing-{400,800}.webp` and a square `rehoboth-special-sharing-thumb.webp`, cropped 4:3 from an owner-supplied screenshot with the rounded screenshot corners trimmed. It is an illustration, not a photograph of the cafe's actual dish. |
 | User-provided Ethiopian platter | Gallery and the Menu page banner | `ethiopian-platter-injera.webp` (1400×787) and `ethiopian-platter-injera-800.webp` (800×450); the gallery crop favours the food on the right. Phones get `ethiopian-platter-injera-mobile.webp` (640×582, centre crop) behind the menu banner's dark overlay. |
 | Menu section photos | Breakfast and Lunch & Dinner on the Menu page | `firfir-rehoboth-{640,800,1200}.webp` and `slide-tibs-{640,800,1200}.webp`; the 800px versions were added for phones. |
 | User-provided Rehoboth Cafe storefront | Home Visit Us, Visit & Contact, Gallery, and the Open Graph image on all six pages | `rehoboth-cafe-storefront.jpg`, `rehoboth-cafe-storefront.webp` (1600×684) and `rehoboth-cafe-storefront-800.webp` (800×342). The homepage business JSON-LD also points to the new JPG. |
@@ -195,11 +198,10 @@ Unused drafts and source files have been removed from `img/`; earlier versions r
 **Checks completed for the current hero and palette:** checked image dimensions and homepage paths, verified that all six pages load the shared stylesheet and use the updated browser theme colour, checked representative text and button contrast, and ran `git diff --check`.
 
 **Placeholders cut from the design mockup.** Replace these with the cafe's own photos:
-- Cappuccino, Tibs Firfir and Ful cards
+- Cappuccino and Tibs Firfir cards
 - Coffee pour on Gallery (the homepage and About page use supplied illustrative images)
 - `slide-tibs-firfir-*` and `tibs-firfir-injera-thumb`
 - Firfir (slideshow, Gallery, menu): `firfir-rehoboth-*`, illustration supplied by the site owner
-- Ful (menu preview card, slideshow, Gallery, menu): `ful-rehoboth-*`, illustration supplied by the site owner
 - Cafe interior (homepage FAQ and Gallery): `rehoboth-cafe-interior*`, image supplied by the site owner
 
 **Openly licensed photos**, shown for illustration and credited on each page:
