@@ -137,6 +137,7 @@ The result: at least one dish name and price is on the first screen of every pho
 - **`sitemap.xml`** lists all 6 pages.
 - **FAQ JSON-LD:** `FAQPage` on the homepage, matching the visible FAQ section word for word.
 - **AI search:** `llms.txt` at the site root.
+- **Parking:** "Plenty of parking right in front of the cafe" (from the owner, 25 Nov 2026) is on the Visit page, in a homepage FAQ with its JSON-LD, as an `amenityFeature` in the business JSON-LD, and in `llms.txt`. It does not say the parking is free, because that has not been confirmed. Free Wi-Fi (from the owner, 25 Nov 2026) is in the same places.
 
 ### Accessibility and speed
 - **Contrast:** the current dark text on cream is 15.23:1, muted text on cream is 5.03:1, header links on the dark background are 15.48:1, and dark text on gold buttons is 8.60:1. Decorative gold and image overlays are treated separately from body text.
