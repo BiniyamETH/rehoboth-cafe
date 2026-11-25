@@ -4,6 +4,17 @@ Website for **Rehoboth Cafe**, an Ethiopian cafe at **2737 Danforth Ave, Toronto
 
 It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build step and no framework. It is hosted on GitHub Pages at **https://rehobothcafe.com/** (repo `BiniyamETH/rehoboth-cafe`, branch `main`). Every push to `main` deploys automatically.
 
+### Search Console SEO update — 24 November 2026
+
+- The 28-day Search Console report (26 Oct–22 Nov 2026: 38 clicks, 1.67K impressions, average position 11.3) showed that most impressions come from breakfast, brunch and "near me" searches, such as "breakfast near me" (111 impressions, position 12.4) and "brunch near me" (26, position 5.7). Searches with "Ethiopian" in them brought only about 20 impressions. The homepage gets 97% of impressions.
+- The owner confirmed that the cafe serves brunch, that Shiro and Misir Wot are vegan, and that the injera is 100% teff.
+- Homepage and menu titles, meta descriptions, Open Graph titles, the homepage H1, intro line and breakfast FAQ now mention brunch (see [SEO](#seo)). No brunch hours are stated, because none were given.
+- The homepage JSON-LD is now `["Restaurant", "CafeOrCoffeeShop"]`, with `alternateName` "Rehoboth Ethiopian Restaurant" and "Rehoboth Cafe Toronto" (people searched "rohobot ethiopian restaurant" and similar spellings) and Breakfast and Brunch in `servesCuisine`.
+- Shiro and Misir Wot are labelled **Vegan** on the menu, homepage highlights, callout and FAQ; their menu JSON-LD lists `VeganDiet` and `VegetarianDiet`. The kitchen must keep cooking them with oil, not kibe.
+- The injera explainer, gluten-free FAQ, vegan callout and menu notice say the injera is 100% teff and naturally gluten-free. Dishes are not individually marked gluten-free, because sauces and cross-contact are not confirmed; the notice says some dishes use wheat.
+- `sitemap.xml` lastmod is 2026-11-24 for the homepage and menu.
+- Next: request indexing for `/` and `/menu` in Search Console, and add "Ethiopian restaurant", "Breakfast restaurant" and "Brunch restaurant" categories to the Google Business Profile. Re-check the 28-day report in late December 2026.
+
 ### Unused image cleanup — 27 October 2026
 
 - Deleted 36 image files that no page referenced any more: the beef-with-injera video still and the older Ful, Bula Kitfo and Rehoboth Special placeholders (`beef-injera-video-cafe.*`, `ful-rehoboth-*`, `bula-kitfo-bowl-*`, `rehoboth-special-sharing-*`). They remain in Git history.
@@ -73,10 +84,10 @@ Every page shares the same header and footer:
 - Faint gold leaf watermarks, gold lines beside section labels, generous spacing, gentle fade-ins and hover zooms remain part of the design.
 
 ### Homepage
-1. **Hero:** one H1, "Ethiopian Restaurant & Cafe on Danforth Avenue, Toronto", with "From Ethiopia. With Love." as the styled slogan and the supplied cafe interior image (`img/rehoboth-home-interior-1536.webp`).
+1. **Hero:** one H1, "Ethiopian & Eritrean Restaurant, Cafe & Brunch on Danforth Avenue, Toronto", with "From Ethiopia. With Love." as the styled slogan and the supplied cafe interior image (`img/rehoboth-home-interior-1536.webp`).
    - Includes the View Menu and Get Directions buttons and the Google rating line.
    - The photo fills the background on desktop and phone. A lighter desktop overlay shows its warm colours while keeping text readable; the phone overlay darkens behind the copy.
-2. **Highlights:** guest rating, seven-day hours, vegetarian options and dine-in/takeout information on a dark feature strip.
+2. **Highlights:** guest rating, seven-day hours, vegan options and dine-in/takeout information on a dark feature strip.
 3. **Menu preview:** Cappuccino, Tibs Firfir, Ful, Shiro and Kitfo cards on a cream section; each card links to the matching menu item and price.
 4. **Rehoboth Special and Our Story:** a featured dish and a short story linking to About.
 5. **Dish slideshow:** Tibs Firfir, Kitfo, Special Kitfo, Tibs, Ful and Firfir.
@@ -112,14 +123,14 @@ The result: at least one dish name and price is on the first screen of every pho
 
 ### SEO
 - **Page titles:**
-  - Home: `Rehoboth Cafe | Ethiopian Restaurant & Coffee on Danforth, Toronto`
-  - Menu: `Ethiopian Menu & Prices | Rehoboth Cafe, Danforth Toronto`
+  - Home: `Rehoboth Cafe | Ethiopian Breakfast, Brunch & Coffee, Danforth Toronto`
+  - Menu: `Ethiopian Breakfast, Brunch & Lunch Menu & Prices | Rehoboth Cafe`
   - About: `About Rehoboth Cafe | Ethiopian Cafe on Danforth, Toronto`
   - Gallery: `Ethiopian Food Photos | Rehoboth Cafe, Danforth Toronto`
   - Visit: `Hours & Directions | Rehoboth Cafe, 2737 Danforth Ave`
   - Order: `Ethiopian Food for Pickup | Rehoboth Cafe, Danforth Toronto`
 - **Every page** has its own meta description, one H1, a canonical link, and Open Graph and Twitter tags.
-- **Business details for Google:** `CafeOrCoffeeShop` JSON-LD on the homepage with name, address, phone, hours, map coordinates, map link and menu link.
+- **Business details for Google:** `Restaurant` + `CafeOrCoffeeShop` JSON-LD on the homepage with name, alternate names, cuisines (including Breakfast and Brunch), address, phone, hours, map coordinates, map link and menu link.
 - **`sitemap.xml`** lists all 6 pages.
 
 ### Accessibility and speed
@@ -165,7 +176,7 @@ The result: at least one dish name and price is on the first screen of every pho
 | "Short walk east of Main Street subway station" | Google Maps map view | Visible on the map |
 
 Content changed on purpose until the owner confirms it:
-- **Gluten-free:** all wording removed.
+- **Gluten-free:** confirmed on 24 Nov 2026 that the injera is 100% teff. Only the injera and the teff Chechebsa are described as gluten-free; individual dishes are not.
 - **Tibs Firfir:** described without naming the meat.
 - **Tax:** no statement about whether prices include tax.
 - **Order page:** says "Call ahead to place your order for pickup", which the owner needs to confirm.
@@ -251,11 +262,10 @@ Done in Google Search Console (Oct 21, 2026):
    - **Check who manages it (small risk).** The listing shows no "Claim this business" link, so someone has already claimed it. That may not be the owner; it could be the old developer. Whoever manages it can change the hours, phone and website shown on Google. The owner should sign in to their own Google account at <https://business.google.com> and search for the cafe:
      - If it opens for editing, the owner already manages it.
      - If it says "managed by someone else", click **Request access** and choose Owner. If there's no reply within about 7 days, Google usually lets the owner claim it directly.
-   - **Once the owner has access:** remove anyone under **People and access** who shouldn't be there, add the category "Ethiopian restaurant", and keep the address, phone and hours identical to the site.
+   - **Once the owner has access:** remove anyone under **People and access** who shouldn't be there, add the categories "Ethiopian restaurant", "Breakfast restaurant" and "Brunch restaurant", and keep the address, phone and hours identical to the site.
 2. **Owner confirmation.** Ask the owner to confirm:
    - all 23 prices, and whether they include tax
    - which meat goes in Tibs Firfir
-   - gluten-free options and vegetarian labels
    - spelling (Perrier, Misir Wot / Adess)
    - hours and phone
    - permission to show the Google rating
