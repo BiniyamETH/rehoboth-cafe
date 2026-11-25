@@ -13,7 +13,9 @@ It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build ste
 - Shiro and Misir Wot are labelled **Vegan** on the menu, homepage highlights, callout and FAQ; their menu JSON-LD lists `VeganDiet` and `VegetarianDiet`. The kitchen must keep cooking them with oil, not kibe.
 - The injera explainer, gluten-free FAQ, vegan callout and menu notice say the injera is 100% teff and naturally gluten-free. Dishes are not individually marked gluten-free, because sauces and cross-contact are not confirmed; the notice says some dishes use wheat.
 - `sitemap.xml` lastmod is 2026-11-24 for the homepage and menu.
-- Next: request indexing for `/` and `/menu` in Search Console, and add "Ethiopian restaurant", "Breakfast restaurant" and "Brunch restaurant" categories to the Google Business Profile. Re-check the 28-day report in late December 2026.
+- **AI search:** added `llms.txt` (a plain-text fact sheet with hours, address, dietary info, full menu with prices and FAQs, for ChatGPT, Perplexity, Claude and similar tools) and `FAQPage` JSON-LD on the homepage built from the 10 visible FAQs. The homepage `sameAs` now includes the Google Maps listing (`cid=4611536118844118917`) and the Uber Eats store, so search and AI tools link the website to the same business. `robots.txt` already allows all crawlers, including AI ones. Review ratings are deliberately not in the JSON-LD, because Google does not allow a business to mark up its own reviews.
+- Indexing was requested for `/` and `/menu` in Search Console on 24 Nov 2026. The Google Business Profile belongs to the client, so the category changes are for the client to make.
+- Next: add "Ethiopian restaurant", "Breakfast restaurant" and "Brunch restaurant" categories to the Google Business Profile. Re-check the 28-day report in late December 2026.
 
 ### Unused image cleanup — 27 October 2026
 
@@ -71,6 +73,7 @@ Every page shares the same header and footer:
 | `fonts/` | Self-hosted copies of the Google Fonts files (Bowlby One, Libre Caslon Text, Outfit: Latin letters only; SIL Open Font License). `noto-sans-ethiopic-subset.woff2` holds only the Amharic letters used on the site, so new Amharic words show in the phone's own Ethiopic font until it is regenerated. |
 | `sitemap.xml` | All 6 page URLs |
 | `robots.txt` | Allows all crawlers and points to the sitemap |
+| `llms.txt` | Plain-text fact sheet for AI search tools: key facts, pages, full menu with prices and FAQs. Update it whenever hours, prices, dishes or FAQs change. |
 | `favicon.ico`, `favicon.svg`, `apple-touch-icon.png` | The gold "R" site icon. They are real files, not inline, so Google Search can show the icon next to the site. |
 | `CNAME` | The custom domain (`rehobothcafe.com`) for GitHub Pages. Don't delete it. |
 
@@ -132,6 +135,8 @@ The result: at least one dish name and price is on the first screen of every pho
 - **Every page** has its own meta description, one H1, a canonical link, and Open Graph and Twitter tags.
 - **Business details for Google:** `Restaurant` + `CafeOrCoffeeShop` JSON-LD on the homepage with name, alternate names, cuisines (including Breakfast and Brunch), address, phone, hours, map coordinates, map link and menu link.
 - **`sitemap.xml`** lists all 6 pages.
+- **FAQ JSON-LD:** `FAQPage` on the homepage, matching the visible FAQ section word for word.
+- **AI search:** `llms.txt` at the site root.
 
 ### Accessibility and speed
 - **Contrast:** the current dark text on cream is 15.23:1, muted text on cream is 5.03:1, header links on the dark background are 15.48:1, and dark text on gold buttons is 8.60:1. Decorative gold and image overlays are treated separately from body text.
@@ -286,7 +291,8 @@ The printed table cards and sign open **https://rehobothcafe.com/menu**. The cod
 ## How to edit common things
 
 - **Navigation:** the header and footer are repeated in all 6 pages. Change a link in every page.
-- **Prices or dishes:** edit the `<li class="menu-item …">` blocks in `menu.html`. Search and filters update automatically.
+- **Prices or dishes:** edit the `<li class="menu-item …">` blocks in `menu.html`, the menu JSON-LD at the top of `menu.html`, and the menu in `llms.txt`. Search and filters update automatically.
+- **FAQs:** edit the `<details>` blocks in `index.html`, then the matching `FAQPage` JSON-LD in its `<head>` and the FAQ list in `llms.txt`.
 - **Dish photo on the menu:**
   - Save a square 240×240 WebP in `img/`, plus 120 and 160px versions (`name-thumb-120.webp`, `name-thumb-160.webp`) and a JPEG copy of each (`.jpg`) for older iPhones.
   - Copy an existing dish's `<picture class="webp-fallback">…</picture>` and change the file names and alt text. For Bula, replace its `<span class="item-thumb item-thumb-icon">…</span>`.
@@ -296,7 +302,8 @@ The printed table cards and sign open **https://rehobothcafe.com/menu**. The cod
   - the footer on all 6 pages
   - the "Visit us" box on `menu.html`
   - the About page facts
-  - the JSON-LD in `index.html`
+  - the JSON-LD in `index.html` (business details and the FAQ block)
+  - `llms.txt`
 - **Gallery:** each photo is an `<li class="g-item" data-cat="food|coffee|cafe">` in `gallery.html`. Credit any new photo that isn't the cafe's own.
 - **Homepage menu preview:** each card is an `<li class="card">` inside `.cards` in `index.html`. Update the image, alt text, name and description together. The responsive grid is in `styles.css`.
 - **Slideshow:** each slide is a `<div class="slide" role="group">` inside `<div class="slides">` in `index.html` (not a list, so the group role stays valid for screen readers), with 1200px and 640px WebP images (16:9) and a matching dot button.
