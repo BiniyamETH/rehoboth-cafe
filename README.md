@@ -15,7 +15,7 @@ It is a 6-page site in plain HTML, CSS and vanilla JavaScript, with no build ste
 - `sitemap.xml` lastmod is 2026-11-24 for the homepage and menu.
 - **AI search:** added `llms.txt` (a plain-text fact sheet with hours, address, dietary info, full menu with prices and FAQs, for ChatGPT, Perplexity, Claude and similar tools) and `FAQPage` JSON-LD on the homepage built from the 10 visible FAQs. The homepage `sameAs` now includes the Google Maps listing (`cid=4611536118844118917`) and the Uber Eats store, so search and AI tools link the website to the same business. `robots.txt` already allows all crawlers, including AI ones. Review ratings are deliberately not in the JSON-LD, because Google does not allow a business to mark up its own reviews.
 - Indexing was requested for `/` and `/menu` in Search Console on 24 Nov 2026. The Google Business Profile belongs to the client, so the category changes are for the client to make.
-- Next: add "Ethiopian restaurant", "Breakfast restaurant" and "Brunch restaurant" categories to the Google Business Profile. Re-check the 28-day report in late December 2026.
+- Next: the client should add "Ethiopian restaurant", "Breakfast restaurant" and "Brunch restaurant" categories to the Google Business Profile. Re-check the 28-day report in late December 2026.
 
 ### Unused image cleanup — 27 October 2026
 
